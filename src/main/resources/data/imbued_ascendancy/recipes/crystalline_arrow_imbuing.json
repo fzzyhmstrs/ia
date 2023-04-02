@@ -41,6 +41,6 @@
   },
   "title": "Crystalline Arrow",
   "cost": 15,
-  "resultA": "imbued_gear:crystalline_arrow",
+  "resultA": "imbued_ascendancy:crystalline_arrow",
   "countA": 16
 }

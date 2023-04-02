@@ -1,5 +1,5 @@
 {
-  "type": "imbued_gear:celestial_altar",
+  "type": "imbued_ascendancy:celestial_altar",
   "imbueA": {
 	"item": "amethyst_imbuement:ametrine"
   },
@@ -41,7 +41,7 @@
   },
   "title": "Celestial Trident",
   "cost": 99,
-  "resultA": "imbued_gear:celestial_trident",
+  "resultA": "imbued_ascendancy:celestial_trident",
   "countA": 1,
   "transferEnchant": true
 }

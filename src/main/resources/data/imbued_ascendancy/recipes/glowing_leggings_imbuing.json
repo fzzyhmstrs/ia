@@ -19,7 +19,7 @@
 	"item": "amethyst_imbuement:glowing_fragment"
   },
   "craftE": {
-	"item": "imbued_gear:garnet_leggings"
+	"item": "imbued_ascendancy:garnet_leggings"
   },
   "craftF": {
 	"item": "amethyst_imbuement:glowing_fragment"
@@ -29,7 +29,7 @@
   },
   "title": "Glowing Leggings",
   "cost": 13,
-  "resultA": "imbued_gear:glowing_leggings",
+  "resultA": "imbued_ascendancy:glowing_leggings",
   "countA": 1,
   "transferEnchant": true
 }

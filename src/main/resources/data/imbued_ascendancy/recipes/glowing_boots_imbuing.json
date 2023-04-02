@@ -19,7 +19,7 @@
 	"item": "amethyst_imbuement:glowing_fragment"
   },
   "craftE": {
-	"item": "imbued_gear:garnet_boots"
+	"item": "imbued_ascendancy:garnet_boots"
   },
   "craftF": {
 	"item": "amethyst_imbuement:glowing_fragment"
@@ -29,7 +29,7 @@
   },
   "title": "Glowing Boots",
   "cost": 13,
-  "resultA": "imbued_gear:glowing_boots",
+  "resultA": "imbued_ascendancy:glowing_boots",
   "countA": 1,
   "transferEnchant": true
 }

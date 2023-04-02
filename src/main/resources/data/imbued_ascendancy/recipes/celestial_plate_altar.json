@@ -1,5 +1,5 @@
 {
-  "type": "imbued_gear:celestial_altar",
+  "type": "imbued_ascendancy:celestial_altar",
   "imbueA": {
 	"item": "amethyst_imbuement:ametrine"
   },
@@ -22,13 +22,13 @@
 	"item": "amethyst_imbuement:charged_moonstone"
   },
   "craftD": {
-	"item": "imbued_gear:mystic_fragment"
+	"item": "imbued_ascendancy:mystic_fragment"
   },
   "craftE": {
-	"tag": "imbued_gear:celestial_chestplate_inputs"
+	"tag": "imbued_ascendancy:celestial_chestplate_inputs"
   },
   "craftF": {
-	"item": "imbued_gear:mystic_fragment"
+	"item": "imbued_ascendancy:mystic_fragment"
   },
   "craftG": {
 	"item": "amethyst_imbuement:charged_moonstone"
@@ -41,7 +41,7 @@
   },
   "title": "Celestial Plate",
   "cost": 155,
-  "resultA": "imbued_gear:celestial_plate",
+  "resultA": "imbued_ascendancy:celestial_plate",
   "countA": 1,
   "transferEnchant": true
 }

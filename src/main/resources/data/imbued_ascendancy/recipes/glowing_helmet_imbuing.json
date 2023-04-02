@@ -19,7 +19,7 @@
 	"item": "amethyst_imbuement:glowing_fragment"
   },
   "craftE": {
-	"item": "imbued_gear:garnet_helmet"
+	"item": "imbued_ascendancy:garnet_helmet"
   },
   "craftF": {
 	"item": "amethyst_imbuement:glowing_fragment"
@@ -29,7 +29,7 @@
   },
   "title": "Glowing Helmet",
   "cost": 13,
-  "resultA": "imbued_gear:glowing_helmet",
+  "resultA": "imbued_ascendancy:glowing_helmet",
   "countA": 1,
   "transferEnchant": true
 }

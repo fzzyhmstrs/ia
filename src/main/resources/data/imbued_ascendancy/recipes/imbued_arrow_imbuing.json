@@ -41,6 +41,6 @@
   },
   "title": "Imbued Arrow",
   "cost": 11,
-  "resultA": "imbued_gear:imbued_arrow",
+  "resultA": "imbued_ascendancy:imbued_arrow",
   "countA": 16
 }
