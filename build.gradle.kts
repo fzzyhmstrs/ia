@@ -54,7 +54,13 @@ repositories {
         dirs("F:\\Documents\\Mod Libraries\\fc\\build\\libs")
     }
     flatDir {
+        dirs("F:\\Documents\\Mod Libraries\\gc\\build\\libs")
+    }
+    flatDir {
         dirs("F:\\Documents\\Mod Development\\ai\\build\\libs")
+    }
+    flatDir {
+        dirs("F:\\Documents\\Mod Libraries\\fzzy_config\\build\\libs")
     }
     mavenCentral()
 }
@@ -88,8 +94,18 @@ dependencies {
         exclude("net.fabricmc.fabric-api")
     }
 
+    val gcVersion: String by project
+    modImplementation(":gear_core-$gcVersion"){
+        exclude("net.fabricmc.fabric-api")
+    }
+
     val aiVersion: String by project
     modImplementation(":amethyst_imbuement-$aiVersion"){
+        exclude("net.fabricmc.fabric-api")
+    }
+
+    val fzzyConfigVersion: String by project
+    modImplementation(":fzzy_config-$fzzyConfigVersion"){
         exclude("net.fabricmc.fabric-api")
     }
 
