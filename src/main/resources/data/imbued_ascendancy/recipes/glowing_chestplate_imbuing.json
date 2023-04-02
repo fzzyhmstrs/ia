@@ -1,0 +1,35 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:imbued_quartz"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:smoky_quartz"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:smoky_quartz"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:imbued_quartz"
+  },
+  "craftB": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "craftD": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "craftE": {
+	"item": "imbued_gear:garnet_chestplate"
+  },
+  "craftF": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "craftH": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "title": "Glowing Chestplate",
+  "cost": 13,
+  "resultA": "imbued_gear:glowing_chestplate",
+  "countA": 1,
+  "transferEnchant": true
+}
