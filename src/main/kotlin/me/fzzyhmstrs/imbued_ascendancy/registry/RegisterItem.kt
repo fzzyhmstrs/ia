@@ -4,10 +4,7 @@ package me.fzzyhmstrs.imbued_ascendancy.registry
 
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
 import me.fzzyhmstrs.amethyst_imbuement.item.AiItemSettings
-import me.fzzyhmstrs.amethyst_imbuement.item.CopperWardItem
-import me.fzzyhmstrs.amethyst_imbuement.item.GlisteringTridentItem
-import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem
-import me.fzzyhmstrs.fzzy_core.item_util.CustomFlavorItem
+import me.fzzyhmstrs.amethyst_imbuement.item.SpellcastersReagentFlavorItem
 import me.fzzyhmstrs.imbued_ascendancy.IA
 import me.fzzyhmstrs.imbued_ascendancy.item.*
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
@@ -26,7 +23,10 @@ object RegisterItem {
     private val regItem: MutableMap<String, Item> = mutableMapOf()
 
     //raw materials
-    val MYSTIC_FRAGMENT = CustomFlavorItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.EPIC)).withGlint().also{ regItem["mystic_fragment"] = it}
+    val REALITY_GEM = RealityGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)).also{ regItem["reality_gem"] = it}
+    val MYSTIC_FRAGMENT = SpellcastersReagentFlavorItem(RegisterAttribute.DAMAGE_MULTIPLICATION,
+        EntityAttributeModifier(UUID.fromString("f2a00170-d1c6-11ed-afa1-0242ac120002"),"mystic_modifier",-0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
+        AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.EPIC)).withGlint().also{ regItem["mystic_fragment"] = it}
 
     //tools and weapons
     val CELESTIAL_TRIDENT = CelestialTridentItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(2650).rarity(

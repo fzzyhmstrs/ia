@@ -1,4 +1,4 @@
-package me.fzzyhmstrs.ai_odyssey.model
+package me.fzzyhmstrs.imbued_ascendancy.model
 
 import me.fzzyhmstrs.imbued_ascendancy.IA
 import net.minecraft.client.model.*

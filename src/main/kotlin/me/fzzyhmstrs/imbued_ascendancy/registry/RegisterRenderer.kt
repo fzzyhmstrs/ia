@@ -2,8 +2,8 @@
 
 package me.fzzyhmstrs.imbued_ascendancy.registry
 
-import me.fzzyhmstrs.ai_odyssey.model.CelestialTridentEntityModel
-import me.fzzyhmstrs.ai_odyssey.model.CelestialTridentEntityRenderer
+import me.fzzyhmstrs.imbued_ascendancy.model.CelestialTridentEntityModel
+import me.fzzyhmstrs.imbued_ascendancy.model.CelestialTridentEntityRenderer
 import me.fzzyhmstrs.amethyst_imbuement.model.GlisteringTridentEntityRenderer
 import me.fzzyhmstrs.imbued_ascendancy.IA
 import net.fabricmc.api.EnvType

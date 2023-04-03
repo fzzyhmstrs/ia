@@ -3,6 +3,7 @@ package me.fzzyhmstrs.imbued_ascendancy.config
 import me.fzzyhmstrs.fzzy_config.config_util.ConfigClass
 import me.fzzyhmstrs.fzzy_config.config_util.SyncedConfigHelperV1.readOrCreateAndValidate
 import me.fzzyhmstrs.fzzy_config.config_util.SyncedConfigWithReadMe
+import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedInt
 import me.fzzyhmstrs.fzzy_config.validated_field.map.ValidatedStringBoolMap
 import me.fzzyhmstrs.imbued_ascendancy.IA
 import net.minecraft.util.Identifier
@@ -25,6 +26,15 @@ object IaConfig:
             .space()
             .build())
 {
+
+    private val itemsHeader = buildSectionHeader("items")
+
+    class Items: ConfigClass(itemsHeader){
+
+        var realityTravelTarget = ValidatedInt(1000,10000,1)
+
+    }
+
     private val modifiersHeader = buildSectionHeader("modifiers")
 
     class Modifiers: ConfigClass(modifiersHeader){
@@ -46,7 +56,7 @@ object IaConfig:
 
 
 
-
+    var items = readOrCreateAndValidate("items_v0.json", base = IA.MOD_ID) {Items()}
     var modifiers = readOrCreateAndValidate("modifiers_v0.json", base = IA.MOD_ID) {Modifiers()}
 
     private fun buildSectionHeader(name:String): Header{

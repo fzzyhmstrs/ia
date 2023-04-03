@@ -1,6 +1,6 @@
-package me.fzzyhmstrs.ai_odyssey.model
+package me.fzzyhmstrs.imbued_ascendancy.model
 
-import me.fzzyhmstrs.ai_odyssey.model.CelestialTridentEntityModel.Companion.TEXTURE
+import me.fzzyhmstrs.imbued_ascendancy.model.CelestialTridentEntityModel.Companion.TEXTURE
 import me.fzzyhmstrs.fzzy_core.registry.ItemModelRegistry
 import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterItem
 import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry
