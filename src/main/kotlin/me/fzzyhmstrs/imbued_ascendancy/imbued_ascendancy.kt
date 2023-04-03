@@ -3,10 +3,7 @@
 package me.fzzyhmstrs.imbued_ascendancy
 
 import com.llamalad7.mixinextras.MixinExtrasBootstrap
-import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterBlock
-import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterEntity
-import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterItem
-import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterRenderer
+import me.fzzyhmstrs.imbued_ascendancy.registry.*
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
@@ -22,6 +19,7 @@ object IA: ModInitializer {
         RegisterItem.registerAll()
         RegisterBlock.registerAll()
         RegisterEntity.registerAll()
+        RegisterModifier.registerAll()
     }
 
     fun iaRandom(): Random{
@@ -34,6 +32,7 @@ object IAClient: ClientModInitializer{
 
     override fun onInitializeClient() {
         RegisterRenderer.registerAll()
+        RegisterItemModel.registerAll()
     }
 
     fun iaRandom(): Random{

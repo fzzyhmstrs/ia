@@ -1,7 +1,8 @@
 package me.fzzyhmstrs.imbued_ascendancy.registry
 
-import me.fzzyhmstrs.amethyst_imbuement.AI
-import me.fzzyhmstrs.amethyst_imbuement.entity.GlisteringTridentEntity
+import me.fzzyhmstrs.imbued_ascendancy.IA
+import me.fzzyhmstrs.imbued_ascendancy.entity.CelestialTridentAvatarEntity
+import me.fzzyhmstrs.imbued_ascendancy.entity.CelestialTridentEntity
 import me.fzzyhmstrs.imbued_ascendancy.entity.CrystallineArrowEntity
 import me.fzzyhmstrs.imbued_ascendancy.entity.ImbuedArrowEntity
 import net.fabricmc.fabric.api.`object`.builder.v1.entity.FabricEntityTypeBuilder
@@ -25,9 +26,35 @@ object RegisterEntity {
             )
         },RegisterBlock.DISENCHANTING_TABLE).build(null))*/
 
+    val CELESTIAL_TRIDENT_ENTITY: EntityType<CelestialTridentEntity> = Registry.register(
+        Registries.ENTITY_TYPE,
+        Identifier(IA.MOD_ID, "celestial_trident"),
+        FabricEntityTypeBuilder.create(
+            SpawnGroup.MISC
+        ) { entityType: EntityType<CelestialTridentEntity>, world: World ->
+            CelestialTridentEntity(
+                entityType,
+                world
+            )
+        }.dimensions(EntityDimensions.fixed(0.5f, 0.5f)).trackRangeChunks(4).trackedUpdateRate(20).build()
+    )
+
+    val CELESTIAL_TRIDENT_AVATAR_ENTITY: EntityType<CelestialTridentAvatarEntity> = Registry.register(
+        Registries.ENTITY_TYPE,
+        Identifier(IA.MOD_ID, "celestial_trident_avatar"),
+        FabricEntityTypeBuilder.create(
+            SpawnGroup.MISC
+        ) { entityType: EntityType<CelestialTridentAvatarEntity>, world: World ->
+            CelestialTridentAvatarEntity(
+                entityType,
+                world
+            )
+        }.dimensions(EntityDimensions.fixed(0.5f, 0.5f)).trackRangeChunks(4).trackedUpdateRate(20).build()
+    )
+
     val IMBUED_ARROW_ENTITY: EntityType<ImbuedArrowEntity> = Registry.register(
         Registries.ENTITY_TYPE,
-        Identifier(AI.MOD_ID, "imbued_arrow"),
+        Identifier(IA.MOD_ID, "imbued_arrow"),
         FabricEntityTypeBuilder.create(
             SpawnGroup.MISC
         ) { entityType: EntityType<ImbuedArrowEntity>, world: World ->
@@ -40,7 +67,7 @@ object RegisterEntity {
 
     val CRYSTALLINE_ARROW_ENTITY: EntityType<CrystallineArrowEntity> = Registry.register(
         Registries.ENTITY_TYPE,
-        Identifier(AI.MOD_ID, "crystalline_arrow"),
+        Identifier(IA.MOD_ID, "crystalline_arrow"),
         FabricEntityTypeBuilder.create(
             SpawnGroup.MISC
         ) { entityType: EntityType<CrystallineArrowEntity>, world: World ->

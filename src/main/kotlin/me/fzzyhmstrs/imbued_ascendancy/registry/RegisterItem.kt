@@ -5,12 +5,11 @@ package me.fzzyhmstrs.imbued_ascendancy.registry
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
 import me.fzzyhmstrs.amethyst_imbuement.item.AiItemSettings
 import me.fzzyhmstrs.amethyst_imbuement.item.CopperWardItem
+import me.fzzyhmstrs.amethyst_imbuement.item.GlisteringTridentItem
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem
-import me.fzzyhmstrs.imbued_ascendancy.item.ImbuedArrowItem
+import me.fzzyhmstrs.fzzy_core.item_util.CustomFlavorItem
 import me.fzzyhmstrs.imbued_ascendancy.IA
-import me.fzzyhmstrs.imbued_ascendancy.item.CrystallineArrowItem
-import me.fzzyhmstrs.imbued_ascendancy.item.SteelJewelryItem
-import me.fzzyhmstrs.imbued_ascendancy.item.SteelWardItem
+import me.fzzyhmstrs.imbued_ascendancy.item.*
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.entity.attribute.EntityAttributes
@@ -18,6 +17,7 @@ import net.minecraft.item.Item
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.util.Identifier
+import net.minecraft.util.Rarity
 import java.util.*
 
 // don't know if this is better as a class or object. as an object it allows me to call it without needing to initialize an instance of it.
@@ -25,7 +25,12 @@ object RegisterItem {
 
     private val regItem: MutableMap<String, Item> = mutableMapOf()
 
+    //raw materials
+    val MYSTIC_FRAGMENT = CustomFlavorItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.EPIC)).withGlint().also{ regItem["mystic_fragment"] = it}
+
     //tools and weapons
+    val CELESTIAL_TRIDENT = CelestialTridentItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(2650).rarity(
+        Rarity.EPIC)).also{ regItem["celestial_trident"] = it}
     val CRYSTALLINE_ARROW = CrystallineArrowItem(FabricItemSettings()).also{ regItem["crystalline_arrow"] = it}
     val IMBUED_ARROW = ImbuedArrowItem(FabricItemSettings()).also{ regItem["imbued_arrow"] = it}
         val COPPER_RING = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_ring"] = it}

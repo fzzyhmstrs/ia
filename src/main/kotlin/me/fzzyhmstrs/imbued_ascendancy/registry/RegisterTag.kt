@@ -8,7 +8,4 @@ import net.minecraft.util.Identifier
 @Suppress("unused")
 object RegisterTag {
 
-    val GEMS_TAG: TagKey<Item> = TagKey.of(RegistryKeys.ITEM,Identifier("c","gems"))
-    
-
 }
