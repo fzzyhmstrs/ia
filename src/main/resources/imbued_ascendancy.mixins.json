@@ -3,6 +3,7 @@
   "package": "me.fzzyhmstrs.imbued_ascendancy.mixins",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "ServerPlayerEntityMixin"
   ],
   "client": [
   ],
