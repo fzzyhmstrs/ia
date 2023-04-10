@@ -1,4 +1,4 @@
-package me.fzzyhmstrs.imbued_ascendancy.item
+package me.fzzyhmstrs.imbued_ascendancy.item.promise
 
 import me.fzzyhmstrs.amethyst_imbuement.item.promise.IgnitedGemItem
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterCriteria
@@ -15,14 +15,14 @@ import net.minecraft.util.Identifier
 import net.minecraft.util.math.BlockPos
 import kotlin.math.sqrt
 
-class RealityGemItem(settings: Settings): IgnitedGemItem(settings) {
+class VoidGemItem(settings: Settings): IgnitedGemItem(settings) {
 
     private val TELEPORT_TARGET by lazy{
         IaConfig.items.realityTravelTarget.get()
     }
 
     override fun getModifier(): Identifier {
-        return Identifier("amethyst_imbuement:traveler")
+        return Identifier("imbued_ascendancy:void_touched")
     }
 
     override fun giveTooltipHint(nbt: NbtCompound, stack: ItemStack, tooltip: MutableList<Text>) {

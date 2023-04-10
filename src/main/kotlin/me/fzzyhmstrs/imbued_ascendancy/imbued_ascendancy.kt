@@ -16,8 +16,9 @@ object IA: ModInitializer {
     const val MOD_ID = "imbued_ascendancy"
 
     override fun onInitialize() {
-        RegisterItem.registerAll()
         RegisterBlock.registerAll()
+        RegisterArmor.registerAll()
+        RegisterItem.registerAll()
         RegisterEntity.registerAll()
         RegisterModifier.registerAll()
     }
