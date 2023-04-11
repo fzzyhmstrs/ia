@@ -17,38 +17,20 @@ import kotlin.math.sqrt
 
 class VoidGemItem(settings: Settings): IgnitedGemItem(settings) {
 
-    private val TELEPORT_TARGET by lazy{
-        IaConfig.items.realityTravelTarget.get()
-    }
-
     override fun getModifier(): Identifier {
         return Identifier("imbued_ascendancy:void_touched")
     }
 
-    override fun giveTooltipHint(nbt: NbtCompound, stack: ItemStack, tooltip: MutableList<Text>) {
-        if (nbt.contains("teleported")){
-            val teleported = nbt.getInt("teleported").toFloat()
-            val progress = teleported/ TELEPORT_TARGET * 100.0F
-            tooltip.add(AcText.translatable("item.amethyst_imbuement.gem_of_promise.reality", progress).formatted(Formatting.DARK_GREEN))
-        }
+    override fun giveTooltipHint(nbt: NbtCompound, stack: ItemStack, tooltip: MutableList<Text>){
     }
 
-    fun realityGemCheck(stack: ItemStack,startPos: BlockPos, endPos: BlockPos, inventory: PlayerInventory){
-        if (startPos == endPos) return
-        val nbt = stack.orCreateNbt
-        val distance = nbt.getInt("teleported")
-        val newDistance  = sqrt(endPos.getSquaredDistance(endPos)).toInt() + distance
-        if (newDistance >= TELEPORT_TARGET){
-            stack.decrement(1)
-            val newStack = ItemStack(RegisterItem.REALITY_GEM)
-            inventory.offerOrDrop(newStack)
-            val player = inventory.player
-            if (player is ServerPlayerEntity) {
-                RegisterCriteria.IGNITE.trigger(player)
-            }
-        } else {
-            nbt.putInt("teleported",newDistance)
+    fun voidGemCheck(stack: ItemStack, inventory: PlayerInventory){
+        stack.decrement(1)
+        val newStack = ItemStack(RegisterItem.VOID_GEM)
+        inventory.offerOrDrop(newStack)
+        val player = inventory.player
+        if (player is ServerPlayerEntity) {
+            RegisterCriteria.IGNITE.trigger(player)
         }
     }
-
 }
