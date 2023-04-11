@@ -59,9 +59,9 @@ object RegisterArmor {
         Registry.register(Registries.ITEM, Identifier(IA.MOD_ID,"glowing_chestplate"), GLOWING_CHESTPLATE)
         Registry.register(Registries.ITEM, Identifier(IA.MOD_ID,"glowing_leggings"), GLOWING_LEGGINGS)
         Registry.register(Registries.ITEM, Identifier(IA.MOD_ID,"glowing_boots"), GLOWING_BOOTS)
-        Registry.register(Registries.ITEM, Identifier(IA.MOD_ID,"celestial_helm"), CELESTIAL_HELM)
-        Registry.register(Registries.ITEM, Identifier(IA.MOD_ID,"celestial_plate"), CELESTIAL_PLATE)
-        Registry.register(Registries.ITEM, Identifier(IA.MOD_ID,"celestial_greaves"), CELESTIAL_GREAVES)
-        Registry.register(Registries.ITEM, Identifier(IA.MOD_ID,"celestial_treads"), CELESTIAL_TREADS)
+        Registry.register(Registries.ITEM, Identifier(IA.MOD_ID,"celestial_helmet"), CELESTIAL_HELM)
+        Registry.register(Registries.ITEM, Identifier(IA.MOD_ID,"celestial_chestplate"), CELESTIAL_PLATE)
+        Registry.register(Registries.ITEM, Identifier(IA.MOD_ID,"celestial_leggings"), CELESTIAL_GREAVES)
+        Registry.register(Registries.ITEM, Identifier(IA.MOD_ID,"celestial_boots"), CELESTIAL_TREADS)
     }
 }
