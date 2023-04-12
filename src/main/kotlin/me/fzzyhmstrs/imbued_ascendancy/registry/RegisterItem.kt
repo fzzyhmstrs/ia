@@ -9,6 +9,7 @@ import me.fzzyhmstrs.amethyst_imbuement.item.custom.CustomHoeItem
 import me.fzzyhmstrs.imbued_ascendancy.IA
 import me.fzzyhmstrs.imbued_ascendancy.item.*
 import me.fzzyhmstrs.imbued_ascendancy.item.promise.RealityGemItem
+import me.fzzyhmstrs.imbued_ascendancy.item.promise.VoidGemItem
 import me.fzzyhmstrs.imbued_ascendancy.tool.SteelToolMaterial
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.entity.attribute.EntityAttributeModifier
@@ -26,11 +27,13 @@ object RegisterItem {
     private val regItem: MutableMap<String, Item> = mutableMapOf()
 
     //raw materials
+    val SARDONYX = Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM)).also{ regItem["sardonyx"] = it}
     val REALITY_GEM = RealityGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)).also{ regItem["reality_gem"] = it}
     val VOID_GEM = VoidGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)).also{ regItem["void_gem"] = it}
     val MYSTIC_FRAGMENT = SpellcastersReagentFlavorItem(RegisterAttribute.DAMAGE_MULTIPLICATION,
         EntityAttributeModifier(UUID.fromString("f2a00170-d1c6-11ed-afa1-0242ac120002"),"mystic_modifier",-0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
         AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.EPIC)).withGlint().also{ regItem["mystic_fragment"] = it}
+
 
     //tools and weapons
     val CELESTIAL_TRIDENT = CelestialTridentItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(2650).rarity(

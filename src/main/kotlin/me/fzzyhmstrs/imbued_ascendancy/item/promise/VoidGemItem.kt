@@ -18,7 +18,7 @@ import kotlin.math.sqrt
 class VoidGemItem(settings: Settings): IgnitedGemItem(settings) {
 
     override fun getModifier(): Identifier {
-        return Identifier("imbued_ascendancy:void_touched")
+        return Identifier("imbued_ascendancy:call_of_the_void")
     }
 
     override fun giveTooltipHint(nbt: NbtCompound, stack: ItemStack, tooltip: MutableList<Text>){

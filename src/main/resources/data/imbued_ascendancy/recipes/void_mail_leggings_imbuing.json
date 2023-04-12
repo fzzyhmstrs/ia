@@ -1,16 +1,16 @@
 {
   "type": "amethyst_imbuement:imbuing",
   "imbueA": {
-	"item": "imbued_ascendancy:onyx"
+	"item": "imbued_ascendancy:sardonyx"
   },
   "imbueB": {
-	"item": "imbued_ascendancy:onyx"
+	"item": "imbued_ascendancy:sardonyx"
   },
   "imbueC": {
-	"item": "imbued_ascendancy:onyx"
+	"item": "imbued_ascendancy:sardonyx"
   },
   "imbueD": {
-	"item": "imbued_ascendancy:onyx"
+	"item": "imbued_ascendancy:sardonyx"
   },
   "craftA": {
 	"item": "minecraft:chain"

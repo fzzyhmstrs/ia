@@ -36,6 +36,7 @@ object RegisterArmor {
 
     //Void Mail Set - Magic resistance - make with void gem, toss into void?
 
+
     //Lapidarists Gear - Sockets, have the witch orb modifiers be socketable? The basic gems too??
 
     //Lich-kings Robes - summoning magic
