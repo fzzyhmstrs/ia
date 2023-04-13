@@ -12,27 +12,23 @@
   "imbueD": {
 	"item": "imbued_ascendancy:null_onyx"
   },
-  "craftA": {
-	"item": "minecraft:chain"
-  },
   "craftB": {
 	"item": "imbued_ascendancy:void_gem"
   },
-  "craftC": {
-	"item": "minecraft:chain"
-  },
   "craftD": {
-	"item": "minecraft:chain"
+	"item": "imbued_ascendancy:null_powder"
   },
   "craftE": {
-	"item": "amethyst_imbuement:steel_helmet"
+	"item": "amethyst_imbuement:glowing_blade"
   },
   "craftF": {
-	"item": "minecraft:chain"
+	"item": "imbued_ascendancy:null_powder"
   },
-  "title": "Void Mail Helmet",
-  "cost": 27,
-  "resultA": "imbued_ascendancy:void_mail_helmet",
-  "countA": 1,
-  "transferEnchant": true
+  "craftH": {
+	"item": "imbued_ascendancy:null_powder"
+  },
+  "title": "Nihil Blade",
+  "cost": 19,
+  "resultA": "imbued_ascendancy:nihil_blade",
+  "countA": 1
 }

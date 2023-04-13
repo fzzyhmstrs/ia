@@ -9,13 +9,17 @@ class ConfigEquipmentModifier(
     modifierId: Identifier = AbstractModifierHelper.BLANK,
     target: EquipmentModifierTarget = EquipmentModifierTarget.NONE,
     weight: Int = 10,
-    rarity: Rarity = Rarity.COMMON)
+    rarity: Rarity = Rarity.COMMON,
+    persistent: Boolean = false,
+    availableForSelection: Boolean = true)
 : EquipmentModifier(
     modifierId,
     target,
     weight,
-    rarity
-){
+    rarity,
+    persistent,
+    availableForSelection)
+{
 
     override fun randomlySelectable(): Boolean{
         return IaConfig.modifiers.isModifierEnabled(modifierId)

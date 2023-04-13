@@ -1,4 +1,4 @@
-package me.fzzyhmstrs.imbued_ascendancy.item
+package me.fzzyhmstrs.imbued_ascendancy.item.weapon
 
 import me.fzzyhmstrs.imbued_ascendancy.entity.ImbuedArrowEntity
 import net.minecraft.entity.LivingEntity

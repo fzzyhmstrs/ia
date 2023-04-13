@@ -1,4 +1,4 @@
-package me.fzzyhmstrs.imbued_ascendancy.item
+package me.fzzyhmstrs.imbued_ascendancy.item.weapon
 
 import com.google.common.collect.ImmutableMultimap
 import com.google.common.collect.Multimap

@@ -1,8 +1,10 @@
 package me.fzzyhmstrs.imbued_ascendancy.config
 
 import me.fzzyhmstrs.fzzy_config.config_util.ConfigClass
+import me.fzzyhmstrs.fzzy_config.config_util.ReadMeText
 import me.fzzyhmstrs.fzzy_config.config_util.SyncedConfigHelperV1.readOrCreateAndValidate
 import me.fzzyhmstrs.fzzy_config.config_util.SyncedConfigWithReadMe
+import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedFloat
 import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedInt
 import me.fzzyhmstrs.fzzy_config.validated_field.map.ValidatedStringBoolMap
 import me.fzzyhmstrs.imbued_ascendancy.IA
@@ -49,6 +51,9 @@ object IaConfig:
             "Needs to be a valid modifier identifier string"
         )
 
+        @ReadMeText("ia.readme.modifiers.voidShroudedMultiplier")
+        var voidShroudedMultiplier = ValidatedFloat(0.84f,1.0f)
+        var nihilBladeNothingnessChance = ValidatedFloat(0.15f,1.0f)
 
     }
 
