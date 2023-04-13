@@ -5,16 +5,21 @@
 	"imbued_ascendancy.advancement.crystalline_beginnings": "Imbued Ascendancy",
 	"imbued_ascendancy.advancement.crystalline_beginnings.desc": "tbd",
 	
+	"item.imbued_ascendancy.sardonyx": "Sardonyx",
+	"item.imbued_ascendancy.null_onyx": "Null Onyx",
+	"item.imbued_ascendancy.serpentine": "Serpentine",
 	"item.imbued_ascendancy.reality_gem": "Reality Gem",
 	"item.amethyst_imbuement.gem_of_promise.reality": "Reality progress: %1$s%%",
 	"item.imbued_ascendancy.void_gem": "Void Gem",
 	"item.imbued_ascendancy.mystic_fragment": "Mystic Fragment",
 	"item.imbued_ascendancy.mystic_fragment.flavor": "It sparkles with a surreal rainbow of hues.",
+	"item.imbued_ascendancy.null_powder": "Null Powder",
 	
 	"item.imbued_ascendancy.celestial_trident": "Celestial Trident",
 	"item.imbued_ascendancy.celestial_trident.flavor": "It blazes with the power of the heavens.",
 	"item.imbued_ascendancy.crystalline_arrow": "Crystalline Arrow",
 	"item.imbued_ascendancy.imbued_arrow": "Imbued Arrow",
+	"item.imbued_ascendancy.gem_and_steel": "Gem and Steel",
 	"item.imbued_ascendancy.steel_amulet": "Steel Amulet",
 	"item.imbued_ascendancy.steel_amulet.flavor": "You are loved.",
 	"item.imbued_ascendancy.steel_headband": "Steel Headband",
@@ -29,6 +34,7 @@
 	"item.imbued_ascendancy.steel_shovel": "Steel Shovel",
 	"item.imbued_ascendancy.steel_sword": "Steel Sword",
 	"item.imbued_ascendancy.steel_horse_armor": "Steel Horse Armor",
+	"item.imbued_ascendancy.nihil_blade": "Nihil Blade",
 	"item.imbued_ascendancy.garnet_helmet": "Garnet Helmet",
 	"item.imbued_ascendancy.garnet_chestplate": "Garnet Chestplate",
 	"item.imbued_ascendancy.garnet_leggings": "Garnet Leggings",
@@ -48,17 +54,11 @@
 	
 	"enchantment.imbued_ascendancy.heroic.desc": "Increases damage against illagers.",
 	
-	"container.imbuing_table": "Imbue",
+	"effect.imbued_ascendancy.nihilism": "Nihilism",
 	
-	"effect.imbued_ascendancy.custom_absorption": "Shielding",
+	"recipe.altar_imbuing": "Altar Imbuing",
 	
-	"key.imbued_ascendancy.vein_mine_key": "Vein Mine",
-	
-	"chat.imbued_ascendancy.no_spell": "Spells not activated yet...",
-	
-	"recipe.enhancing": "Enhancing",
-	
-	"itemGroup.imbued_ascendancy.ai_group": "Amethyst Imbuement",
+	"itemGroup.imbued_ascendancy.ia_group": "Imbued Ascendancy",
 	
 	"tag.imbued_ascendancy.disenchant_pillar_blocks": "Disenchanting Table Pillar Blocks",
 	
@@ -66,8 +66,28 @@
 	
 	"augment_damage.strength.burnout": "Strength augment burnt out!",
 	
-	"scepter.modifier.imbued_ascendancy:traveler": "Traveler",
-	"scepter.modifier.imbued_ascendancy:traveler.desc": "Bonus to spells that involve movement",
+	"scepter.modifier.imbued_ascendancy:wisened": "Wisened",
+	"scepter.modifier.imbued_ascendancy:very_experienced": "Very Experienced",
+	"scepter.modifier.imbued_ascendancy:experienced": "Experience",
+	"scepter.modifier.imbued_ascendancy:inexperienced": "Inexperience",
+	"scepter.modifier.imbued_ascendancy:inept": "Inept",
+	"scepter.modifier.imbued_ascendancy:mana_vampiric": "Mana-Vampiric",
+	"scepter.modifier.imbued_ascendancy:mana_draining": "Mana-Draining",
+	"scepter.modifier.imbued_ascendancy:mana_reactive": "Mana-Reactive",
+	"scepter.modifier.imbued_ascendancy:void_shrouded": "Void Shrouded",
+	"scepter.modifier.imbued_ascendancy:mana_kindled": "Mana Kindled",
+	"scepter.modifier.imbued_ascendancy:nothingness": "Nothingness",
+	"scepter.modifier.imbued_ascendancy:wisened.desc": "Adds 1.5 experience whenever a player gains xp",
+	"scepter.modifier.imbued_ascendancy:very_experienced.desc": "Adds 0.75 experience whenever a player gains xp",
+	"scepter.modifier.imbued_ascendancy:experienced.desc": "Adds 0.25 experience whenever a player gains xp",
+	"scepter.modifier.imbued_ascendancy:inexperienced.desc": "Removes 0.25 expereince from the amount a player would gain",
+	"scepter.modifier.imbued_ascendancy:inept.desc": "Removes 1.0 expereince from the amount a player would gain",
+	"scepter.modifier.imbued_ascendancy:mana_vampiric.desc": "Mana-Vampiric",
+	"scepter.modifier.imbued_ascendancy:mana_draining.desc": "Mana-Draining",
+	"scepter.modifier.imbued_ascendancy:mana_reactive.desc": "Mana-Reactive",
+	"scepter.modifier.imbued_ascendancy:void_shrouded.desc": "Provides protection from magical attacks",
+	"scepter.modifier.imbued_ascendancy:mana_kindled.desc": "Increases spell damage and reduces cooldown",
+	"scepter.modifier.imbued_ascendancy:nothingness.desc": "Attacks have a chance to reduce the targets maximum health temporarily",
 	
 	"enchantment_lore.imbued_ascendancy:heroic.description": "Heroic\n\nMax Level: VII\n\nIncreases damage against illagers."
 	
