@@ -44,19 +44,58 @@ object RegisterModifier {
     }
 
     //Random equipment modifiers
-    val SHARP = buildModifier(Identifier(IA.MOD_ID,"sharp"), EquipmentModifier.EquipmentModifierTarget.WEAPON_AND_TRINKET, 12)
+    //player experience
+    val WISENED = buildModifier(
+        Identifier(IA.MOD_ID,"wisened"), EquipmentModifier.EquipmentModifierTarget.WEAPON_AND_TRINKET, 3, EquipmentModifier.Rarity.EPIC)
         .withAttributeModifier(
-            EntityAttributes.GENERIC_ATTACK_DAMAGE,0.5, EntityAttributeModifier.Operation.ADDITION)
-        .withToll(CHEAP_TOLL)
+            RegisterAttribute.PLAYER_EXPERIENCE,1.5, EntityAttributeModifier.Operation.ADDITION)
+        .withToll(VERY_EXPENSIVE_TOLL)
         .also { regMod.add(it) }
-    val DULL = buildModifier(
-        Identifier(IA.MOD_ID,"dull"), EquipmentModifier.EquipmentModifierTarget.WEAPON_AND_TRINKET, 8, EquipmentModifier.Rarity.BAD)
+    val VERY_EXPERIENCED = buildModifier(
+        Identifier(IA.MOD_ID,"very_experienced"), EquipmentModifier.EquipmentModifierTarget.WEAPON_AND_TRINKET, 6, EquipmentModifier.Rarity.UNCOMMON)
         .withAttributeModifier(
-            EntityAttributes.GENERIC_ATTACK_DAMAGE,-0.5, EntityAttributeModifier.Operation.ADDITION)
-        .withDescendant(SHARP)
-        .withToll(CHEAP_TOLL)
+            RegisterAttribute.PLAYER_EXPERIENCE,0.75, EntityAttributeModifier.Operation.ADDITION)
+        .withDescendant(WISENED)
+        .withToll(EXPENSIVE_TOLL)
+        .also { regMod.add(it) }
+    val EXPERIENCED = buildModifier(Identifier(IA.MOD_ID,"experienced"), EquipmentModifier.EquipmentModifierTarget.WEAPON_AND_TRINKET, 10)
+        .withAttributeModifier(
+            RegisterAttribute.PLAYER_EXPERIENCE,0.25, EntityAttributeModifier.Operation.ADDITION)
+        .withDescendant(VERY_EXPERIENCED)
+        .also { regMod.add(it) }
+    val INEXPERIENCED = buildModifier(
+        Identifier(IA.MOD_ID,"inexperienced"), EquipmentModifier.EquipmentModifierTarget.WEAPON_AND_TRINKET, 7, EquipmentModifier.Rarity.BAD)
+        .withAttributeModifier(
+            RegisterAttribute.PLAYER_EXPERIENCE,-0.25, EntityAttributeModifier.Operation.ADDITION)
+        .withDescendant(EXPERIENCED)
+        .also { regMod.add(it) }
+    val INEPT = buildModifier(
+        Identifier(IA.MOD_ID,"inept"), EquipmentModifier.EquipmentModifierTarget.WEAPON_AND_TRINKET, 2, EquipmentModifier.Rarity.REALLY_BAD)
+        .withAttributeModifier(
+            RegisterAttribute.PLAYER_EXPERIENCE,-1.0, EntityAttributeModifier.Operation.ADDITION)
+        .withDescendant(INEXPERIENCED)
+        .withToll(VERY_EXPENSIVE_TOLL)
+        .also { regMod.add(it) }
+    
+    //mana gaining modifier (repairing scepters and totems etc)
+    val MANA_VAMPIRIC = buildModifier(Identifier(IA.MOD_ID,"mana_vampiric"), EquipmentModifier.EquipmentModifierTarget.WEAPON, 5, EquipmentModifier.Rarity.RARE)
+        .withPostHit(ModifierConsumers.MANA_VAMPIRIC_HIT_CONSUMER)
+        .withKilledOther(ModifierConsumers.MANA_VAMPIRIC_KILL_CONSUMER)
+        .withToll(EXPENSIVE_TOLL)
+        .also { regMod.add(it) }
+    val MANA_DRAINING = buildModifier(Identifier(IA.MOD_ID,"mana_draining"), EquipmentModifier.EquipmentModifierTarget.WEAPON, 3, EquipmentModifier.Rarity.BAD)
+        .withPostHit(ModifierConsumers.MANA_DRAINING_HIT_CONSUMER)
+        .withKilledOther(ModifierConsumers.MANA_DRAINING_KILL_CONSUMER)
+        .withToll(EXPENSIVE_TOLL)
+        .also { regMod.add(it) }
+        
+    val MANA_REACTIVE = buildModifier(Identifier(IA.MOD_ID,"mana_reactive"), EquipmentModifier.EquipmentModifierTarget.ARMOR, 5, EquipmentModifier.Rarity.RARE)
+        .withOnDamaged(ModifierFunctions.MANA_REACTIVE_FUNCTION)
+        .withToll(EXPENSIVE_TOLL)
         .also { regMod.add(it) }
 
+    /////////////////////////////////////////////////
+        
     //Set and Special equipment modifiers
     val VOID_SHROUDED = buildModifier(Identifier(IA.MOD_ID,"void_shrouded"), persistent = true, availableForSelection = false)
         .withOnDamaged(ModifierFunctions.VOID_SHROUDED_DAMAGE_FUNCTION)
