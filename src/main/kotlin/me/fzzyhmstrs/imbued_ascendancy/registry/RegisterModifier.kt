@@ -1,6 +1,7 @@
 package me.fzzyhmstrs.imbued_ascendancy.registry
 
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
+import me.fzzyhmstrs.amethyst_imbuement.modifier.ModifierPredicates
 import me.fzzyhmstrs.fzzy_core.modifier_util.AbstractModifier
 import me.fzzyhmstrs.fzzy_core.registry.ModifierRegistry
 import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifier
@@ -43,6 +44,9 @@ object RegisterModifier {
         return ConfigEquipmentModifier(modifierId,target,weight,rarity,persistent, availableForSelection)
     }
 
+    //scepter modifiers
+    val DAMNABLE_SUMMONS = AugmentModifier(Identifier(AI.MOD_ID,"damnable_summons"), cooldownModifier = -6.25).withDamage(1f).withSpellToAffect(ModifierPredicates.SUMMONERS_PREDICATE).also { regMod[it] = 6 }
+    
     //Random equipment modifiers
     //player experience
     val WISENED = buildModifier(
@@ -106,6 +110,12 @@ object RegisterModifier {
         .also { regMod.add(it) }
     val NOTHINGNESS = buildModifier(Identifier(IA.MOD_ID,"nothingness"), persistent = true, availableForSelection = false)
         .withPostHit(ModifierConsumers.NOTHINGNESS_HIT_CONSUMER)
+        .also { regMod.add(it) }
+    val RULER_OF_THE_DAMNED = buildModifier(Identifier(IA.MOD_ID,"ruler_of_the_damned"), persistent = true, availableForSelection = false)
+        .withModifiers(DAMNABLE_SUMMONS.modifierId)
+        .also { regMod.add(it) }
+    val SOLARPHOBIA = buildModifier(Identifier(IA.MOD_ID,"solarphobia"), persistent = true, availableForSelection = false)
+        .withOnDamaged(ModifierFunctions.SOLARPHOBIA_DAMAGE_FUNCTION)
         .also { regMod.add(it) }
 
 
