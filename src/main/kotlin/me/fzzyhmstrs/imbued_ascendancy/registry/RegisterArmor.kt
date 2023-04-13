@@ -46,7 +46,11 @@ object RegisterArmor {
     //Lapidarists Gear - Sockets, have the witch orb modifiers be socketable? The basic gems too??
     //probably going to hold off for now, so I don't have to focus on the slots API for the moment
 
-    //Lich-kings Robes - summoning magic
+    //Lich-kings Robes - summoning magic, takes more damage during the day
+    val LICH_KINGS_HELMET = LichKingsRobesArmorItem(EquipmentSlot.HEAD,Item.Settings()).also { regArmor["lich_kings_helmet"] = it }
+    val LICH_KINGS_CHESTPLATE = LichKingsRobesArmorItem(EquipmentSlot.CHEST,Item.Settings()).also { regArmor["lich_kings_chestplate"] = it }
+    val LICH_KINGS_LEGGINGS = LichKingsRobesArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["lich_kings_leggings"] = it }
+    val LICH_KINGS_BOOTS = LichKingsRobesArmorItem(EquipmentSlot.FEET,Item.Settings()).also { regArmor["lich_kings_boots"] = it }
 
     //Spellbades Armor - spell damage and cooldown
     val SPELLBLADES_HELMET = SpellbladesArmorArmorItem(EquipmentSlot.HEAD,Item.Settings()).also { regArmor["spellblades_helmet"] = it }
