@@ -62,8 +62,8 @@ object RegisterModifier {
         .withOnDamaged(ModifierFunctions.VOID_SHROUDED_DAMAGE_FUNCTION)
         .also { regMod.add(it) }
     val MANA_KINDLED = buildModifier(Identifier(IA.MOD_ID,"mana_kindled"), persistent = true, availableForSelection = false)
-        .withAttributeModifier(RegisterAttribute.SPELL_DAMAGE,0.05,EntityAttributeModifier.Operation.ADDITION)
-        .withAttributeModifier(RegisterAttribute.SPELL_COOLDOWN,0.0625,EntityAttributeModifier.Operation.ADDITION)
+        .withAttributeModifier(RegisterAttribute.SPELL_DAMAGE,0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+        .withAttributeModifier(RegisterAttribute.SPELL_COOLDOWN,-0.0625,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
         .also { regMod.add(it) }
     val NOTHINGNESS = buildModifier(Identifier(IA.MOD_ID,"nothingness"), persistent = true, availableForSelection = false)
         .withPostHit(ModifierConsumers.NOTHINGNESS_HIT_CONSUMER)
