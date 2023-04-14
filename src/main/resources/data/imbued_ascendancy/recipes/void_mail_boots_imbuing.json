@@ -30,9 +30,9 @@
   "craftI": {
 	"item": "minecraft:chain"
   },
-  "title": "Void Mail Helmet",
-  "cost": 33,
-  "resultA": "imbued_ascendancy:void_mail_helmet",
+  "title": "Void Mail Boots",
+  "cost": 27,
+  "resultA": "imbued_ascendancy:void_mail_boots",
   "countA": 1,
   "transferEnchant": true
 }

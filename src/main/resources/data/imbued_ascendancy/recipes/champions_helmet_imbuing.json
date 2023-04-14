@@ -1,0 +1,38 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "craftA": {
+	"item": "minecraft:obsidian"
+  },
+  "craftB": {
+	"item": "amethyst_imbuement:beryl_copper_ingot"
+  },
+  "craftC": {
+	"item": "minecraft:obsidian"
+  },
+  "craftD": {
+	"item": "amethyst_imbuement:beryl_copper_ingot"
+  },
+  "craftE": {
+	"item": "imbued_ascendancy:glowing_helmet"
+  },
+  "craftF": {
+	"item": "amethyst_imbuement:beryl_copper_ingot"
+  },
+  "title": "Champions Helmet",
+  "cost": 33,
+  "resultA": "imbued_ascendancy:champions_helmet",
+  "countA": 1,
+  "transferEnchant": true
+}

@@ -7,8 +7,14 @@ import net.minecraft.util.Identifier
 
 class VoidMailArmorItem(slot: EquipmentSlot,settings: Settings): WitchClassArmorItem(VoidMailArmorMaterial(),slot,settings) {
 
-    override fun modifiers(): List<Identifier> {
-        return listOf(RegisterModifier.VOID_SHROUDED.modifierId)
+    private val modifiers = mutableListOf(RegisterModifier.VOID_SHROUDED.modifierId)
+
+    override fun defaultEquipmentModifiers(): MutableList<Identifier> {
+        return modifiers
+    }
+
+    override fun celestialModifiers(): List<Identifier> {
+        return modifiers
     }
 
 }

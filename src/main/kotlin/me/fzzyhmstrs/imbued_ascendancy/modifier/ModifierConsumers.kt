@@ -17,4 +17,35 @@ object ModifierConsumers {
             }
         }
 
+    val MANA_VAMPIRIC_HIT_CONSUMER: EquipmentModifier.ToolConsumer =
+        EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
+            if (target == null) return@ToolConsumer
+            if (user.world.random.nextFloat() < IaConfig.modifiers.nihilBladeNothingnessChance.get()){
+                EffectQueue.addStatusToQueue(target, StatusEffects.WEAKNESS,50,1)
+            }
+        }
+
+    val MANA_VAMPIRIC_KILL_CONSUMER: EquipmentModifier.ToolConsumer =
+        EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
+            if (target == null) return@ToolConsumer
+            if (user.world.random.nextFloat() < IaConfig.modifiers.nihilBladeNothingnessChance.get()){
+                EffectQueue.addStatusToQueue(target, StatusEffects.WEAKNESS,50,1)
+            }
+        }
+
+    val MANA_DRAINING_HIT_CONSUMER: EquipmentModifier.ToolConsumer =
+        EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
+            if (target == null) return@ToolConsumer
+            if (user.world.random.nextFloat() < IaConfig.modifiers.nihilBladeNothingnessChance.get()){
+                EffectQueue.addStatusToQueue(target, StatusEffects.WEAKNESS,50,1)
+            }
+        }
+
+    val MANA_DRAINING_KILL_CONSUMER: EquipmentModifier.ToolConsumer =
+        EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
+            if (target == null) return@ToolConsumer
+            if (user.world.random.nextFloat() < IaConfig.modifiers.nihilBladeNothingnessChance.get()){
+                EffectQueue.addStatusToQueue(target, StatusEffects.WEAKNESS,50,1)
+            }
+        }
 }

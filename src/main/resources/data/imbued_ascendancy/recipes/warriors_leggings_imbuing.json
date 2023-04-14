@@ -1,0 +1,44 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "craftA": {
+    "item": "imbued_ascendancy:puresteel"
+  },
+  "craftB": {
+    "item": "amethyst_imbuement:brutal_gem"
+  },
+  "craftC": {
+    "item": "imbued_ascendancy:puresteel"
+  },
+  "craftD": {
+	"item": "imbued_ascendancy:puresteel"
+  },
+  "craftE": {
+	"item": "imbued_ascendancy:glowing_leggings"
+  },
+  "craftF": {
+	"item": "imbued_ascendancy:puresteel"
+  },
+  "craftG": {
+	"item": "imbued_ascendancy:puresteel"
+  },
+  "craftI": {
+	"item": "imbued_ascendancy:puresteel"
+  },
+  "title": "Warriors Leggings",
+  "cost": 35,
+  "resultA": "imbued_ascendancy:warriors_leggings",
+  "countA": 1,
+  "transferEnchant": true
+}

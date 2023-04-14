@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S S",
+    "S S"
+  ],
+  "key": {
+    "S": {
+      "item": "imbued_ascendancy:shimmering_fabric"
+    }
+  },
+  "result": {
+    "item": "imbued_ascendancy:shimmering_boots",
+    "count": 1
+  }
+}

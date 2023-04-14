@@ -1,0 +1,46 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "minecraft:lily_of_the_valley"
+  },
+  "imbueB": {
+	"item": "minecraft:lily_of_the_valley"
+  },
+  "imbueC": {
+	"item": "minecraft:lily_of_the_valley"
+  },
+  "imbueD": {
+	"item": "minecraft:lily_of_the_valley"
+  },
+  "craftA": {
+	"item": "imbued_ascendancy:null_powder"
+  },
+  "craftB": {
+    "tag": "c:steel_ingots"
+  },
+  "craftC": {
+	"item": "imbued_ascendancy:null_powder"
+  },
+  "craftD": {
+    "tag": "c:steel_ingots"
+  },
+  "craftE": {
+	"item": "minecraft:rotten_flesh"
+  },
+  "craftF": {
+    "tag": "c:steel_ingots"
+  },
+  "craftG": {
+	"item": "imbued_ascendancy:null_powder"
+  },
+  "craftH": {
+	"tag": "c:steel_ingots"
+  },
+  "craftI": {
+	"item": "imbued_ascendancy:null_powder"
+  },
+  "title": "Puresteel",
+  "cost": 13,
+  "resultA": "imbued_ascendancy:puresteel",
+  "countA": 4
+}

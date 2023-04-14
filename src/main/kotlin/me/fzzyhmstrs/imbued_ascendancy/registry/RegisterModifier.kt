@@ -1,7 +1,9 @@
 package me.fzzyhmstrs.imbued_ascendancy.registry
 
+import me.fzzyhmstrs.amethyst_core.modifier_util.AugmentModifier
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
 import me.fzzyhmstrs.amethyst_imbuement.modifier.ModifierPredicates
+import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterModifier
 import me.fzzyhmstrs.fzzy_core.modifier_util.AbstractModifier
 import me.fzzyhmstrs.fzzy_core.registry.ModifierRegistry
 import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifier
@@ -10,6 +12,7 @@ import me.fzzyhmstrs.imbued_ascendancy.config.IaConfig
 import me.fzzyhmstrs.imbued_ascendancy.modifier.ConfigEquipmentModifier
 import me.fzzyhmstrs.imbued_ascendancy.modifier.ModifierConsumers
 import me.fzzyhmstrs.imbued_ascendancy.modifier.ModifierFunctions
+import me.fzzyhmstrs.imbued_ascendancy.modifier.ModifierPredicates as ModifierPredicates1
 import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.entity.attribute.EntityAttributes
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider
@@ -45,8 +48,9 @@ object RegisterModifier {
     }
 
     //scepter modifiers
-    val DAMNABLE_SUMMONS = AugmentModifier(Identifier(AI.MOD_ID,"damnable_summons"), cooldownModifier = -6.25).withDamage(1f).withSpellToAffect(ModifierPredicates.SUMMONERS_PREDICATE).also { regMod[it] = 6 }
-    
+    val DAMNABLE_SUMMONS = AugmentModifier(Identifier(IA.MOD_ID,"damnable_summons"), cooldownModifier = -6.25, availableForRoll = false).withDamage(1f).withSpellToAffect(ModifierPredicates.SUMMONERS_PREDICATE).also { regMod.add(it) }
+    val CHAMPIONS_FAITH = AugmentModifier(Identifier(IA.MOD_ID,"champions_faith"), levelModifier = 1, availableForRoll = false).withDuration(0,0,25).withSpellToAffect(ModifierPredicates1.CHAMPIONS_PREDICATE).also { regMod.add(it) }
+
     //Random equipment modifiers
     //player experience
     val WISENED = buildModifier(
@@ -94,7 +98,7 @@ object RegisterModifier {
         .also { regMod.add(it) }
         
     val MANA_REACTIVE = buildModifier(Identifier(IA.MOD_ID,"mana_reactive"), EquipmentModifier.EquipmentModifierTarget.ARMOR, 5, EquipmentModifier.Rarity.RARE)
-        .withOnDamaged(ModifierFunctions.MANA_REACTIVE_FUNCTION)
+        .withOnDamaged(ModifierFunctions.MANA_REACTIVE_DAMAGE_FUNCTION)
         .withToll(EXPENSIVE_TOLL)
         .also { regMod.add(it) }
 
@@ -114,10 +118,20 @@ object RegisterModifier {
     val RULER_OF_THE_DAMNED = buildModifier(Identifier(IA.MOD_ID,"ruler_of_the_damned"), persistent = true, availableForSelection = false)
         .withModifiers(DAMNABLE_SUMMONS.modifierId)
         .also { regMod.add(it) }
-    val SOLARPHOBIA = buildModifier(Identifier(IA.MOD_ID,"solarphobia"), persistent = true, availableForSelection = false)
-        .withOnDamaged(ModifierFunctions.SOLARPHOBIA_DAMAGE_FUNCTION)
+    val HELIOPHOBIA = buildModifier(Identifier(IA.MOD_ID,"heliophobia"), persistent = true, availableForSelection = false)
+        .withOnDamaged(ModifierFunctions.HELIOPHOBIA_DAMAGE_FUNCTION)
         .also { regMod.add(it) }
-
+    val CHAMPIONS_RESOLVE = buildModifier(Identifier(IA.MOD_ID,"champions_resolve"), persistent = true, availableForSelection = false)
+        .withAttributeModifier(EntityAttributes.GENERIC_ARMOR,1.0,EntityAttributeModifier.Operation.ADDITION)
+        .withAttributeModifier(EntityAttributes.GENERIC_ARMOR_TOUGHNESS,3.0,EntityAttributeModifier.Operation.ADDITION)
+        .also { regMod.add(it) }
+    val CHAMPIONS_GRIT = buildModifier(Identifier(IA.MOD_ID,"champions_grit"), persistent = true, availableForSelection = false)
+        .withModifiers(CHAMPIONS_FAITH.modifierId)
+        .also { regMod.add(it) }
+    val WARRIORS_LIGHT = buildModifier(Identifier(IA.MOD_ID,"warriors_light"), persistent = true, availableForSelection = false)
+        .withModifiers(RegisterModifier.SMITING.modifierId)
+        .withOnDamaged(ModifierFunctions.WARRIORS_LIGHT_DAMAGE_FUNCTION)
+        .also { regMod.add(it) }
 
 
     fun registerAll(){
