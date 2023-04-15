@@ -6,6 +6,8 @@ import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
 import me.fzzyhmstrs.amethyst_imbuement.item.AiItemSettings
 import me.fzzyhmstrs.amethyst_imbuement.item.SpellcastersReagentFlavorItem
 import me.fzzyhmstrs.amethyst_imbuement.item.custom.CustomHoeItem
+import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterModifier
+import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterModifier as RegisterModifier1
 import me.fzzyhmstrs.imbued_ascendancy.IA
 import me.fzzyhmstrs.imbued_ascendancy.item.*
 import me.fzzyhmstrs.imbued_ascendancy.item.promise.RealityGemItem
@@ -15,6 +17,7 @@ import me.fzzyhmstrs.imbued_ascendancy.item.weapon.CrystallineArrowItem
 import me.fzzyhmstrs.imbued_ascendancy.item.weapon.ImbuedArrowItem
 import me.fzzyhmstrs.imbued_ascendancy.item.weapon.NihilBladeItem
 import me.fzzyhmstrs.imbued_ascendancy.tool.SteelToolMaterial
+
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.entity.attribute.EntityAttributes
@@ -62,13 +65,6 @@ object RegisterItem {
     val IMBUED_ARROW = ImbuedArrowItem(FabricItemSettings()).also{ regItem["imbued_arrow"] = it}
     //model tex
     val GEM_AND_STEEL = GemAndSteelItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(32)).also{ regItem["gem_and_steel"] = it}
-    val STEEL_AMULET = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_amulet"] = it}
-    val STEEL_HEADBAND = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_headband"] = it}
-    val STEEL_RING = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_ring"] = it}
-    val STEEL_WARD = SteelWardItem(
-        EntityAttributes.GENERIC_ARMOR,
-        EntityAttributeModifier(UUID.fromString("1f6875e4-d167-11ed-afa1-0242ac120002"),"steel_ward_modifier",1.5, EntityAttributeModifier.Operation.ADDITION),
-        AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(424)).also{ regItem["steel_ward"] = it}
     val STEEL_AXE = AxeItem(SteelToolMaterial,5.0f,-3.0f,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT)).also{ regItem["steel_axe"] = it}
     val STEEL_HOE = CustomHoeItem(SteelToolMaterial,-3,-3.0f,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT)).also{ regItem["steel_hoe"] = it}
     val STEEL_PICKAXE = PickaxeItem(SteelToolMaterial,1,-2.8f,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT)).also{ regItem["steel_pickaxe"] = it}
@@ -77,6 +73,15 @@ object RegisterItem {
     //model tex
     val NIHIL_BLADE = NihilBladeItem(FabricItemSettings()).also{ regItem["nihil_blade"] = it}
 
+    //trinkets
+    val CADUCEUS = SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), scepterModifiers = listOf(RegisterModifier.HEALING.modifierId, RegisterModifier1.HEALERS_REWARD.modifierId)) .also{ regItem["caduceus"] = it}
+    val STEEL_AMULET = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_amulet"] = it}
+    val STEEL_HEADBAND = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_headband"] = it}
+    val STEEL_RING = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_ring"] = it}
+    val STEEL_WARD = SteelWardItem(
+        EntityAttributes.GENERIC_ARMOR,
+        EntityAttributeModifier(UUID.fromString("1f6875e4-d167-11ed-afa1-0242ac120002"),"steel_ward_modifier",1.5, EntityAttributeModifier.Operation.ADDITION),
+        AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(424)).also{ regItem["steel_ward"] = it}
 
     //////////////////////////////
 
