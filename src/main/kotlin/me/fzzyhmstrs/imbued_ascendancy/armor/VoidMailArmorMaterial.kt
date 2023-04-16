@@ -18,7 +18,7 @@ class VoidMailArmorMaterial : ArmorMaterial {
     override fun getRepairIngredient(): Ingredient? = Ingredient.ofItems(RegisterItem.NULL_ONYX)
     override fun getEnchantability(): Int = 20
     override fun getProtectionAmount(slot: EquipmentSlot): Int = PROTECTION_VALUES[slot.entitySlotId]
-    override fun getDurability(slot: EquipmentSlot): Int = BASE_DURABILITY[slot.entitySlotId] * 27
+    override fun getDurability(slot: EquipmentSlot): Int = BASE_DURABILITY[slot.entitySlotId] * 29
     override fun getKnockbackResistance(): Float = 0.0F
-    override fun getToughness(): Float = 1.0f
+    override fun getToughness(): Float = 2.0f
 }

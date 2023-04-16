@@ -1,16 +1,16 @@
 package me.fzzyhmstrs.imbued_ascendancy.item.armor
 
+import me.fzzyhmstrs.imbued_ascendancy.armor.ArmorOfTheChampionArmorMaterial
 import me.fzzyhmstrs.imbued_ascendancy.armor.VoidMailArmorMaterial
-import me.fzzyhmstrs.imbued_ascendancy.armor.WarriorsHarnessArmorMaterial
 import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterModifier
 import net.minecraft.entity.EquipmentSlot
 import net.minecraft.util.Identifier
 
-class WarriorsHarnessArmorItem(slot: EquipmentSlot, settings: Settings): WitchClassArmorItem(WarriorsHarnessArmorMaterial(),slot,settings) {
+class EternityShroudArmorItem(slot: EquipmentSlot, settings: Settings): WitchClassArmorItem(ArmorOfTheChampionArmorMaterial(),slot,settings) {
 
-    private val modifiers = mutableListOf(RegisterModifier.WARRIORS_LIGHT.modifierId)
+    private val modifiers = mutableListOf(RegisterModifier.ETERNAL.modifierId)
 
-    private val celestialModifiers = mutableListOf(RegisterModifier.WARRIORS_LIGHT.modifierId, RegisterModifier.WARRIORS_PATH.modifierId)
+    private val celestialModifiers = mutableListOf(RegisterModifier.ETERNAL.modifierId, RegisterModifier.ETERNITY_SHROUDED.modifierId)
 
     override fun defaultEquipmentModifiers(): MutableList<Identifier> {
         return modifiers

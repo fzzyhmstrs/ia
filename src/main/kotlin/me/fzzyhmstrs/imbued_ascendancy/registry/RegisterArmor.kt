@@ -20,6 +20,23 @@ object RegisterArmor {
 
     internal val regArmor: MutableMap<String,Item> = mutableMapOf()
 
+    /*
+    garnet <- steel
+    glowing <- garnet
+    shimmering = base
+    celestial <- many
+    void mail <- steel
+    lapidarists <- steel
+    lich-king <- shimmering
+    spellblades <- steel
+    champions <- ametrine
+    warriors <- glowing
+    scholars <- shimmering
+    elementalists <- garnet
+    clerics <- shimmering
+    eternity <- N/A
+    */
+
     //garnet armor
     val GARNET_ARMOR_MATERIAL = GarnetArmorMaterial()
     val GARNET_HELMET = ArmorItem(GARNET_ARMOR_MATERIAL, EquipmentSlot.HEAD,Item.Settings()).also { regArmor["garnet_helmet"] = it }
@@ -34,7 +51,7 @@ object RegisterArmor {
     val GLOWING_LEGGINGS = ArmorItem(GLOWING_ARMOR_MATERIAL, EquipmentSlot.LEGS,Item.Settings()).also { regArmor["glowing_leggings"] = it }
     val GLOWING_BOOTS = ArmorItem(GLOWING_ARMOR_MATERIAL, EquipmentSlot.FEET,Item.Settings()).also { regArmor["glowing_boots"] = it }
 
-    //Shimmering armor
+    //Shimmering robes
     val SHIMMERING_ARMOR_MATERIAL = ShimmeringArmorMaterial()
     val SHIMMERING_HOOD = ArmorItem(SHIMMERING_ARMOR_MATERIAL, EquipmentSlot.HEAD,Item.Settings()).also { regArmor["shimmering_hood"] = it }
     val SHIMMERING_ROBE = ArmorItem(SHIMMERING_ARMOR_MATERIAL, EquipmentSlot.CHEST,Item.Settings()).also { regArmor["shimmering_robe"] = it }
@@ -62,7 +79,7 @@ object RegisterArmor {
     val LICH_KINGS_LEGGINGS = LichKingsRobesArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["lich_kings_leggings"] = it }
     val LICH_KINGS_BOOTS = LichKingsRobesArmorItem(EquipmentSlot.FEET,Item.Settings()).also { regArmor["lich_kings_boots"] = it }
 
-    //Spellbades Armor - spell damage and cooldown
+    //Spellblades Armor - spell damage and cooldown
     val SPELLBLADES_HELMET = SpellbladesArmorArmorItem(EquipmentSlot.HEAD,Item.Settings()).also { regArmor["spellblades_helmet"] = it }
     val SPELLBLADES_CHESTPLATE = SpellbladesArmorArmorItem(EquipmentSlot.CHEST,Item.Settings()).also { regArmor["spellblades_chestplate"] = it }
     val SPELLBLADES_LEGGINGS = SpellbladesArmorArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["spellblades_leggings"] = it }
@@ -81,10 +98,22 @@ object RegisterArmor {
     val WARRIORS_BOOTS = WarriorsHarnessArmorItem(EquipmentSlot.FEET,Item.Settings()).also { regArmor["warriors_boots"] = it }
 
     //Scholars Vestments - Player XP and spell XP
+    val SCHOLARS_HELMET = ScholarsVestmentsArmorItem(EquipmentSlot.HEAD,Item.Settings()).also { regArmor["scholars_helmet"] = it }
+    val SCHOLARS_CHESTPLATE = ScholarsVestmentsArmorItem(EquipmentSlot.CHEST,Item.Settings()).also { regArmor["scholars_chestplate"] = it }
+    val SCHOLARS_LEGGINGS = ScholarsVestmentsArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["scholars_leggings"] = it }
+    val SCHOLARS_BOOTS = ScholarsVestmentsArmorItem(EquipmentSlot.FEET,Item.Settings()).also { regArmor["scholars_boots"] = it }
 
     //Elementalists Garb - elemental spells, mana cost
+    val ELEMENTALISTS_HELMET = ElementalistsGarbArmorItem(EquipmentSlot.HEAD,Item.Settings()).also { regArmor["elementalists_helmet"] = it }
+    val ELEMENTALISTS_CHESTPLATE = ElementalistsGarbArmorItem(EquipmentSlot.CHEST,Item.Settings()).also { regArmor["warriors_chestplate"] = it }
+    val ELEMENTALISTS_LEGGINGS = ElementalistsGarbArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["warriors_leggings"] = it }
+    val ELEMENTALISTS_BOOTS = ElementalistsGarbArmorItem(EquipmentSlot.FEET,Item.Settings()).also { regArmor["warriors_boots"] = it }
 
-    //Eternity Set - health and spell duration/range, rare finds in dungeons
+    //Eternity Shroud - health and spell duration/range, rare finds in dungeons
+    val ETERNITY_HELMET = EternityShroudArmorItem(EquipmentSlot.HEAD,Item.Settings()).also { regArmor["eternity_helmet"] = it }
+    val ETERNITY_CHESTPLATE = EternityShroudArmorItem(EquipmentSlot.CHEST,Item.Settings()).also { regArmor["eternity_chestplate"] = it }
+    val ETERNITY_LEGGINGS = EternityShroudArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["eternity_leggings"] = it }
+    val ETERNITY_BOOTS = EternityShroudArmorItem(EquipmentSlot.FEET,Item.Settings()).also { regArmor["eternity_boots"] = it }
 
     fun registerAll() {
         for (entry in regArmor) {

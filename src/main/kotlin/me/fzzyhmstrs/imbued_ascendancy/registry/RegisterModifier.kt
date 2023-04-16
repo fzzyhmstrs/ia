@@ -133,7 +133,16 @@ object RegisterModifier {
         .withModifiers(RegisterModifier.SMITING.modifierId)
         .withOnDamaged(ModifierFunctions.WARRIORS_LIGHT_DAMAGE_FUNCTION)
         .also { regMod.add(it) }
-
+    val WARRIORS_PATH = buildModifier(Identifier(IA.MOD_ID,"warriors_path"), persistent = true, availableForSelection = false)
+        .withAttributeModifier(EntityAttributes.GENERIC_ARMOR,1.5,EntityAttributeModifier.Operation.ADDITION)
+        .withAttributeModifier(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,0.05,EntityAttributeModifier.Operation.ADDITION)
+        .also { regMod.add(it) }
+    val ETERNAL = buildModifier(Identifier(IA.MOD_ID,"eternal"), persistent = true, availableForSelection = false)
+        .withAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH,2.0,EntityAttributeModifier.Operation.ADDITION)
+        .also { regMod.add(it) }
+    val ETERNITY_SHROUDED = buildModifier(Identifier(IA.MOD_ID,"eternity_shrouded"), persistent = true, availableForSelection = false)
+        .withAttributeModifier(RegisterAttribute.DAMAGE_MULTIPLICATION,-0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+        .also { regMod.add(it) }
 
     fun registerAll(){
         regMod.forEach {

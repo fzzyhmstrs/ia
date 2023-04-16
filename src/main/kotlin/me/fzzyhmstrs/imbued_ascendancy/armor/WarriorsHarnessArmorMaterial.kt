@@ -19,6 +19,6 @@ class WarriorsHarnessArmorMaterial : ArmorMaterial {
     override fun getEnchantability(): Int = 10
     override fun getProtectionAmount(slot: EquipmentSlot): Int = PROTECTION_VALUES[slot.entitySlotId]
     override fun getDurability(slot: EquipmentSlot): Int = BASE_DURABILITY[slot.entitySlotId] * 25
-    override fun getKnockbackResistance(): Float = 0.05F
+    override fun getKnockbackResistance(): Float = 0.15F
     override fun getToughness(): Float = 2.0f
 }

@@ -19,6 +19,6 @@ class CelestialArmorMaterial : ArmorMaterial {
     override fun getEnchantability(): Int = 45
     override fun getProtectionAmount(slot: EquipmentSlot): Int = PROTECTION_VALUES[slot.entitySlotId]
     override fun getDurability(slot: EquipmentSlot): Int = BASE_DURABILITY[slot.entitySlotId] * 100
-    override fun getKnockbackResistance(): Float = 0.225F
+    override fun getKnockbackResistance(): Float = 0.2F
     override fun getToughness(): Float = 4.0F
 }
