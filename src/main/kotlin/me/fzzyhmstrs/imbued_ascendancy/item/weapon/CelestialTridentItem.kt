@@ -57,7 +57,7 @@ class CelestialTridentItem(settings: Settings) : TridentItem(settings), Flavorfu
             EntityAttributeModifier(
                 ATTACK_DAMAGE_MODIFIER_ID,
                 "Tool modifier",
-                15.0,
+                16.0,
                 EntityAttributeModifier.Operation.ADDITION
             )
         )
