@@ -13,10 +13,10 @@
 	"item": "amethyst_imbuement:moonstone"
   },
   "craftA": {
-	"item": "amethyst_imbuement:beryl_copper_ingot"
+	"item": "amethyst_imbuement:steel_ingot"
   },
   "craftC": {
-	"item": "amethyst_imbuement:beryl_copper_ingot"
+	"item": "amethyst_imbuement:steel_ingot"
   },
   "craftD": {
 	"item": "minecraft:obsidian"
@@ -28,13 +28,13 @@
 	"item": "minecraft:obsidian"
   },
   "craftG": {
-	"item": "amethyst_imbuement:beryl_copper_ingot"
+	"item": "imbued_ascendancy:puresteel_ingot"
   },
   "craftH": {
-    "item": "minecraft:obsidian"
+    	"item": "minecraft:obsidian"
   },
   "craftI": {
-	"item": "amethyst_imbuement:beryl_copper_ingot"
+	"item": "imbued_ascendancy:puresteel_ingot"
   },
   "title": "Champions Chestplate",
   "cost": 33,
