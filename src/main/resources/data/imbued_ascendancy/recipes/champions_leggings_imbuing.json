@@ -13,13 +13,13 @@
 	"item": "amethyst_imbuement:moonstone"
   },
   "craftA": {
-	"item": "amethyst_imbuement:beryl_copper_ingot"
+	"item": "amethyst_imbuement:steel_ingot"
   },
   "craftB": {
 	"item": "minecraft:obsidian"
   },
   "craftC": {
-	"item": "amethyst_imbuement:beryl_copper_ingot"
+	"item": "amethyst_imbuement:steel_ingot"
   },
   "craftD": {
 	"item": "minecraft:obsidian"
@@ -31,10 +31,10 @@
 	"item": "minecraft:obsidian"
   },
   "craftG": {
-	"item": "amethyst_imbuement:beryl_copper_ingot"
+	"item": "imbued_ascendancy:puresteel_ingot"
   },
   "craftI": {
-	"item": "amethyst_imbuement:beryl_copper_ingot"
+	"item": "imbued_ascendancy:puresteel_ingot"
   },
   "title": "Champions Leggings",
   "cost": 33,
