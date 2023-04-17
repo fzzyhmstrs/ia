@@ -13,34 +13,34 @@
 	"item": "minecraft:lily_of_the_valley"
   },
   "craftA": {
-	"item": "imbued_ascendancy:null_powder"
+	"item": "imbued_ascendancy:pure_powder"
   },
   "craftB": {
-    "tag": "c:steel_ingots"
+    "item": "minecraft:netherite_scrap"
   },
   "craftC": {
-	"item": "imbued_ascendancy:null_powder"
+	"item": "imbued_ascendancy:pure_powder"
   },
   "craftD": {
-    "tag": "c:steel_ingots"
+    "item": "minecraft:netherite_scrap"
   },
   "craftE": {
-	"item": "minecraft:rotten_flesh"
-  },
-  "craftF": {
     "tag": "c:steel_ingots"
   },
+  "craftF": {
+    "item": "minecraft:netherite_scrap"
+  },
   "craftG": {
-	"item": "imbued_ascendancy:null_powder"
+	"item": "imbued_ascendancy:pure_powder"
   },
   "craftH": {
-	"tag": "c:steel_ingots"
+        "item": "minecraft:netherite_scrap"
   },
   "craftI": {
-	"item": "imbued_ascendancy:null_powder"
+	"item": "imbued_ascendancy:pure_powder"
   },
   "title": "Puresteel",
-  "cost": 13,
+  "cost": 19,
   "resultA": "imbued_ascendancy:puresteel",
-  "countA": 4
+  "countA": 2
 }
