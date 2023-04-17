@@ -44,9 +44,9 @@ object RegisterItem {
     val MYSTIC_FRAGMENT = SpellcastersReagentFlavorItem(RegisterAttribute.DAMAGE_MULTIPLICATION,
         EntityAttributeModifier(UUID.fromString("f2a00170-d1c6-11ed-afa1-0242ac120002"),"mystic_modifier",-0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
         AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.EPIC)).withGlint().also{ regItem["mystic_fragment"] = it}
-    //model tex
+    //model
     val SHIMMERING_FABRIC = Item(AiItemSettings()).also{ regItem["shimmering_fabric"] = it}
-    //model tex
+    //model
     val PURESTEEL = Item(AiItemSettings()).also{ regItem["puresteel"] = it}
     //powders
     //model tex
