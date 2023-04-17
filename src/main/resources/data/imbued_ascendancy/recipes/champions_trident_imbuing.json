@@ -1,0 +1,47 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "imbued_ascendancy:puresteel_ingot"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:ametrine"
+  },
+  "imbueC": {
+	"item": "imbued_ascendancy:puresteel_ingot"
+  },
+  "imbueD": {
+	"item": "imbued_ascendancy:puresteel_ingot"
+  },
+  "craftA": {
+	"item": "minecraft:diamond"
+  },
+  "craftB": {
+	"item": "imbued_ascendancy:reality_gem"
+  },
+  "craftC": {
+	"item": "minecraft:diamond"
+  },
+  "craftD": {
+	"item": "imbued_ascendancy:sardonyx"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:glistering_trident"
+  },
+  "craftF": {
+	"item": "imbued_ascendancy:sardonyx"
+  },
+  "craftG": {
+	"item": "minecraft:diamond"
+  },
+  "craftH": {
+	"item": "imbued_ascendancy:sardonyx"
+  },
+  "craftI": {
+	"item": "minecraft:diamond"
+  },
+  "title": "Champions Trident",
+  "cost": 39,
+  "resultA": "imbued_ascendancy:champions_trident",
+  "countA": 1,
+  "transferEnchant": true
+}
