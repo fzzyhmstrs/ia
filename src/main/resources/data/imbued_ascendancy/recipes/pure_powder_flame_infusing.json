@@ -1,0 +1,24 @@
+{
+  "type": "imbued_ascendancy:flame_imfusing",
+  "ingredients": [
+    {
+      "item": "amethyst_imbuement:imbued_quartz"
+    },
+    {
+      "item": "amethyst_imbuement:smoky_quartz"
+    },
+    {
+      "item": "minecraft:rose_bush"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "base": {
+    "block": "imbued_ascendancy:glistering_pedestal"
+  }
+  "result": {
+    "item": "imbued_ascendancy:pure_powder",
+    "count": 2
+  }
+}
