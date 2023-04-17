@@ -1,0 +1,47 @@
+{
+  "type": "imbued_ascendancy:celestial_altar",
+  "imbueA": {
+	"item": "imbued_ascendancy:mystic_fragment"
+  },
+  "imbueB": {
+	"item": "imbued_ascendancy:mystic_fragment"
+  },
+  "imbueC": {
+	"item": "imbued_ascendancy:mystic_fragment"
+  },
+  "imbueD": {
+	"item": "imbued_ascendancy:mystic_fragment"
+  },
+  "craftA": {
+	"item": "imbued_ascendancy:puresteel"
+  },
+  "craftB": {
+	"item": "amethyst_imbuement:celestine"
+  },
+  "craftC": {
+	"item": "imbued_ascendancy:puresteel"
+  },
+  "craftD": {
+	"item": "amethyst_imbuement:malachite_figurine"
+  },
+  "craftE": {
+	"item": "imbued_ascendancy:crown_of_sorrows"
+  },
+  "craftF": {
+	"item": "amethyst_imbuement:malachite_figurine"
+  },
+  "craftG": {
+	"item": "imbued_ascendancy:puresteel"
+  },
+  "craftH": {
+	"tag": "imbued_ascendancy:divine_reagents"
+  },
+  "craftI": {
+	"item": "imbued_ascendancy:puresteel"
+  },
+  "title": "Divine Coronet",
+  "cost": 129,
+  "resultA": "imbued_ascendancy:divine_coronet",
+  "countA": 1,
+  "transferEnchant": true
+}
