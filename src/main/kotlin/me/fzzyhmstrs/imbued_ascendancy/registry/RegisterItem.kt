@@ -32,7 +32,6 @@ object RegisterItem {
 
     //raw materials
     val SARDONYX = Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM)).also{ regItem["sardonyx"] = it}
-    //model
     val NULL_ONYX = Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)).also{ regItem["null_onyx"] = it}
     val SERPENTINE = Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM)).also{ regItem["serpentine"] = it}
     val ENSOULED_GEM = RealityGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)).also{ regItem["reality_gem"] = it}
@@ -41,24 +40,19 @@ object RegisterItem {
     val MYSTIC_FRAGMENT = SpellcastersReagentFlavorItem(RegisterAttribute.DAMAGE_MULTIPLICATION,
         EntityAttributeModifier(UUID.fromString("f2a00170-d1c6-11ed-afa1-0242ac120002"),"mystic_modifier",-0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
         AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.EPIC)).withGlint().also{ regItem["mystic_fragment"] = it}
-    //model
     val SHIMMERING_FABRIC = Item(AiItemSettings()).also{ regItem["shimmering_fabric"] = it}
-    //model
     val PURESTEEL = Item(AiItemSettings()).also{ regItem["puresteel"] = it}
     //powders
-    //model
     val NULL_POWDER = Item(FabricItemSettings()).also{ regItem["null_powder"] = it} //lighting bedrock on fire
     //soul powder
-    //model
     val SOUL_POWDER = Item(FabricItemSettings()).also{ regItem["soul_powder"] = it} //killing a mob with gem fire
 
     //tools and weapons
     val CELESTIAL_TRIDENT = CelestialTridentItem(FabricItemSettings().maxDamage(2650).rarity(Rarity.EPIC)).also{ regItem["celestial_trident"] = it}
-    //model tex recipe
+    //tex recipe
     val CHAMPIONS_TRIDENT = ChampionsTridentItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(1250).rarity(Rarity.RARE)).also{ regItem["champions_trident"] = it}
     val CRYSTALLINE_ARROW = CrystallineArrowItem(FabricItemSettings()).also{ regItem["crystalline_arrow"] = it}
     val IMBUED_ARROW = ImbuedArrowItem(FabricItemSettings()).also{ regItem["imbued_arrow"] = it}
-    //model
     val GEM_AND_STEEL = GemAndSteelItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(32)).also{ regItem["gem_and_steel"] = it}
     val STEEL_AXE = AxeItem(SteelToolMaterial,5.0f,-3.0f,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT)).also{ regItem["steel_axe"] = it}
     val STEEL_HOE = CustomHoeItem(SteelToolMaterial,-3,-3.0f,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT)).also{ regItem["steel_hoe"] = it}
@@ -68,15 +62,11 @@ object RegisterItem {
     val NIHIL_BLADE = NihilBladeItem(FabricItemSettings()).also{ regItem["nihil_blade"] = it}
 
     //trinkets
-    //model
-    val CADUCEUS = SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), scepterModifiers = listOf(RegisterModifier.HEALING.modifierId, RegisterModifier1.HEALERS_REWARD.modifierId)) .also{ regItem["caduceus"] = it}
-    //model
+    //shield-code
+    val CADUCEUS = SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(450), scepterModifiers = listOf(RegisterModifier.HEALING.modifierId, RegisterModifier1.HEALERS_REWARD.modifierId)) .also{ regItem["caduceus"] = it}
     val CROWN_OF_SORROWS = CrownOfSorrowsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(240)).also{ regItem["crown_of_sorrows"] = it}
-    //model
     val DIVINE_CORONET = DivineCoronetItem(FabricItemSettings().maxDamage(480)).withGlint().also{ regItem["divine_coronet"] = it}
-    //model
     val PENDANT_OF_MEMORIES = PendantOfMemoriesItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(250)).also{ regItem["pendant_of_memories"] = it}
-    //model
     val RING_OF_SOULS = RingOfSoulsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(240)).also{ regItem["ring_of_souls"] = it}
     val STEEL_AMULET = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_amulet"] = it}
     val STEEL_HEADBAND = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_headband"] = it}
