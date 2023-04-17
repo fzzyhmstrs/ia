@@ -1,9 +1,14 @@
 {
   "type": "imbued_ascendancy:flame_imfusing",
   "ingredients": [
-    {
-      "item": "minecraft:enchanted_book"
-    },
+    [
+      {
+        "item": "minecraft:enchanted_book"
+      },
+      {
+        "item": "amethyst_imbuement:spell_scroll"
+      }
+    ],
     {
       "item": "minecraft:glowstone_dust"
     }
