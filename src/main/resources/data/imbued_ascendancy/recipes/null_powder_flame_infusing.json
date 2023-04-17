@@ -1,0 +1,21 @@
+{
+  "type": "imbued_ascendancy:flame_imfusing",
+  "ingredients": [
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:ink_sac"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "base": {
+    "block": "minecraft:bedrock"
+  }
+  "result": {
+    "item": "imbued_ascendancy:null_powder",
+    "count": 2
+  }
+}
