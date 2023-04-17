@@ -6,6 +6,8 @@ import me.fzzyhmstrs.imbued_ascendancy.model.CelestialTridentEntityModel
 import me.fzzyhmstrs.imbued_ascendancy.model.CelestialTridentEntityRenderer
 import me.fzzyhmstrs.amethyst_imbuement.model.GlisteringTridentEntityRenderer
 import me.fzzyhmstrs.imbued_ascendancy.IA
+import me.fzzyhmstrs.imbued_ascendancy.model.ChampionsTridentEntityModel
+import me.fzzyhmstrs.imbued_ascendancy.model.ChampionsTridentEntityRenderer
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry
@@ -22,6 +24,7 @@ import net.minecraft.util.Identifier
 object RegisterRenderer {
 
     val CELESTIAL_TRIDENT: EntityModelLayer = EntityModelLayer(Identifier(IA.MOD_ID,"celestial_trident"),"celestial_trident_model")
+    val CHAMPIONS_TRIDENT: EntityModelLayer = EntityModelLayer(Identifier(IA.MOD_ID,"champions_trident"),"champions_trident_model")
 
     fun registerAll() {
 /*      BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlock.EXPERIENCE_BUSH, RenderLayer.getCutout())
@@ -51,7 +54,16 @@ object RegisterRenderer {
             )
         }
 
+        EntityRendererRegistry.register(
+            RegisterEntity.CHAMPIONS_TRIDENT_ENTITY
+        ){context: EntityRendererFactory.Context ->
+            ChampionsTridentEntityRenderer(
+                context
+            )
+        }
+
         EntityModelLayerRegistry.registerModelLayer(CELESTIAL_TRIDENT, CelestialTridentEntityModel::getTexturedModelData)
+        EntityModelLayerRegistry.registerModelLayer(CHAMPIONS_TRIDENT, ChampionsTridentEntityModel::getTexturedModelData)
 
         ModelPredicateProviderRegistry.register(
             RegisterItem.STEEL_WARD, Identifier("blocking")

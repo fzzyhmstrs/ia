@@ -1,10 +1,7 @@
 package me.fzzyhmstrs.imbued_ascendancy.registry
 
 import me.fzzyhmstrs.imbued_ascendancy.IA
-import me.fzzyhmstrs.imbued_ascendancy.entity.CelestialTridentAvatarEntity
-import me.fzzyhmstrs.imbued_ascendancy.entity.CelestialTridentEntity
-import me.fzzyhmstrs.imbued_ascendancy.entity.CrystallineArrowEntity
-import me.fzzyhmstrs.imbued_ascendancy.entity.ImbuedArrowEntity
+import me.fzzyhmstrs.imbued_ascendancy.entity.*
 import net.fabricmc.fabric.api.`object`.builder.v1.entity.FabricEntityTypeBuilder
 import net.minecraft.entity.EntityDimensions
 import net.minecraft.entity.EntityType
@@ -33,6 +30,19 @@ object RegisterEntity {
             SpawnGroup.MISC
         ) { entityType: EntityType<CelestialTridentEntity>, world: World ->
             CelestialTridentEntity(
+                entityType,
+                world
+            )
+        }.dimensions(EntityDimensions.fixed(0.5f, 0.5f)).trackRangeChunks(4).trackedUpdateRate(20).build()
+    )
+
+    val CHAMPIONS_TRIDENT_ENTITY: EntityType<ChampionsTridentEntity> = Registry.register(
+        Registries.ENTITY_TYPE,
+        Identifier(IA.MOD_ID, "champions_trident"),
+        FabricEntityTypeBuilder.create(
+            SpawnGroup.MISC
+        ) { entityType: EntityType<ChampionsTridentEntity>, world: World ->
+            ChampionsTridentEntity(
                 entityType,
                 world
             )

@@ -12,10 +12,7 @@ import me.fzzyhmstrs.imbued_ascendancy.IA
 import me.fzzyhmstrs.imbued_ascendancy.item.*
 import me.fzzyhmstrs.imbued_ascendancy.item.promise.RealityGemItem
 import me.fzzyhmstrs.imbued_ascendancy.item.promise.VoidGemItem
-import me.fzzyhmstrs.imbued_ascendancy.item.weapon.CelestialTridentItem
-import me.fzzyhmstrs.imbued_ascendancy.item.weapon.CrystallineArrowItem
-import me.fzzyhmstrs.imbued_ascendancy.item.weapon.ImbuedArrowItem
-import me.fzzyhmstrs.imbued_ascendancy.item.weapon.NihilBladeItem
+import me.fzzyhmstrs.imbued_ascendancy.item.weapon.*
 import me.fzzyhmstrs.imbued_ascendancy.tool.SteelToolMaterial
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
@@ -55,10 +52,10 @@ object RegisterItem {
     //model
     val SOUL_POWDER = Item(FabricItemSettings()).also{ regItem["soul_powder"] = it} //killing a mob with gem fire
 
-
     //tools and weapons
-    val CELESTIAL_TRIDENT = CelestialTridentItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(2650).rarity(
-        Rarity.EPIC)).also{ regItem["celestial_trident"] = it}
+    val CELESTIAL_TRIDENT = CelestialTridentItem(FabricItemSettings().maxDamage(2650).rarity(Rarity.EPIC)).also{ regItem["celestial_trident"] = it}
+    //model tex recipe
+    val CHAMPIONS_TRIDENT = ChampionsTridentItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(1250).rarity(Rarity.RARE)).also{ regItem["champions_trident"] = it}
     val CRYSTALLINE_ARROW = CrystallineArrowItem(FabricItemSettings()).also{ regItem["crystalline_arrow"] = it}
     val IMBUED_ARROW = ImbuedArrowItem(FabricItemSettings()).also{ regItem["imbued_arrow"] = it}
     //model
