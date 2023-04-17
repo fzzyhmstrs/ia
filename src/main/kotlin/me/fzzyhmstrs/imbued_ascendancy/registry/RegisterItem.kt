@@ -43,6 +43,9 @@ object RegisterItem {
     val SHIMMERING_FABRIC = Item(AiItemSettings()).also{ regItem["shimmering_fabric"] = it}
     val PURESTEEL = Item(AiItemSettings()).also{ regItem["puresteel"] = it}
     //powders
+    //model tex
+    val PURE_POWDER = Item(FabricItemSettings()).also{ regItem["pure_powder"] = it} //lighting bedrock on fire
+    //powders
     val NULL_POWDER = Item(FabricItemSettings()).also{ regItem["null_powder"] = it} //lighting bedrock on fire
     //soul powder
     val SOUL_POWDER = Item(FabricItemSettings()).also{ regItem["soul_powder"] = it} //killing a mob with gem fire
