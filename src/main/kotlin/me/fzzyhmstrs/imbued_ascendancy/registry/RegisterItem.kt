@@ -35,7 +35,7 @@ object RegisterItem {
 
     //raw materials
     val SARDONYX = Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM)).also{ regItem["sardonyx"] = it}
-    //model tex
+    //model
     val NULL_ONYX = Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)).also{ regItem["null_onyx"] = it}
     val SERPENTINE = Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM)).also{ regItem["serpentine"] = it}
     val ENSOULED_GEM = RealityGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)).also{ regItem["reality_gem"] = it}
@@ -49,31 +49,29 @@ object RegisterItem {
     //model
     val PURESTEEL = Item(AiItemSettings()).also{ regItem["puresteel"] = it}
     //powders
-    //model tex
+    //model
     val NULL_POWDER = Item(FabricItemSettings()).also{ regItem["null_powder"] = it} //lighting bedrock on fire
     //soul powder
-    //model tex
+    //model
     val SOUL_POWDER = Item(FabricItemSettings()).also{ regItem["soul_powder"] = it} //killing a mob with gem fire
 
 
     //tools and weapons
     val CELESTIAL_TRIDENT = CelestialTridentItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(2650).rarity(
         Rarity.EPIC)).also{ regItem["celestial_trident"] = it}
-    //tex
     val CRYSTALLINE_ARROW = CrystallineArrowItem(FabricItemSettings()).also{ regItem["crystalline_arrow"] = it}
-    //tex
     val IMBUED_ARROW = ImbuedArrowItem(FabricItemSettings()).also{ regItem["imbued_arrow"] = it}
-    //model tex
+    //model
     val GEM_AND_STEEL = GemAndSteelItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(32)).also{ regItem["gem_and_steel"] = it}
     val STEEL_AXE = AxeItem(SteelToolMaterial,5.0f,-3.0f,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT)).also{ regItem["steel_axe"] = it}
     val STEEL_HOE = CustomHoeItem(SteelToolMaterial,-3,-3.0f,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT)).also{ regItem["steel_hoe"] = it}
     val STEEL_PICKAXE = PickaxeItem(SteelToolMaterial,1,-2.8f,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT)).also{ regItem["steel_pickaxe"] = it}
     val STEEL_SHOVEL = ShovelItem(SteelToolMaterial,1.5f,-3.0f,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT)).also{ regItem["steel_shovel"] = it}
     val STEEL_SWORD = SwordItem(SteelToolMaterial,3,-2.4f,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT)).also{ regItem["steel_sword"] = it}
-    //model tex
     val NIHIL_BLADE = NihilBladeItem(FabricItemSettings()).also{ regItem["nihil_blade"] = it}
 
     //trinkets
+    //model tex
     val CADUCEUS = SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), scepterModifiers = listOf(RegisterModifier.HEALING.modifierId, RegisterModifier1.HEALERS_REWARD.modifierId)) .also{ regItem["caduceus"] = it}
     val STEEL_AMULET = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_amulet"] = it}
     val STEEL_HEADBAND = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_headband"] = it}
