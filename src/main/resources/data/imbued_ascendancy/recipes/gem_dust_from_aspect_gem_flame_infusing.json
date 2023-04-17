@@ -1,9 +1,14 @@
 {
   "type": "imbued_ascendancy:flame_imfusing",
   "ingredients": [
-    {
-      "tag": "amethyst_imbuement:aspect_gems"
-    },
+    [
+      {
+        "tag": "amethyst_imbuement:aspect_gems"
+      },
+      {
+        "item": "amethyst_imbuement:iridescent_orb"
+      }
+    ],
     {
       "item": "minecraft:glowstone_dust"
     }
