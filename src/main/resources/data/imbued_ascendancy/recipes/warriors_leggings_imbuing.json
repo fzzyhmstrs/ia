@@ -13,22 +13,22 @@
 	"item": "amethyst_imbuement:glowing_fragment"
   },
   "craftA": {
-    "item": "imbued_ascendancy:puresteel"
+    "item": "amethyst_imbuement:beryl_copper_ingot"
   },
   "craftB": {
     "item": "amethyst_imbuement:brutal_gem"
   },
   "craftC": {
-    "item": "imbued_ascendancy:puresteel"
+    "item": "amethyst_imbuement:beryl_copper_ingot"
   },
   "craftD": {
-	"item": "imbued_ascendancy:puresteel"
+	"item": "minecraft:sea_lantern"
   },
   "craftE": {
 	"item": "imbued_ascendancy:glowing_leggings"
   },
   "craftF": {
-	"item": "imbued_ascendancy:puresteel"
+	"item": "minecraft:sea_lantern"
   },
   "craftG": {
 	"item": "imbued_ascendancy:puresteel"
