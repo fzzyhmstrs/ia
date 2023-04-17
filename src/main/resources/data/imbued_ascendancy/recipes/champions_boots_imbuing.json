@@ -13,19 +13,19 @@
 	"item": "amethyst_imbuement:moonstone"
   },
   "craftD": {
-	"item": "minecraft:obsidian"
+	"item": "amethyst_imbuement:steel_ingot"
   },
   "craftE": {
 	"item": "amethyst_imbuement:ametrine_boots"
   },
   "craftF": {
-	"item": "minecraft:obsidian"
+	"item": "amethyst_imbuement:steel_ingot"
   },
   "craftG": {
-	"item": "amethyst_imbuement:beryl_copper_ingot"
+	"item": "imbued_ascendancy:puresteel_ingot"
   },
   "craftI": {
-	"item": "amethyst_imbuement:beryl_copper_ingot"
+	"item": "imbued_ascendancy:puresteel_ingot"
   },
   "title": "Champions Boots",
   "cost": 33,
