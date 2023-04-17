@@ -52,6 +52,11 @@ object RegisterModifier {
     val CHAMPIONS_FAITH = AugmentModifier(Identifier(IA.MOD_ID,"champions_faith"), levelModifier = 1, availableForRoll = false).withDuration(0,0,25).withSpellToAffect(ModifierPredicates1.CHAMPIONS_PREDICATE).also { regMod.add(it) }
     val HEALERS_REWARD = AugmentModifier(Identifier(IA.MOD_ID,"healers_reward")).withConsumer(ModifierConsumers.HEALERS_REWARD_CONSUMER).withSpellToAffect(ModifierPredicates.HEALERS_PREDICATE).also { regMod.add(it) }
 
+    val WHISPER_OF_REGRET_SCEPTER = AugmentModifier(Identifier(IA.MOD_ID,"whisper_of_regret_scepter"),1)
+        .withDamage(0.0f,0.0f,25f)
+        .withAmplifier(2)
+        .also { regMod.add(it) }
+
     //Random equipment modifiers
     //player experience
     val WISENED = buildModifier(
@@ -142,6 +147,10 @@ object RegisterModifier {
         .also { regMod.add(it) }
     val ETERNITY_SHROUDED = buildModifier(Identifier(IA.MOD_ID,"eternity_shrouded"), persistent = true, availableForSelection = false)
         .withAttributeModifier(RegisterAttribute.DAMAGE_MULTIPLICATION,-0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+        .also { regMod.add(it) }
+
+    val WHISPER_OF_REGRET = EquipmentModifier(Identifier(IA.MOD_ID,"whisper_of_regret"), persistent = true, randomSelectable = false)
+        .withModifiers(WHISPER_OF_REGRET_SCEPTER.modifierId)
         .also { regMod.add(it) }
 
     fun registerAll(){

@@ -1,6 +1,7 @@
 package me.fzzyhmstrs.imbued_ascendancy.config
 
 import me.fzzyhmstrs.fzzy_config.config_util.ConfigClass
+import me.fzzyhmstrs.fzzy_config.config_util.ConfigSection
 import me.fzzyhmstrs.fzzy_config.config_util.ReadMeText
 import me.fzzyhmstrs.fzzy_config.config_util.SyncedConfigHelperV1.readOrCreateAndValidate
 import me.fzzyhmstrs.fzzy_config.config_util.SyncedConfigWithReadMe
@@ -34,6 +35,20 @@ object IaConfig:
     class Items: ConfigClass(itemsHeader){
 
         var realityTravelTarget = ValidatedInt(1000,10000,1)
+
+        var ringOfSouls = RingOfSouls()
+        class RingOfSouls: ConfigSection(Header.Builder().space().add("ia.readme.items.ring_of_souls").build()){
+            var maxTier = ValidatedInt(10, Int.MAX_VALUE,1)
+            var baseKillsPerTier = ValidatedInt(250, Int.MAX_VALUE,1)
+            var killTierMultiplier = ValidatedFloat(2f, Float.MAX_VALUE,1f)
+        }
+
+        var crownOfSorrows = CrownOfSorrows()
+        class CrownOfSorrows: ConfigSection(Header.Builder().space().add("ia.readme.items.crown_of_sorrows").build()){
+            var activeDuration = ValidatedInt(80, Int.MAX_VALUE,1)
+            var defense50Percent = ValidatedInt(10000, Int.MAX_VALUE,10)
+            var regret50Percent = ValidatedInt(25000, Int.MAX_VALUE,25)
+        }
 
     }
 

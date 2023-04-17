@@ -71,8 +71,16 @@ object RegisterItem {
     val NIHIL_BLADE = NihilBladeItem(FabricItemSettings()).also{ regItem["nihil_blade"] = it}
 
     //trinkets
-    //model tex
+    //model
     val CADUCEUS = SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), scepterModifiers = listOf(RegisterModifier.HEALING.modifierId, RegisterModifier1.HEALERS_REWARD.modifierId)) .also{ regItem["caduceus"] = it}
+    //model
+    val CROWN_OF_SORROWS = CrownOfSorrowsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(240)).also{ regItem["crown_of_sorrows"] = it}
+    //model
+    val DIVINE_CORONET = DivineCoronetItem(FabricItemSettings().maxDamage(480)).withGlint().also{ regItem["divine_coronet"] = it}
+    //model
+    val PENDANT_OF_MEMORIES = PendantOfMemoriesItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(250)).also{ regItem["pendant_of_memories"] = it}
+    //model
+    val RING_OF_SOULS = RingOfSoulsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(240)).also{ regItem["ring_of_souls"] = it}
     val STEEL_AMULET = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_amulet"] = it}
     val STEEL_HEADBAND = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_headband"] = it}
     val STEEL_RING = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_ring"] = it}

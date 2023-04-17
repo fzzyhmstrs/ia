@@ -58,6 +58,25 @@ object RegisterRenderer {
         ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
             if (entity != null && entity.isUsingItem && entity.activeItem == stack) 1.0f else 0.0f
         }
+
+        ModelPredicateProviderRegistry.register(
+            RegisterItem.CROWN_OF_SORROWS, Identifier("active")
+        ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
+            if (entity != null && stack.nbt?.getBoolean("active") == true) 1.0f else 0.0f
+        }
+
+        ModelPredicateProviderRegistry.register(
+            RegisterItem.PENDANT_OF_MEMORIES, Identifier("active")
+        ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
+            if (entity != null && stack.nbt?.getBoolean("active") == true) 1.0f else 0.0f
+        }
+
+        ModelPredicateProviderRegistry.register(
+            RegisterItem.RING_OF_SOULS, Identifier("active")
+        ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
+            val nbt = stack.nbt?:return@register 0.0f
+            if (entity != null && nbt.getInt("tier") > 1) 1.0f else 0.0f
+        }
     }
 }
 
