@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "imbued_ascendancy:steel_ward"
+    "imbued_ascendancy:steel_ward",
+    "imbued_ascendancy:caduceus"
   ]
 }
