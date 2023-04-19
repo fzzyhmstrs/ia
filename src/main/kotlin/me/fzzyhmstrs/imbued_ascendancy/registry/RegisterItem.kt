@@ -14,7 +14,6 @@ import me.fzzyhmstrs.imbued_ascendancy.item.promise.RealityGemItem
 import me.fzzyhmstrs.imbued_ascendancy.item.promise.VoidGemItem
 import me.fzzyhmstrs.imbued_ascendancy.item.weapon.*
 import me.fzzyhmstrs.imbued_ascendancy.tool.SteelToolMaterial
-
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.entity.attribute.EntityAttributes
