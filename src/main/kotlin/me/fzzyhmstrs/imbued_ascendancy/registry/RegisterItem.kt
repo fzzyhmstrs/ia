@@ -86,8 +86,10 @@ object RegisterItem {
     //misc
     //item tex
     val ANCIENT_TABLET = AncientTabletItem(FabricItemSettings().maxCount(1)).also{ regItem["ancient_tablet"] = it}
+    //lang model tex
+    val LORE_FRAGMENT = LoreFragmentItem(FabricItemSettings()).also{ regItem["lore_fragment"] = it}
     //item tex
-    val NOTEBOOK_OF_ECHOES = ArchaeologistsNotebookItem(FabricItemSettings().maxCount(1)).also{ regItem["notebook_of_echoes"] = it}
+    val NOTEBOOK_OF_ECHOES = NotebookOfEchoesItem(FabricItemSettings().maxCount(1)).also{ regItem["notebook_of_echoes"] = it}
     //tex
     val BOOK_OF_LEGEND = BookOfLegendItem(FabricItemSettings().maxCount(8).rarity(Rarity.EPIC)).withGlint() .also{ regItem["book_of_legend"] = it}
     
