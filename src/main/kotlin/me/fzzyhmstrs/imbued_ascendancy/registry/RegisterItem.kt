@@ -51,21 +51,17 @@ object RegisterItem {
     
     //icons
     //model tex lang
-    val ICON_OF_THE_CHAMPION = SpellcastersReagentFlavorItem(EntityAttributes.ARMOR_TOUGHNESS,
-        EntityAttributeModifier(UUID.fromString("30e7eca0-deb9-11ed-b5ea-0242ac120002"),"champion_icon_modifier",3.0,EntityAttributeModifier.Operation.ADDITION),
-        FabricItemSettings()).also{ regItem["icon_of_the_champion"] = it}
+    val ICON_OF_NOTHINGNESS = SpellcastersReagentFlavorItem(RegisterAttribute.MAGIC_RESISTANCE,
+        EntityAttributeModifier(UUID.fromString("30e7f31c-deb9-11ed-b5ea-0242ac120002"),"nothingness_icon_modifier",0.15,EntityAttributeModifier.Operation.ADDITION),
+        FabricItemSettings()).also{ regItem["icon_of_nothingness"] = it}
     //model tex lang
-    val ICON_OF_THE_WARRIOR = SpellcastersReagentFlavorItem(RegisterAttribute.DAMAGE_MULTIPLICATION,
-        EntityAttributeModifier(UUID.fromString("30e7f0ba-deb9-11ed-b5ea-0242ac120002"),"warrior_icon_modifier",-0.15,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
-        FabricItemSettings()).also{ regItem["icon_of_the_warrior"] = it}
+    val ICON_OF_THE_SAINT = SpellcastersReagentFlavorItem(EntityAttributes.GENERIC_MAX_HEALTH,
+        EntityAttributeModifier(UUID.fromString("cde55f4a-dec0-11ed-b5ea-0242ac120002"),"saint_icon_modifier",2.0,EntityAttributeModifier.Operation.ADDITION),
+        FabricItemSettings()).also{ regItem["icon_of_the_saint"] = it}
     //model tex lang
     val ICON_OF_FLAMES = SpellcastersReagentFlavorItem(RegisterAttribute.SPELL_COOLDOWN,
         EntityAttributeModifier(UUID.fromString("30e7f1fa-deb9-11ed-b5ea-0242ac120002"),"flame_icon_modifier",-0.15,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
         FabricItemSettings()).also{ regItem["icon_of_flames"] = it}
-    //model tex lang
-    val ICON_OF_NOTHINGNESS = SpellcastersReagentFlavorItem(RegisterAttribute.MAGIC_RESISTANCE,
-        EntityAttributeModifier(UUID.fromString("30e7f31c-deb9-11ed-b5ea-0242ac120002"),"nothingness_icon_modifier",0.15,EntityAttributeModifier.Operation.ADDITION),
-        FabricItemSettings()).also{ regItem["icon_of_nothingness"] = it}
     //model tex lang
     val ICON_OF_KNOWLEDGE = SpellcastersReagentFlavorItem(RegisterAttribute.PLAYER_EXPERIENCE,
         EntityAttributeModifier(UUID.fromString("30e7f77c-deb9-11ed-b5ea-0242ac120002"),"knowledge_icon_modifier",0.15,EntityAttributeModifier.Operation.ADDITION),
@@ -79,9 +75,13 @@ object RegisterItem {
         EntityAttributeModifier(UUID.fromString("30e7fa24-deb9-11ed-b5ea-0242ac120002"),"depravity_icon_modifier",0.2,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
         FabricItemSettings()).also{ regItem["icon_of_depravity"] = it}
     //model tex lang
-    val ICON_OF_THE_SAINT = SpellcastersReagentFlavorItem(EntityAttributes.GENERIC_MAX_HEALTH,
-        EntityAttributeModifier(UUID.fromString("cde55f4a-dec0-11ed-b5ea-0242ac120002"),"saint_icon_modifier",2.0,EntityAttributeModifier.Operation.ADDITION),
-        FabricItemSettings()).also{ regItem["icon_of_the_saint"] = it}
+    val ICON_OF_THE_WARRIOR = SpellcastersReagentFlavorItem(RegisterAttribute.DAMAGE_MULTIPLICATION,
+        EntityAttributeModifier(UUID.fromString("30e7f0ba-deb9-11ed-b5ea-0242ac120002"),"warrior_icon_modifier",-0.15,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
+        FabricItemSettings()).also{ regItem["icon_of_the_warrior"] = it}
+    //model tex lang
+    val ICON_OF_THE_CHAMPION = SpellcastersReagentFlavorItem(EntityAttributes.ARMOR_TOUGHNESS,
+        EntityAttributeModifier(UUID.fromString("30e7eca0-deb9-11ed-b5ea-0242ac120002"),"champion_icon_modifier",3.0,EntityAttributeModifier.Operation.ADDITION),
+        FabricItemSettings()).also{ regItem["icon_of_the_champion"] = it}
 
     //misc
     //item model tex lang
