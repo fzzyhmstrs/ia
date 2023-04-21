@@ -107,6 +107,10 @@ object RegisterItem {
     val STEEL_SWORD = SwordItem(SteelToolMaterial,3,-2.4f,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT)).also{ regItem["steel_sword"] = it}
     val NIHIL_BLADE = NihilBladeItem(FabricItemSettings()).also{ regItem["nihil_blade"] = it}
     val SOULSPIKE = SoulspikeItem(FabricItemSettings()).also{ regItem["soulspike"] = it}
+    //item model tex lang modifier
+    val COSMOS = CosmicScepterItem(ScepterLvl4ToolMaterial,AiItemSettings().aiGroup(AiItemGroup.SCEPTER).rarity(Rarity.EPIC))
+        .withModifiers(listOf(RegisterModifier.COSMIC))
+        .also{ regItem["redemption"] = it}
 
     //trinkets
     //shield-code
