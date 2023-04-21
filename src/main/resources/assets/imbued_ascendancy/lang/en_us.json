@@ -1,7 +1,7 @@
 {
 	"entity.imbued_ascendancy.celestial_trident": "Celestial Trident",
 	"entity.imbued_ascendancy.celestial_trident_avatar": "Echo of the Trident",
-	"entity.imbued_ascendancy.champions_trident": "Celestial Trident",
+	"entity.imbued_ascendancy.champions_trident": "Champions Trident",
 	
 	"imbued_ascendancy.advancement.crystalline_beginnings": "Imbued Ascendancy",
 	"imbued_ascendancy.advancement.crystalline_beginnings.desc": "tbd",
@@ -41,6 +41,29 @@
 	"item.imbued_ascendancy.nihil_blade.flavor": "The inky depths shimmering withingcall out to you",
 	"item.imbued_ascendancy.soulspike": "Soulspike",
 	"item.imbued_ascendancy.soulspike.flavor": "Its jagged edges rend not flesh but dream",
+	
+	"item.imbued_ascendancy.icon_of_nothingness": "Icon of Nothingness",
+	"item.imbued_ascendancy.icon_of_nothingness.flavor": "An echo of null existance",
+	"item.imbued_ascendancy.icon_of_the_saint": "Icon of the Saint",
+	"item.imbued_ascendancy.icon_of_the_saint.flavor": "An echo of life",
+	"item.imbued_ascendancy.icon_of_flames": "Icon of Flames",
+	"item.imbued_ascendancy.icon_of_flames.flavor": "An echo of passion",
+	"item.imbued_ascendancy.icon_of_knowledge": "Icon of th Saint",
+	"item.imbued_ascendancy.icon_of_knowledge.flavor": "An echo of hope",
+	"item.imbued_ascendancy.icon_of_the_blade": "Icon of the Blade",
+	"item.imbued_ascendancy.icon_of_the_blade.flavor": "An echo of violence",
+	"item.imbued_ascendancy.icon_of_depravity": "Icon of Depravity",
+	"item.imbued_ascendancy.icon_of_depravity.flavor": "An echo of cruelty",
+	"item.imbued_ascendancy.icon_of_the_warrior": "Icon of the Warrior",
+	"item.imbued_ascendancy.icon_of_the_warrior.flavor": "An echo of light",
+	"item.imbued_ascendancy.icon_of_the_champion": "Icon of the Champion",
+	"item.imbued_ascendancy.icon_of_the_champion.flavor": "An echo of silence",
+	
+	"item.imbued_ascendancy.ancient_tablet": "Ancient Tablet",
+	"item.imbued_ascendancy.notebook_of_echoes": "Notebook of Echoes",
+	"item.imbued_ascendancy.book_of_legend": "Book of Legend",
+	"item.imbued_ascendancy.book_of_legend.flavor": "What whispers of the cosmos lie within?",
+	"item.imbued_ascendancy.book_of_legend.flavor.desc": "Hold a scepter in your offhand to increase chances of opening a spell relevant to that scepter",
 	
 	"item.imbued_ascendancy.caduceus": "Caduceus",
 	"item.imbued_ascendancy.caduceus.flavor": "Often thought to be a symbol of healing, this symbol of commerce nonetheless protects the bearer from harm.",
