@@ -42,7 +42,7 @@ object RegisterItem {
     val SHIMMERING_FABRIC = Item(AiItemSettings()).also{ regItem["shimmering_fabric"] = it}
     val PURESTEEL = Item(AiItemSettings()).also{ regItem["puresteel"] = it}
     //powders
-    //model tex
+    //tex
     val PURE_POWDER = Item(FabricItemSettings()).also{ regItem["pure_powder"] = it} //lighting bedrock on fire
     //powders
     val NULL_POWDER = Item(FabricItemSettings()).also{ regItem["null_powder"] = it} //lighting bedrock on fire
@@ -50,45 +50,45 @@ object RegisterItem {
     val SOUL_POWDER = Item(FabricItemSettings()).also{ regItem["soul_powder"] = it} //killing a mob with gem fire
     
     //icons
-    //model tex lang
+    //tex
     val ICON_OF_NOTHINGNESS = SpellcastersReagentFlavorItem(RegisterAttribute.MAGIC_RESISTANCE,
         EntityAttributeModifier(UUID.fromString("30e7f31c-deb9-11ed-b5ea-0242ac120002"),"nothingness_icon_modifier",0.15,EntityAttributeModifier.Operation.ADDITION),
         FabricItemSettings()).also{ regItem["icon_of_nothingness"] = it}
-    //model tex lang
+    //tex
     val ICON_OF_THE_SAINT = SpellcastersReagentFlavorItem(EntityAttributes.GENERIC_MAX_HEALTH,
         EntityAttributeModifier(UUID.fromString("cde55f4a-dec0-11ed-b5ea-0242ac120002"),"saint_icon_modifier",2.0,EntityAttributeModifier.Operation.ADDITION),
         FabricItemSettings()).also{ regItem["icon_of_the_saint"] = it}
-    //model tex lang
+    //tex
     val ICON_OF_FLAMES = SpellcastersReagentFlavorItem(RegisterAttribute.SPELL_COOLDOWN,
         EntityAttributeModifier(UUID.fromString("30e7f1fa-deb9-11ed-b5ea-0242ac120002"),"flame_icon_modifier",-0.15,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
         FabricItemSettings()).also{ regItem["icon_of_flames"] = it}
-    //model tex lang
+    //tex
     val ICON_OF_KNOWLEDGE = SpellcastersReagentFlavorItem(RegisterAttribute.PLAYER_EXPERIENCE,
         EntityAttributeModifier(UUID.fromString("30e7f77c-deb9-11ed-b5ea-0242ac120002"),"knowledge_icon_modifier",0.15,EntityAttributeModifier.Operation.ADDITION),
         FabricItemSettings()).also{ regItem["icon_of_knowledge"] = it}
-    //model tex lang
+    //tex
     val ICON_OF_THE_BLADE = SpellcastersReagentFlavorItem(EntityAttributes.GENERIC_ATTACK_DAMAGE,
         EntityAttributeModifier(UUID.fromString("30e7f8f8-deb9-11ed-b5ea-0242ac120002"),"blade_icon_modifier",2.0,EntityAttributeModifier.Operation.ADDITION),
         FabricItemSettings()).also{ regItem["icon_of_the_blade"] = it}
-    //model tex lang
+    //tex
     val ICON_OF_DEPRAVITY = SpellcastersReagentFlavorItem(RegisterAttribute.SPELL_DAMAGE,
         EntityAttributeModifier(UUID.fromString("30e7fa24-deb9-11ed-b5ea-0242ac120002"),"depravity_icon_modifier",0.2,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
         FabricItemSettings()).also{ regItem["icon_of_depravity"] = it}
-    //model tex lang
+    //tex
     val ICON_OF_THE_WARRIOR = SpellcastersReagentFlavorItem(RegisterAttribute.DAMAGE_MULTIPLICATION,
         EntityAttributeModifier(UUID.fromString("30e7f0ba-deb9-11ed-b5ea-0242ac120002"),"warrior_icon_modifier",-0.15,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
         FabricItemSettings()).also{ regItem["icon_of_the_warrior"] = it}
-    //model tex lang
+    //tex
     val ICON_OF_THE_CHAMPION = SpellcastersReagentFlavorItem(EntityAttributes.ARMOR_TOUGHNESS,
         EntityAttributeModifier(UUID.fromString("30e7eca0-deb9-11ed-b5ea-0242ac120002"),"champion_icon_modifier",3.0,EntityAttributeModifier.Operation.ADDITION),
         FabricItemSettings()).also{ regItem["icon_of_the_champion"] = it}
 
     //misc
-    //item model tex lang
+    //item tex
     val ANCIENT_TABLET = AncientTabletItem(FabricItemSettings().maxCount(1)).also{ regItem["ancient_tablet"] = it}
-    //item model tex lang
-    val ARCHAEOLOGISTS_NOTEBOOK = ArchaeologistsNotebookItem(FabricItemSettings().maxCount(1)).also{ regItem["ancient_tablet"] = it}
-    //item model tex lang
+    //item tex
+    val NOTEBOOK_OF_ECHOES = ArchaeologistsNotebookItem(FabricItemSettings().maxCount(1)).also{ regItem["notebook_of_echoes"] = it}
+    //tex
     val BOOK_OF_LEGEND = BookOfLegendItem(FabricItemSettings().maxCount(8).rarity(Rarity.EPIC)).withGlint() .also{ regItem["book_of_legend"] = it}
     
     //tools and weapons
