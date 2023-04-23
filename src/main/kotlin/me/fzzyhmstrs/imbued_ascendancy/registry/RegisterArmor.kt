@@ -37,21 +37,21 @@ object RegisterArmor {
     eternity <- N/A
     */
 
-    //garnet armor
+    //garnet armor -tex done
     val GARNET_ARMOR_MATERIAL = GarnetArmorMaterial()
     val GARNET_HELMET = ArmorItem(GARNET_ARMOR_MATERIAL, EquipmentSlot.HEAD,Item.Settings()).also { regArmor["garnet_helmet"] = it }
     val GARNET_CHESTPLATE = ArmorItem(GARNET_ARMOR_MATERIAL, EquipmentSlot.CHEST,Item.Settings()).also { regArmor["garnet_chestplate"] = it }
     val GARNET_LEGGINGS = ArmorItem(GARNET_ARMOR_MATERIAL, EquipmentSlot.LEGS,Item.Settings()).also { regArmor["garnet_leggings"] = it }
     val GARNET_BOOTS = ArmorItem(GARNET_ARMOR_MATERIAL, EquipmentSlot.FEET,Item.Settings()).also { regArmor["garnet_boots"] = it }
 
-    //Glowing armor
+    //Glowing armor -tex done
     val GLOWING_ARMOR_MATERIAL = GlowingArmorMaterial()
     val GLOWING_HELMET = ArmorItem(GLOWING_ARMOR_MATERIAL, EquipmentSlot.HEAD,Item.Settings()).also { regArmor["glowing_helmet"] = it }
     val GLOWING_CHESTPLATE = ArmorItem(GLOWING_ARMOR_MATERIAL, EquipmentSlot.CHEST,Item.Settings()).also { regArmor["glowing_chestplate"] = it }
     val GLOWING_LEGGINGS = ArmorItem(GLOWING_ARMOR_MATERIAL, EquipmentSlot.LEGS,Item.Settings()).also { regArmor["glowing_leggings"] = it }
     val GLOWING_BOOTS = ArmorItem(GLOWING_ARMOR_MATERIAL, EquipmentSlot.FEET,Item.Settings()).also { regArmor["glowing_boots"] = it }
 
-    //Shimmering robes
+    //Shimmering robes -tex done
     val SHIMMERING_ARMOR_MATERIAL = ShimmeringArmorMaterial()
     val SHIMMERING_HOOD = ArmorItem(SHIMMERING_ARMOR_MATERIAL, EquipmentSlot.HEAD,Item.Settings()).also { regArmor["shimmering_hood"] = it }
     val SHIMMERING_ROBE = ArmorItem(SHIMMERING_ARMOR_MATERIAL, EquipmentSlot.CHEST,Item.Settings()).also { regArmor["shimmering_robe"] = it }
@@ -64,7 +64,7 @@ object RegisterArmor {
     val CELESTIAL_GREAVES = CelestialArmorItem(EquipmentSlot.LEGS,Item.Settings().rarity(Rarity.EPIC)).also { regArmor["celestial_leggings"] = it }
     val CELESTIAL_TREADS = CelestialArmorItem(EquipmentSlot.FEET,Item.Settings().rarity(Rarity.EPIC)).also { regArmor["celestial_boots"] = it }
 
-    //Void Mail Set - Magic resistance - make with void gem, toss into void?
+    //Void Mail Set - Magic resistance - make with void gem, toss into void? -tex done
     val VOID_MAIL_HELMET = VoidMailArmorItem(EquipmentSlot.HEAD,Item.Settings()).also { regArmor["void_mail_helmet"] = it }
     val VOID_MAIL_CHESTPLATE = VoidMailArmorItem(EquipmentSlot.CHEST,Item.Settings()).also { regArmor["void_mail_chestplate"] = it }
     val VOID_MAIL_LEGGINGS = VoidMailArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["void_mail_leggings"] = it }

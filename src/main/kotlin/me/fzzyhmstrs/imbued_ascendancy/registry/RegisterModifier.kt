@@ -51,6 +51,7 @@ object RegisterModifier {
     val DAMNABLE_SUMMONS = AugmentModifier(Identifier(IA.MOD_ID,"damnable_summons"), cooldownModifier = -6.25, availableForRoll = false).withDamage(1f).withSpellToAffect(ModifierPredicates.SUMMONERS_PREDICATE).also { regMod.add(it) }
     val CHAMPIONS_FAITH = AugmentModifier(Identifier(IA.MOD_ID,"champions_faith"), levelModifier = 1, availableForRoll = false).withDuration(0,0,25).withSpellToAffect(ModifierPredicates1.CHAMPIONS_PREDICATE).also { regMod.add(it) }
     val HEALERS_REWARD = AugmentModifier(Identifier(IA.MOD_ID,"healers_reward")).withConsumer(ModifierConsumers.HEALERS_REWARD_CONSUMER).withSpellToAffect(ModifierPredicates.HEALERS_PREDICATE).also { regMod.add(it) }
+    val COSMIC = AugmentModifier(Identifier(IA.MOD_ID,"cosmic"), cooldownModifier = -10.0, availableForRoll = false).withDamage(1f).withSpellToAffect(ModifierPredicates.SUMMONERS_PREDICATE).also { regMod.add(it) }
 
     val WHISPER_OF_REGRET_SCEPTER = AugmentModifier(Identifier(IA.MOD_ID,"whisper_of_regret_scepter"),1)
         .withDamage(0.0f,0.0f,25f)

@@ -13,13 +13,16 @@ import me.fzzyhmstrs.imbued_ascendancy.item.*
 import me.fzzyhmstrs.imbued_ascendancy.item.promise.RealityGemItem
 import me.fzzyhmstrs.imbued_ascendancy.item.promise.VoidGemItem
 import me.fzzyhmstrs.imbued_ascendancy.item.weapon.*
+import me.fzzyhmstrs.imbued_ascendancy.tool.ScepterLvl4ToolMaterial
 import me.fzzyhmstrs.imbued_ascendancy.tool.SteelToolMaterial
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup
 import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.entity.attribute.EntityAttributes
 import net.minecraft.item.*
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
+import net.minecraft.text.Text
 import net.minecraft.util.Identifier
 import net.minecraft.util.Rarity
 import java.util.*
@@ -79,7 +82,7 @@ object RegisterItem {
         EntityAttributeModifier(UUID.fromString("30e7f0ba-deb9-11ed-b5ea-0242ac120002"),"warrior_icon_modifier",-0.15,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
         FabricItemSettings()).also{ regItem["icon_of_the_warrior"] = it}
     //tex
-    val ICON_OF_THE_CHAMPION = SpellcastersReagentFlavorItem(EntityAttributes.ARMOR_TOUGHNESS,
+    val ICON_OF_THE_CHAMPION = SpellcastersReagentFlavorItem(EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
         EntityAttributeModifier(UUID.fromString("30e7eca0-deb9-11ed-b5ea-0242ac120002"),"champion_icon_modifier",3.0,EntityAttributeModifier.Operation.ADDITION),
         FabricItemSettings()).also{ regItem["icon_of_the_champion"] = it}
 
@@ -108,8 +111,8 @@ object RegisterItem {
     val NIHIL_BLADE = NihilBladeItem(FabricItemSettings()).also{ regItem["nihil_blade"] = it}
     val SOULSPIKE = SoulspikeItem(FabricItemSettings()).also{ regItem["soulspike"] = it}
     //item model tex lang modifier
-    val COSMOS = CosmicScepterItem(ScepterLvl4ToolMaterial,AiItemSettings().aiGroup(AiItemGroup.SCEPTER).rarity(Rarity.EPIC))
-        .withModifiers(listOf(RegisterModifier.COSMIC))
+    val COSMOS = CosmicScepterItem(ScepterLvl4ToolMaterial,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.SCEPTER).rarity(Rarity.EPIC))
+        .withModifiers(listOf(RegisterModifier1.COSMIC))
         .also{ regItem["redemption"] = it}
 
     //trinkets
@@ -136,7 +139,7 @@ object RegisterItem {
     fun registerItemGroup(): ItemGroup{
         return FabricItemGroup.builder(Identifier(IA.MOD_ID,"ia_group"))
             .displayName(Text.translatable("itemGroup.imbued_ascendancy.is_group"))
-            .icon { ItemStack(RegisterBlock.CELESTIAL_TRIDENT.asItem()) }
+            .icon { ItemStack(CELESTIAL_TRIDENT.asItem()) }
             .entries { _, entries, _ ->
                 entries.addAll(regItem.values.stream().map { item -> ItemStack(item) }.toList())
                 entries.addAll(RegisterArmor.regArmor.values.stream().map { item -> ItemStack(item) }.toList())
