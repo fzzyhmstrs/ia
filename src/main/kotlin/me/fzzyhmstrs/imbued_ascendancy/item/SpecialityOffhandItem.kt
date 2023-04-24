@@ -19,14 +19,15 @@ open class SpecialityOffhandItem(
     
     companion object{
         init{
-        ModifyModifiersEvent.EVENT.register{ _, user, _, modifiers ->
-            for (stack in user.handItems) {
-                if (stack.item is SpecialityOffhandItem) {
-                    val focusMods = ModifierHelper.getActiveModifiers(stack)
-                    return@register modifiers.combineWith(focusMods, AugmentModifier())
+            ModifyModifiersEvent.EVENT.register{ _, user, _, modifiers ->
+                for (stack in user.handItems) {
+                    if (stack.item is SpecialityOffhandItem) {
+                        val focusMods = ModifierHelper.getActiveModifiers(stack)
+                        return@register modifiers.combineWith(focusMods, AugmentModifier())
+                    }
                 }
+                modifiers
             }
-            modifiers
         }
     }
 
