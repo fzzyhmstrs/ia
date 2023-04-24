@@ -116,11 +116,27 @@ object RegisterItem {
         .also{ regItem["redemption"] = it}
 
     //trinkets
-    //shield-code
+    //model tex mods
+    //warrior - increases damage against undead, reduces damage from undead
+    val BLAZE_OF_LIGHT = SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(), scepterModifiers = listOf()) .also{ regItem["blaze_of_light"] = it}
+    //model tex mods
+    //lich - buffs summons, chance to echo summoning spells at durability expense
+    val BONE_RATTLE = BoneRattleItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(100)) .also{ regItem["bone_rattle"] = it}
+    //saint
     val CADUCEUS = SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(450), scepterModifiers = listOf(RegisterModifier.HEALING.modifierId, RegisterModifier1.HEALERS_REWARD.modifierId)) .also{ regItem["caduceus"] = it}
+    //champion
     val CROWN_OF_SORROWS = CrownOfSorrowsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(240)).also{ regItem["crown_of_sorrows"] = it}
+    //altar
     val DIVINE_CORONET = DivineCoronetItem(FabricItemSettings().maxDamage(480)).withGlint().also{ regItem["divine_coronet"] = it}
+    //model tex mods
+    //flame - spell cooldown, attack speed, chance to set things on fire
+    val LIVING_FLAME = SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(), scepterModifiers = listOf()) .also{ regItem["living_flame"] = it}
+    //model tex mods
+    //void - damaging has chance to reduce max health, magic resist, mana cost
+    val NULL_AND_VOID = SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(), scepterModifiers = listOf()) .also{ regItem["null_and_void"] = it}
+    //scholar
     val PENDANT_OF_MEMORIES = PendantOfMemoriesItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(250)).also{ regItem["pendant_of_memories"] = it}
+    //blade
     val RING_OF_SOULS = RingOfSoulsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(240)).also{ regItem["ring_of_souls"] = it}
     val STEEL_AMULET = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_amulet"] = it}
     val STEEL_HEADBAND = SteelJewelryItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) .also{ regItem["steel_headband"] = it}
