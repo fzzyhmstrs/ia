@@ -14,10 +14,11 @@ open class SpecialityOffhandItem(
     private val equipmentModifiers: List<Identifier> = listOf(),
     private val scepterModifiers: List<Identifier> = listOf())
     :
-    CustomFlavorItem(settings), Modifiable
+    CustomFlavorItem(settings), Modifiable, Modifiable, DamageTracking, AttributeTracking, HitTracking, KillTracking, ModifierTracking
 {
-
-    init{
+    
+    companion object{
+        init{
         ModifyModifiersEvent.EVENT.register{ _, user, _, modifiers ->
             for (stack in user.handItems) {
                 if (stack.item is SpecialityOffhandItem) {
