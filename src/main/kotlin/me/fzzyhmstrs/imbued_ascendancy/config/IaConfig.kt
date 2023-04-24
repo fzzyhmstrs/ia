@@ -40,6 +40,7 @@ object IaConfig:
         var boneRattle = CrownOfSorrows()
         class boneRattle: ConfigSection(Header.Builder().space().add("ia.readme.items.bone_rattle").build()){
             var duplicationChance = ValidatedFloat(0.25f,1f,0f)
+            var duplicationDamage = ValidatedInt(20,100,0)
             var repairTime = ValidatedInt(300,Int.MAX_VALUE,0)
         }
         
