@@ -58,7 +58,7 @@ object RegisterArmor {
     val SHIMMERING_PANTS = ArmorItem(SHIMMERING_ARMOR_MATERIAL, EquipmentSlot.LEGS,Item.Settings()).also { regArmor["shimmering_pants"] = it }
     val SHIMMERING_BOOTS = ArmorItem(SHIMMERING_ARMOR_MATERIAL, EquipmentSlot.FEET,Item.Settings()).also { regArmor["shimmering_boots"] = it }
 
-    //Celestial Armor
+    //Celestial Armor -tex done
     val CELESTIAL_HELM = CelestialArmorItem(EquipmentSlot.HEAD,Item.Settings().rarity(Rarity.EPIC)).also { regArmor["celestial_helmet"] = it }
     val CELESTIAL_PLATE = CelestialArmorItem(EquipmentSlot.CHEST,Item.Settings().rarity(Rarity.EPIC)).also { regArmor["celestial_chestplate"] = it }
     val CELESTIAL_GREAVES = CelestialArmorItem(EquipmentSlot.LEGS,Item.Settings().rarity(Rarity.EPIC)).also { regArmor["celestial_leggings"] = it }
@@ -73,7 +73,7 @@ object RegisterArmor {
     //Lapidarists Gear - Sockets, have the witch orb modifiers be socketable? The basic gems too??
     //probably going to hold off for now, so I don't have to focus on the slots API for the moment
 
-    //Lich-kings Robes - summoning magic, takes more damage during the day
+    //Lich-kings Robes - summoning magic, takes more damage during the day -tex done
     val LICH_KINGS_HELMET = LichKingsRobesArmorItem(EquipmentSlot.HEAD,Item.Settings()).also { regArmor["lich_kings_helmet"] = it }
     val LICH_KINGS_CHESTPLATE = LichKingsRobesArmorItem(EquipmentSlot.CHEST,Item.Settings()).also { regArmor["lich_kings_chestplate"] = it }
     val LICH_KINGS_LEGGINGS = LichKingsRobesArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["lich_kings_leggings"] = it }
@@ -109,7 +109,7 @@ object RegisterArmor {
     val ELEMENTALISTS_LEGGINGS = ElementalistsGarbArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["warriors_leggings"] = it }
     val ELEMENTALISTS_BOOTS = ElementalistsGarbArmorItem(EquipmentSlot.FEET,Item.Settings()).also { regArmor["warriors_boots"] = it }
 
-    //Eternity Shroud - health and spell duration/range, rare finds in dungeons
+    //Eternity Shroud - health and spell duration/range, rare finds in dungeons - Tex Done
     val ETERNITY_HELMET = EternityShroudArmorItem(EquipmentSlot.HEAD,Item.Settings()).also { regArmor["eternity_helmet"] = it }
     val ETERNITY_CHESTPLATE = EternityShroudArmorItem(EquipmentSlot.CHEST,Item.Settings()).also { regArmor["eternity_chestplate"] = it }
     val ETERNITY_LEGGINGS = EternityShroudArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["eternity_leggings"] = it }
