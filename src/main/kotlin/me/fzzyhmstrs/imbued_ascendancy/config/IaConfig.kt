@@ -34,8 +34,15 @@ object IaConfig:
 
     class Items: ConfigClass(itemsHeader){
 
+        
         var realityTravelTarget = ValidatedInt(1000,10000,1)
 
+        var boneRattle = CrownOfSorrows()
+        class boneRattle: ConfigSection(Header.Builder().space().add("ia.readme.items.bone_rattle").build()){
+            var duplicationChance = ValidatedFloat(0.25f,1f,0f)
+            var repairTime = ValidatedInt(300,Int.MAX_VALUE,0)
+        }
+        
         var ringOfSouls = RingOfSouls()
         class RingOfSouls: ConfigSection(Header.Builder().space().add("ia.readme.items.ring_of_souls").build()){
             var maxTier = ValidatedInt(10, Int.MAX_VALUE,1)
