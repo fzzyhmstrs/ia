@@ -24,39 +24,135 @@ object ModifierConsumers {
         EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
             if (target == null) return@ToolConsumer
             if (user.world.random.nextFloat() < IaConfig.modifiers.nihilBladeNothingnessChance.get()){
-                EffectQueue.addStatusToQueue(target, StatusEffects.WEAKNESS,50,1)
+                val health = target.health
+                val maxHealth = target.maxHealth
+                if (health > maxHealth - 4f){
+                    if (health - 4f < 0f){
+                        target.health = 0.1f
+                        target.removeStatusEffect(StatusEffects.STRENGTH)
+                        target.addStatusEffect(
+                                StatusEffectInstance(StatusEffects.WEAKNESS, 400, 4)
+                            )
+                        target.addStatusEffect(
+                                StatusEffectInstance(StatusEffects.SLOWNESS, 400, 2)
+                            )
+                        target.removeStatusEffect(StatusEffects.JUMP_BOOST)
+                        target.addStatusEffect(
+                                StatusEffectInstance(StatusEffects.JUMP_BOOST, 400, -3)
+                            )
+                    } else {
+                        target.health = health - 4f
+                        if (target.hasStatusEffect(RegisterStatus.NIHILISM)){
+                            val effect = target.getStatusEffect(RegisterStatus.NIHILISM)
+                            val amp = effect?.amplifier?:0
+                            val duration = effect?.duration?:0
+                            if (duration > 0){
+                                val duration2 = if(duration < 400) {400} else {duration}
+                                target.addStatusEffect(StatusEffectInstance(RegisterStatus.NIHILISM,duration2,amp + 1))
+                            }
+                        } else {
+                            target.addStatusEffect(
+                                StatusEffectInstance(RegisterStatus.NIHILISM, 400)
+                            )
+                        }
+                    }
+                }  
             }
         }
 
     val MANA_VAMPIRIC_HIT_CONSUMER: EquipmentModifier.ToolConsumer =
         EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
             if (target == null) return@ToolConsumer
-            if (user.world.random.nextFloat() < IaConfig.modifiers.nihilBladeNothingnessChance.get()){
-                EffectQueue.addStatusToQueue(target, StatusEffects.WEAKNESS,50,1)
+            if (user.world.random.nextFloat() < IaConfig.modifiers.gear.manaVampiricHitChance.get()){
+                manaHealItems(user,IaConfig.modifiers.gear.manaVampiricHitAmount.get())
             }
         }
 
     val MANA_VAMPIRIC_KILL_CONSUMER: EquipmentModifier.ToolConsumer =
         EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
             if (target == null) return@ToolConsumer
-            if (user.world.random.nextFloat() < IaConfig.modifiers.nihilBladeNothingnessChance.get()){
-                EffectQueue.addStatusToQueue(target, StatusEffects.WEAKNESS,50,1)
-            }
+            manaHealItems(user,IaConfig.modifiers.gear.manaVampiricKillAmount.get())
         }
 
     val MANA_DRAINING_HIT_CONSUMER: EquipmentModifier.ToolConsumer =
         EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
             if (target == null) return@ToolConsumer
-            if (user.world.random.nextFloat() < IaConfig.modifiers.nihilBladeNothingnessChance.get()){
-                EffectQueue.addStatusToQueue(target, StatusEffects.WEAKNESS,50,1)
+            if (user.world.random.nextFloat() < IaConfig.modifiers.gear.manaDrainingHitChance.get()){
+                manaDamageItems(user,IaConfig.modifiers.gear.manaDrainingDamageAmount.get())
             }
         }
 
     val MANA_DRAINING_KILL_CONSUMER: EquipmentModifier.ToolConsumer =
         EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
             if (target == null) return@ToolConsumer
-            if (user.world.random.nextFloat() < IaConfig.modifiers.nihilBladeNothingnessChance.get()){
-                EffectQueue.addStatusToQueue(target, StatusEffects.WEAKNESS,50,1)
+            manaDmageItems(user,IaConfig.modifiers.gear.manaDrainingKillAmount.get())
+        }
+        
+    /////////////////////////////
+    
+    private fun manaDamageItems(user: LivingEntity, damageAmount: Int){
+        if (user !is PlayerEntity) return
+        val stacks = getManaStacks(user: PlayerEntity)
+        manaDamageItems(stacks,user,healAmount)
+    }
+    
+    private fun manaDamageItems(list: MutableList<ItemStack>, user: PlayerEntity, damageLeft: Int): Int{
+        var hl = damageLeft
+        if (hl <= 0 || list.isEmpty()) return max(0,hl)
+        val rnd = world.random.nextInt(list.size)
+        val stack = list[rnd]
+        val damageAmount = min(5,hl)
+        val bl = (stack.item as ManaItem).manaDamage(stack,user.world,user,damageAmount,AcText.empty())
+        hl -= damageAmount
+        if (bl){
+            list.remove(stack)
+        }
+        return manaDamageItems(list,user,hl)
+    }
+        
+    private fun manaHealItems(user: LivingEntity, healAmount: Int){
+        if (user !is PlayerEntity) return
+        val stacks = getManaStacks(user: PlayerEntity)
+        manaHealItems(stacks,user.world,healAmount)
+    }
+    
+    private fun manaHealItems(list: MutableList<ItemStack>,world: World, healLeft: Int): Int{
+        var hl = healLeft
+        if (hl <= 0 || list.isEmpty()) return max(0,hl)
+        val rnd = world.random.nextInt(list.size)
+        val stack = list[rnd]
+        val healAmount = min(5,hl)
+        val healedAmount = (stack.item as ManaItem).healDamage(healAmount,stack)
+        hl -= min(healAmount,healedAmount)
+        if (!stack.isDamaged){
+            list.remove(stack)
+        }
+        return manaHealItems(list,world,hl)
+    }
+    
+    private fun getManaStacks(user: PlayerEntity): List<ItemStack>{
+        val stacks: MutableList<ItemStack> = mutableListOf()
+        for (stack2 in user.inventory.main){
+            if (stack2.item is ManaItem && stack2.isDamaged){
+                stacks.add(stack2)
+            }
+        } // iterate over the inventory and look for items that are interfaced with "ManaItem"
+        for (stack2 in user.inventory.offHand){
+            if (stack2.item is ManaItem && stack2.isDamaged){
+                stacks.add(stack2)
             }
         }
+        for (stack2 in user.inventory.armor){
+            if (stack2.item is ManaItem && stack2.isDamaged){
+                stacks.add(stack2)
+            }
+        }
+        val stacks2 = TrinketUtil.getTrinketStacks(user)
+        stacks2.forEach {
+            if (it.item is ManaItem && it.isDamaged){
+                stacks.add(it)
+            }
+        }
+        return stacks
+    }
 }
