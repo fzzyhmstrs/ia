@@ -38,8 +38,10 @@ object ModifierFunctions {
     val WARRIORS_LIGHT_DAMAGE_FUNCTION: EquipmentModifier.DamageFunction =
         EquipmentModifier.DamageFunction { _, user, attacker, damage, amount ->
             if (attacker != null && attacker.isUndead){
-                val source = if(user is PlayerEntity) DamageSource.player(user) else DamageSource.mob(user)
-                attacker.damage(source, IaConfig.modifiers.warriorsLightDamage.get())
+                if (!attacker.isInvulnerable){
+                    val source = if(user is PlayerEntity) DamageSource.player(user) else DamageSource.mob(user)
+                    attacker.damage(source, IaConfig.modifiers.warriorsLightDamage.get())
+                }
                 amount * IaConfig.modifiers.warriorsLightMultiplier.get()
             } else {
                 amount
