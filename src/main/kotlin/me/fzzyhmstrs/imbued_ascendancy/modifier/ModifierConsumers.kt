@@ -4,8 +4,10 @@ import me.fzzyhmstrs.amethyst_core.modifier_util.AugmentConsumer
 import me.fzzyhmstrs.fzzy_core.trinket_util.EffectQueue
 import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifier
 import me.fzzyhmstrs.imbued_ascendancy.config.IaConfig
+import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterStatus
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.effect.StatusEffects
+import net.minecraft.entity.effect.StatusEffectInstance
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemStack
 
