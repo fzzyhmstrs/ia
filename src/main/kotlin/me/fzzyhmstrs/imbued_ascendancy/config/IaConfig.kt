@@ -86,6 +86,7 @@ object IaConfig:
             var manaDrainingHitChance = ValidatedFloat(0.15f,1f,0f)
             var manaDrainingHitAmount = ValidatedInt(7,100,1)
             var manaDrainingKillAmount = ValidatedInt(10,150,1)
+            var manaReactiveAmount = ValidatedInt(1,25,1)
         }
         
     }
