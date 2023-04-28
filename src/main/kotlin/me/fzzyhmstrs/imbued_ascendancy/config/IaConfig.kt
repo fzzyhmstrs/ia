@@ -38,21 +38,21 @@ object IaConfig:
         var realityTravelTarget = ValidatedInt(1000,10000,1)
 
         var boneRattle = BoneRattle()
-        class BoneRattle: ConfigSection(Header.Builder().space().add("ia.readme.items.bone_rattle").build()){
+        class BoneRattle: ConfigSection(Header.Builder().space().add("ia.readme.items.bone_rattle").add("ia.readme.items.bone_rattle_2").build()){
             var duplicationChance = ValidatedFloat(0.25f,1f,0f)
             var duplicationDamage = ValidatedInt(20,100,0)
             var repairTime = ValidatedInt(300,Int.MAX_VALUE,0)
         }
         
         var ringOfSouls = RingOfSouls()
-        class RingOfSouls: ConfigSection(Header.Builder().space().add("ia.readme.items.ring_of_souls").build()){
+        class RingOfSouls: ConfigSection(Header.Builder().space().add("ia.readme.items.ring_of_souls").add("ia.readme.items.ring_of_souls_2").build()){
             var maxTier = ValidatedInt(10, Int.MAX_VALUE,1)
             var baseKillsPerTier = ValidatedInt(250, Int.MAX_VALUE,1)
             var killTierMultiplier = ValidatedFloat(2f, Float.MAX_VALUE,1f)
         }
 
         var crownOfSorrows = CrownOfSorrows()
-        class CrownOfSorrows: ConfigSection(Header.Builder().space().add("ia.readme.items.crown_of_sorrows").build()){
+        class CrownOfSorrows: ConfigSection(Header.Builder().space().add("ia.readme.items.crown_of_sorrows").add("ia.readme.items.crown_of_sorrows_2").build()){
             var activeDuration = ValidatedInt(80, Int.MAX_VALUE,1)
             var defense50Percent = ValidatedInt(10000, Int.MAX_VALUE,10)
             var regret50Percent = ValidatedInt(25000, Int.MAX_VALUE,25)
@@ -78,6 +78,16 @@ object IaConfig:
         var voidShroudedMultiplier = ValidatedFloat(0.84f,1.0f)
         var nihilBladeNothingnessChance = ValidatedFloat(0.15f,1.0f)
 
+        var gear = GearSection()
+        class GearSection: ConfigSection(Header.Builder().space().add("ia.readme.modifiers.gear").add("ia.readme.items.modifiers.gear_2").build()){
+            var manaVampiricHitChance = ValidatedFloat(0.15f,1f,0f)
+            var manaVampiricHitAmount = ValidatedInt(10,100,1)
+            var manaVampiricKillAmount = ValidatedInt(15,150,1)
+            var manaDrainingHitChance = ValidatedFloat(0.15f,1f,0f)
+            var manaDrainingHitAmount = ValidatedInt(7,100,1)
+            var manaDrainingKillAmount = ValidatedInt(10,150,1)
+        }
+        
     }
 
 
