@@ -124,6 +124,7 @@ object RegisterModifier {
         .also { regMod.add(it) }
     val RULER_OF_THE_DAMNED = buildModifier(Identifier(IA.MOD_ID,"ruler_of_the_damned"), persistent = true, availableForSelection = false)
         .withModifiers(DAMNABLE_SUMMONS.modifierId)
+        .withAttributeModifier(RegisterAttribute.SPELL_DURATION,0.0625,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
         .also { regMod.add(it) }
     val HELIOPHOBIA = buildModifier(Identifier(IA.MOD_ID,"heliophobia"), persistent = true, availableForSelection = false)
         .withOnDamaged(ModifierFunctions.HELIOPHOBIA_DAMAGE_FUNCTION)
