@@ -112,7 +112,7 @@ object ModifierConsumers {
         return manaDamageItems(list,user,hl)
     }
         
-    private fun manaHealItems(user: LivingEntity, healAmount: Int){
+    internal fun manaHealItems(user: LivingEntity, healAmount: Int){
         if (user !is PlayerEntity) return
         val stacks = getManaStacks(user: PlayerEntity)
         manaHealItems(stacks,user.world,healAmount)
@@ -132,7 +132,7 @@ object ModifierConsumers {
         return manaHealItems(list,world,hl)
     }
     
-    private fun getManaStacks(user: PlayerEntity): List<ItemStack>{
+    internal fun getManaStacks(user: PlayerEntity): List<ItemStack>{
         val stacks: MutableList<ItemStack> = mutableListOf()
         for (stack2 in user.inventory.main){
             if (stack2.item is ManaItem && stack2.isDamaged){
