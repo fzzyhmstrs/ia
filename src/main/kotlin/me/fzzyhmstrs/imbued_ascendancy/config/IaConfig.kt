@@ -78,6 +78,7 @@ object IaConfig:
         var voidShroudedMultiplier = ValidatedFloat(0.84f,1.0f)
         var nihilBladeNothingnessChance = ValidatedFloat(0.15f,1.0f)
         var heliophobiaMultiplier = ValidatedFloat(2.0f,10.0f)
+        var warriorsLightMultiplier = ValidatedFloat(0.9f,1.0f)
 
         var gear = GearSection()
         class GearSection: ConfigSection(Header.Builder().space().add("ia.readme.modifiers.gear").add("ia.readme.items.modifiers.gear_2").build()){
