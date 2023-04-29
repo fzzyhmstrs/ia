@@ -1,7 +1,10 @@
 package me.fzzyhmstrs.imbued_ascendancy.modifier
 
 import me.fzzyhmstrs.amethyst_core.modifier_util.AugmentConsumer
+import me.fzzyhmstrs.fzzy_core.coding_util.AcText
+import me.fzzyhmstrs.fzzy_core.mana_util.ManaItem
 import me.fzzyhmstrs.fzzy_core.trinket_util.EffectQueue
+import me.fzzyhmstrs.fzzy_core.trinket_util.TrinketUtil
 import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifier
 import me.fzzyhmstrs.imbued_ascendancy.config.IaConfig
 import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterStatus
@@ -10,6 +13,9 @@ import net.minecraft.entity.effect.StatusEffects
 import net.minecraft.entity.effect.StatusEffectInstance
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemStack
+import net.minecraft.world.World
+import kotlin.math.max
+import kotlin.math.min
 
 object ModifierConsumers {
 
@@ -80,31 +86,31 @@ object ModifierConsumers {
         EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
             if (target == null) return@ToolConsumer
             if (user.world.random.nextFloat() < IaConfig.modifiers.gear.manaDrainingHitChance.get()){
-                manaDamageItems(user,IaConfig.modifiers.gear.manaDrainingDamageAmount.get())
+                manaDamageItems(user,IaConfig.modifiers.gear.manaDrainingHitAmount.get())
             }
         }
 
     val MANA_DRAINING_KILL_CONSUMER: EquipmentModifier.ToolConsumer =
         EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
             if (target == null) return@ToolConsumer
-            manaDmageItems(user,IaConfig.modifiers.gear.manaDrainingKillAmount.get())
+            manaDamageItems(user,IaConfig.modifiers.gear.manaDrainingKillAmount.get())
         }
         
     /////////////////////////////
     
     private fun manaDamageItems(user: LivingEntity, damageAmount: Int){
         if (user !is PlayerEntity) return
-        val stacks = getManaStacks(user: PlayerEntity)
-        manaDamageItems(stacks,user,healAmount)
+        val stacks = getManaStacks(user)
+        manaDamageItems(stacks,user,damageAmount)
     }
     
     private fun manaDamageItems(list: MutableList<ItemStack>, user: PlayerEntity, damageLeft: Int): Int{
         var hl = damageLeft
         if (hl <= 0 || list.isEmpty()) return max(0,hl)
-        val rnd = world.random.nextInt(list.size)
+        val rnd = user.world.random.nextInt(list.size)
         val stack = list[rnd]
         val damageAmount = min(5,hl)
-        val bl = (stack.item as ManaItem).manaDamage(stack,user.world,user,damageAmount,AcText.empty())
+        val bl = (stack.item as ManaItem).manaDamage(stack,user.world,user,damageAmount, AcText.empty())
         hl -= damageAmount
         if (bl){
             list.remove(stack)
@@ -114,11 +120,11 @@ object ModifierConsumers {
         
     internal fun manaHealItems(user: LivingEntity, healAmount: Int){
         if (user !is PlayerEntity) return
-        val stacks = getManaStacks(user: PlayerEntity)
+        val stacks = getManaStacks(user)
         manaHealItems(stacks,user.world,healAmount)
     }
     
-    private fun manaHealItems(list: MutableList<ItemStack>,world: World, healLeft: Int): Int{
+    private fun manaHealItems(list: MutableList<ItemStack>, world: World, healLeft: Int): Int{
         var hl = healLeft
         if (hl <= 0 || list.isEmpty()) return max(0,hl)
         val rnd = world.random.nextInt(list.size)
@@ -132,7 +138,7 @@ object ModifierConsumers {
         return manaHealItems(list,world,hl)
     }
     
-    internal fun getManaStacks(user: PlayerEntity): List<ItemStack>{
+    internal fun getManaStacks(user: PlayerEntity): MutableList<ItemStack>{
         val stacks: MutableList<ItemStack> = mutableListOf()
         for (stack2 in user.inventory.main){
             if (stack2.item is ManaItem && stack2.isDamaged){

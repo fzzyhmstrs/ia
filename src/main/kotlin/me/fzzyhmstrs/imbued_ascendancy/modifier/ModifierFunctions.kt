@@ -27,8 +27,8 @@ object ModifierFunctions {
         }
 
     val HELIOPHOBIA_DAMAGE_FUNCTION: EquipmentModifier.DamageFunction =
-        EquipmentModifier.DamageFunction { _, user, _, damage, amount ->
-            if (user.world.isSkyVisible(user.blockPos) && world.isDay){
+        EquipmentModifier.DamageFunction { _, user, _, _, amount ->
+            if (user.world.isSkyVisible(user.blockPos) && user.world.isDay){
                 amount * IaConfig.modifiers.heliophobiaMultiplier.get()
             } else {
                 amount

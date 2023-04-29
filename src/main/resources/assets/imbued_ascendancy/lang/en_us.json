@@ -153,8 +153,8 @@
 	
 	"scepter.modifier.imbued_ascendancy:wisened": "Wisened",
 	"scepter.modifier.imbued_ascendancy:very_experienced": "Very Experienced",
-	"scepter.modifier.imbued_ascendancy:experienced": "Experience",
-	"scepter.modifier.imbued_ascendancy:inexperienced": "Inexperience",
+	"scepter.modifier.imbued_ascendancy:experienced": "Experienced",
+	"scepter.modifier.imbued_ascendancy:inexperienced": "Inexperienced",
 	"scepter.modifier.imbued_ascendancy:inept": "Inept",
 	"scepter.modifier.imbued_ascendancy:mana_vampiric": "Mana-Vampiric",
 	"scepter.modifier.imbued_ascendancy:mana_draining": "Mana-Draining",
@@ -174,8 +174,8 @@
 	"scepter.modifier.imbued_ascendancy:mana_kindled.desc": "Increases spell damage and reduces cooldown",
 	"scepter.modifier.imbued_ascendancy:nothingness.desc": "Attacks have a chance to reduce the targets maximum health temporarily",
 	
-	"enchantment_lore.imbued_ascendancy:heroic.description": "Heroic\n\nMax Level: VII\n\nIncreases damage against illagers."
+	"enchantment_lore.imbued_ascendancy:heroic.description": "Heroic\n\nMax Level: VII\n\nIncreases damage against illagers.",
 	
-	"ia.readme.main_header.title": "README - Imbued Ascendancy",
+	"ia.readme.main_header.title": "README - Imbued Ascendancy"
 	
 }
