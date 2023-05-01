@@ -56,9 +56,6 @@ open class BoneRattleItem(
             }
             ActionResult.PASS
         }
-        
-        
-        
     }
 
     
