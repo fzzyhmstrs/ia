@@ -34,13 +34,25 @@ TODO
 |Task|Status|
 |----|------|
 |NOT STARTED|X|
+|Add murals and lore writings blocks|Not started|
+|Add Demigod Altars|Not started|
+|Begin Dungeon design|Not started|
 |Begin Dungeon design|Not started|
 |Start adding entities|Not started|
+|Design progression system|Not started|
+|Add mob modification system|Not started|
+|Add spell-ability gear modifiers|Not started|
+|Test added trinkets|Not started|
+|Check on modifiers for the Celestial Reagents, maybe add special abilities|Not started|
 |Integrate celestial language|Not started|
 |Begin Dungeon design|Not started|
+|Add in-game armor textures|Not started|
 |IN PROGRESS|X|
-|Overhaul augment datapoint system to simplify and fzzy-config-ify|In progress|
+|Add Spellblades set item textures|In progress|
+|Add Scholars Robes set item textures|In progress|
+|Add elementalists set item textures|In progress|
 |COMPLETE|X|
-|Overhaul augment datapoint system to simplify and fzzy-config-ify|In progress|
+|9/12 item textures|Complete|
+|Core item impl|Complete|
 |DOCUMENTATION TODO|X|
-|Polish up wiki|Doc Todo|
+|Create wiki|Doc Todo|
