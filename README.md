@@ -34,6 +34,9 @@ TODO
 |Task|Status|
 |----|------|
 |NOT STARTED|X|
+|Implement custom guidebook engine|Not started|
+|Implement custom atlas-like map|Not started|
+|Implement map biome data format|Not started|
 |Add murals and lore writings blocks|Not started|
 |Add Demigod Altars|Not started|
 |Begin Dungeon design|Not started|
