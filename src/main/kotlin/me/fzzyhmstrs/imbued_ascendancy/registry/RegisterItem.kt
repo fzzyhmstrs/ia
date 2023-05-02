@@ -89,6 +89,8 @@ object RegisterItem {
 
     //misc
     //lang model tex
+    val STRANGE_MAP = CustomFlavorItem(FabricItemSettings()).also{ regItem["strange_map"] = it}
+    //lang model tex
     val LORE_FRAGMENT = LoreFragmentItem(FabricItemSettings()).also{ regItem["lore_fragment"] = it}
     //item tex
     val NOTEBOOK_OF_ECHOES = NotebookOfEchoesItem(FabricItemSettings().maxCount(1)).also{ regItem["notebook_of_echoes"] = it}
