@@ -23,7 +23,7 @@ PLANNED ENTITIES
 * Memory of Violence - Skeleton entity with sword arms. Very fast and brutal single target melee attack, relatively squishy. (The Blade)
 * Horrid Amalgam - Undead creature that looks like multiple entities stapled together. Ranged blob explosion attack that poisons. Melee smash. (The Lich)
 * Lightbringer - Floating creeper like mob, looks like floating crystals of light. Damages all in the area, double to undead (The Warrior)
-* Ghostly Cavalier - Undead armored melee mob with very high health and resistance to damage. (The Champion)
+* Ghostly Cavalier - Undead armored melee mob with very high health and resistance to damage. Wields a Trident. (The Champion)
 * NATURAL SPAWNS
 * Mana Jelly - Found in water, drains XP and mana and small damage.
 * Sardonyx Elemental - Golem entity with a beam ranged attack. found in dungeons. Source of Sardonyx
@@ -34,7 +34,10 @@ TODO
 |Task|Status|
 |----|------|
 |NOT STARTED|X|
-|Add reroll functionality into the imbuing table|Not started|
+|Begin Dungeon design|Not started|
+|Start adding entities|Not started|
+|Integrate celestial language|Not started|
+|Begin Dungeon design|Not started|
 |IN PROGRESS|X|
 |Overhaul augment datapoint system to simplify and fzzy-config-ify|In progress|
 |COMPLETE|X|
