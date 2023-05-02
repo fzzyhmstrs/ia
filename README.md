@@ -14,8 +14,8 @@ Embark on an epic journey to discover the origins of the world, the source of ma
 * More scepters and magical gear. Adds more scepters to the AI arsenal, including the all-powerful **Cosmic Scepter**, the ultimate evolution of spellcasting and the only implement powerful enough to contain and cast the spells of legend.
 * And much more!
 
-PLANNED ENTITIES
-* DEMIGOD MINIONS
+### PLANNED ENTITIES
+#### DEMIGOD MINIONS
 * Void Entity - Spawns only at light level 0 underground, very dangerous life draining attack, spaghetti monster like pitch black blob (The Void)
 * Oaken Construct - Friendly, tameable. Little construct that will heal passerby (or owner). Likes apples. (The Saint)
 * Living Inferno - Nether and near lava pools underground. Fires a stream of flame at enemies, can target multiple at once. (The Flame)
@@ -24,13 +24,13 @@ PLANNED ENTITIES
 * Horrid Amalgam - Undead creature that looks like multiple entities stapled together. Ranged blob explosion attack that poisons. Melee smash. (The Lich)
 * Lightbringer - Floating creeper like mob, looks like floating crystals of light. Damages all in the area, double to undead (The Warrior)
 * Ghostly Cavalier - Undead armored melee mob with very high health and resistance to damage. Wields a Trident. (The Champion)
-* NATURAL SPAWNS
+#### NATURAL SPAWNS
 * Mana Jelly - Found in water, drains XP and mana and small damage.
 * Sardonyx Elemental - Golem entity with a beam ranged attack. found in dungeons. Source of Sardonyx
 * Crystallized - Stronger zombie that is "infested" with crystals. Chance to slow and weaken on hit. Small chance to paralyze.
 * Crystalline Caster - Ranged crystallized that fires spikes of crystal in bursts.
 
-TODO
+### TODO
 |Task|Status|
 |----|------|
 |NOT STARTED|X|

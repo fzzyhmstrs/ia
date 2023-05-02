@@ -85,13 +85,13 @@ object RegisterArmor {
     val SPELLBLADES_LEGGINGS = SpellbladesArmorArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["spellblades_leggings"] = it }
     val SPELLBLADES_BOOTS = SpellbladesArmorArmorItem(EquipmentSlot.FEET,Item.Settings()).also { regArmor["spellblades_boots"] = it }
 
-    //Armor of the Champion - armor toughness and boost defensive spells
+    //Armor of the Champion - armor toughness and boost defensive spells -Tex done
     val CHAMPIONS_HELMET = ArmorOfTheChampionArmorItem(EquipmentSlot.HEAD,Item.Settings()).also { regArmor["champions_helmet"] = it }
     val CHAMPIONS_CHESTPLATE = ArmorOfTheChampionArmorItem(EquipmentSlot.CHEST,Item.Settings()).also { regArmor["champions_chestplate"] = it }
     val CHAMPIONS_LEGGINGS = ArmorOfTheChampionArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["champions_leggings"] = it }
     val CHAMPIONS_BOOTS = ArmorOfTheChampionArmorItem(EquipmentSlot.FEET,Item.Settings()).also { regArmor["champions_boots"] = it }
 
-    //Warriors Harness - damage against undead
+    //Warriors Harness - damage against undead - tex done
     val WARRIORS_HELMET = WarriorsHarnessArmorItem(EquipmentSlot.HEAD,Item.Settings()).also { regArmor["warriors_helmet"] = it }
     val WARRIORS_CHESTPLATE = WarriorsHarnessArmorItem(EquipmentSlot.CHEST,Item.Settings()).also { regArmor["warriors_chestplate"] = it }
     val WARRIORS_LEGGINGS = WarriorsHarnessArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["warriors_leggings"] = it }

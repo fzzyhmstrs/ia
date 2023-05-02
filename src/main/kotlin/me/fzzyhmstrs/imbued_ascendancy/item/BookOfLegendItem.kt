@@ -53,7 +53,7 @@ class BookOfLegendItem(settings: Settings) : AbstractAugmentBookItem(settings), 
     override fun getRandomBookAugment(list: List<String>, user: PlayerEntity, hand: Hand): String {
         val stack = if (hand == Hand.MAIN_HAND) user.offHandStack else user.mainHandStack
         if (stack.isIn(RegisterTag.ALL_FURY_SCEPTERS_TAG)){
-            for (i in 1..2){
+            for (i in 1..4){
                 val aug = super.getRandomBookAugment(list, user, hand)
                 val type = AugmentHelper.getAugmentType(aug)
                 if (type == SpellType.FURY){
@@ -61,7 +61,7 @@ class BookOfLegendItem(settings: Settings) : AbstractAugmentBookItem(settings), 
                 }
             }
         } else if (stack.isIn(RegisterTag.ALL_WIT_SCEPTERS_TAG)){
-            for (i in 1..2){
+            for (i in 1..4){
                 val aug = super.getRandomBookAugment(list, user, hand)
                 val type = AugmentHelper.getAugmentType(aug)
                 if (type == SpellType.WIT){
@@ -69,7 +69,7 @@ class BookOfLegendItem(settings: Settings) : AbstractAugmentBookItem(settings), 
                 }
             }
         } else if (stack.isIn(RegisterTag.ALL_GRACE_SCEPTERS_TAG)){
-            for (i in 1..2){
+            for (i in 1..4){
                 val aug = super.getRandomBookAugment(list, user, hand)
                 val type = AugmentHelper.getAugmentType(aug)
                 if (type == SpellType.GRACE){

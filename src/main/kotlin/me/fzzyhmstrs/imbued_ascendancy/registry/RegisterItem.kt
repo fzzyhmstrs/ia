@@ -7,6 +7,7 @@ import me.fzzyhmstrs.amethyst_imbuement.item.AiItemSettings
 import me.fzzyhmstrs.amethyst_imbuement.item.SpellcastersReagentFlavorItem
 import me.fzzyhmstrs.amethyst_imbuement.item.custom.CustomHoeItem
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterModifier
+import me.fzzyhmstrs.fzzy_core.item_util.CustomFlavorItem
 import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterModifier as RegisterModifier1
 import me.fzzyhmstrs.imbued_ascendancy.IA
 import me.fzzyhmstrs.imbued_ascendancy.item.*
