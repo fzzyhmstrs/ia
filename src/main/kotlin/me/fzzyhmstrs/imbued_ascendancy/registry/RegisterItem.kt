@@ -35,6 +35,7 @@ object RegisterItem {
     //raw materials
     val SARDONYX = Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM)).also{ regItem["sardonyx"] = it}
     val NULL_ONYX = Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)).also{ regItem["null_onyx"] = it}
+    //Make Tigers Eye??
     val SERPENTINE = Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM)).also{ regItem["serpentine"] = it}
     val ENSOULED_GEM = RealityGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)).also{ regItem["reality_gem"] = it}
     val REALITY_GEM = RealityGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)).also{ regItem["reality_gem"] = it}
@@ -87,8 +88,6 @@ object RegisterItem {
         FabricItemSettings()).also{ regItem["icon_of_the_champion"] = it}
 
     //misc
-    //item tex
-    val ANCIENT_TABLET = AncientTabletItem(FabricItemSettings().maxCount(1)).also{ regItem["ancient_tablet"] = it}
     //lang model tex
     val LORE_FRAGMENT = LoreFragmentItem(FabricItemSettings()).also{ regItem["lore_fragment"] = it}
     //item tex
