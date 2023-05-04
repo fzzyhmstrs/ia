@@ -57,21 +57,22 @@ Embark on an epic journey to discover the origins of the world, the source of ma
 |Blaze of Light|Not started|
 |Bone Rattle|Not started|
 |Living Flame|Not started|
-|Null and Void|Not started|
-|Icon of Nothingness|Not started|
-|Icon of the Saint|Not started|
-|Icon of Flames|Not started|
-|Icon of Knowledge|Not started|
-|Icon of the Blade|Not started|
-|Icon of Depravity|Not started|
-|Icon of the Warrior|Not started|
-|Icon of the Champion|Not started|
 |IN PROGRESS|X|
-|Add Spellblades set item textures|In progress|
 |Add Scholars Robes set item textures|In progress|
 |Add elementalists set item textures|In progress|
 |COMPLETE|X|
-|9/12 item textures|Complete|
+|Icon of Nothingness|Complete|
+|Icon of Depravity|complete|
+|Icon of Flames|Complete|
+|Icon of the Saint|Complete|
+|Icon of the Warrior|Complete|
+|Icon of the Champion|Complete|
+|Icon of Knowledge|Complete|
+|Icon of the Blade|Complete|
+|Null and Void|Complete|
+|Add Spellblades set item textures|Complete|
+|Strange Map|Complete|
+|10/12 item textures|Complete|
 |Core item impl|Complete|
 |DOCUMENTATION TODO|X|
 |Create wiki|Doc Todo|

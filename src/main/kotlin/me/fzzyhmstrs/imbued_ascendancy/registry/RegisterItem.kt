@@ -11,6 +11,7 @@ import me.fzzyhmstrs.fzzy_core.item_util.CustomFlavorItem
 import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterModifier as RegisterModifier1
 import me.fzzyhmstrs.imbued_ascendancy.IA
 import me.fzzyhmstrs.imbued_ascendancy.item.*
+import me.fzzyhmstrs.imbued_ascendancy.item.promise.EnsouledGemItem
 import me.fzzyhmstrs.imbued_ascendancy.item.promise.RealityGemItem
 import me.fzzyhmstrs.imbued_ascendancy.item.promise.VoidGemItem
 import me.fzzyhmstrs.imbued_ascendancy.item.weapon.*
