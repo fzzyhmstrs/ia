@@ -52,10 +52,8 @@ Embark on an epic journey to discover the origins of the world, the source of ma
 |Add in-game armor textures|Not started|
 |Book of Legend|Not started|
 |Notebook of Echoes|Not started|
-|Lore Fragment|Not started|
-|Cosmos|Not started|
+|Cosmos|Not started|0
 |Blaze of Light|Not started|
-|Bone Rattle|Not started|
 |Living Flame|Not started|
 |IN PROGRESS|X|
 |Add Scholars Robes set item textures|In progress|
@@ -69,6 +67,8 @@ Embark on an epic journey to discover the origins of the world, the source of ma
 |Icon of the Champion|Complete|
 |Icon of Knowledge|Complete|
 |Icon of the Blade|Complete|
+|Bone Rattle|Complete|
+|Lore Fragment|Complete|
 |Null and Void|Complete|
 |Add Spellblades set item textures|Complete|
 |Strange Map|Complete|

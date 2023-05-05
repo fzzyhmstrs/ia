@@ -79,7 +79,7 @@ object RegisterArmor {
     val LICH_KINGS_LEGGINGS = LichKingsRobesArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["lich_kings_leggings"] = it }
     val LICH_KINGS_BOOTS = LichKingsRobesArmorItem(EquipmentSlot.FEET,Item.Settings()).also { regArmor["lich_kings_boots"] = it }
 
-    //Spellblades Armor - spell damage and cooldown
+    //Spellblades Armor - spell damage and cooldown - Tex done
     val SPELLBLADES_HELMET = SpellbladesArmorArmorItem(EquipmentSlot.HEAD,Item.Settings()).also { regArmor["spellblades_helmet"] = it }
     val SPELLBLADES_CHESTPLATE = SpellbladesArmorArmorItem(EquipmentSlot.CHEST,Item.Settings()).also { regArmor["spellblades_chestplate"] = it }
     val SPELLBLADES_LEGGINGS = SpellbladesArmorArmorItem(EquipmentSlot.LEGS,Item.Settings()).also { regArmor["spellblades_leggings"] = it }

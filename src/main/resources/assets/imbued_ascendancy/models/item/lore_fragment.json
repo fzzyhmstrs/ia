@@ -2,25 +2,5 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "imbued_ascendancy:item/lore_fragment"
-  },
-  "overrides": [
-        {
-            "predicate": {
-                "count": 0.3
-            },
-            "model": "imbued_ascendancy:item/lore_fragment_2"
-        },
-        {
-            "predicate": {
-                "count": 0.7
-            },
-            "model": "imbued_ascendancy:item/lore_fragment_3"
-        },
-        {
-            "predicate": {
-                "count": 1.0
-            },
-            "model": "imbued_ascendancy:item/lore_fragment_4"
-        }
-    ]
+  }
 }

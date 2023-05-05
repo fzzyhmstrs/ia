@@ -1,5 +1,7 @@
 package me.fzzyhmstrs.imbued_ascendancy.config
 
+import me.fzzyhmstrs.amethyst_imbuement.tool.ScepterLvl1ToolMaterial
+import me.fzzyhmstrs.amethyst_imbuement.tool.ScepterOfBladesToolMaterial
 import me.fzzyhmstrs.fzzy_config.config_util.ConfigClass
 import me.fzzyhmstrs.fzzy_config.config_util.ConfigSection
 import me.fzzyhmstrs.fzzy_config.config_util.ReadMeText
@@ -7,8 +9,10 @@ import me.fzzyhmstrs.fzzy_config.config_util.SyncedConfigHelperV1.readOrCreateAn
 import me.fzzyhmstrs.fzzy_config.config_util.SyncedConfigWithReadMe
 import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedFloat
 import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedInt
+import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedLong
 import me.fzzyhmstrs.fzzy_config.validated_field.map.ValidatedStringBoolMap
 import me.fzzyhmstrs.imbued_ascendancy.IA
+import me.fzzyhmstrs.imbued_ascendancy.tool.CracklingToolMaterial
 import net.minecraft.util.Identifier
 
 object IaConfig:
@@ -56,6 +60,14 @@ object IaConfig:
             var activeDuration = ValidatedInt(80, Int.MAX_VALUE,1)
             var defense50Percent = ValidatedInt(10000, Int.MAX_VALUE,10)
             var regret50Percent = ValidatedInt(25000, Int.MAX_VALUE,25)
+        }
+
+        var scepters = Scepters()
+        class Scepters: ConfigSection(Header.Builder().space().add("ia.readme.items.scepters").add("ia.readme.items.scepters_2").build()){
+            @ReadMeText("ia.readme.items.scepters.cracklingDamage")
+            var cracklingDamage = ValidatedFloat(CracklingToolMaterial.defaultAttackDamage(),20f,0f)
+            var cracklingDurability = ValidatedInt(CracklingToolMaterial.defaultDurability(),5000,32)
+            var cracklingCooldown = ValidatedLong(CracklingToolMaterial.baseCooldown(), Long.MAX_VALUE, CracklingToolMaterial.minCooldown())
         }
 
     }
