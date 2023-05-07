@@ -4,7 +4,10 @@ import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem
 import me.fzzyhmstrs.fzzy_core.coding_util.AcText
 import me.fzzyhmstrs.imbued_ascendancy.IA
 import net.minecraft.block.BlockState
-import net.minecraft.entity.*
+import net.minecraft.entity.EntityDimensions
+import net.minecraft.entity.EntityGroup
+import net.minecraft.entity.EntityPose
+import net.minecraft.entity.EntityType
 import net.minecraft.entity.ai.goal.*
 import net.minecraft.entity.attribute.DefaultAttributeContainer
 import net.minecraft.entity.attribute.EntityAttributes

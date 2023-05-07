@@ -6,7 +6,6 @@ import me.fzzyhmstrs.imbued_ascendancy.IA
 import me.fzzyhmstrs.imbued_ascendancy.armor.GarnetArmorMaterial
 import me.fzzyhmstrs.imbued_ascendancy.armor.GlowingArmorMaterial
 import me.fzzyhmstrs.imbued_ascendancy.armor.ShimmeringArmorMaterial
-import me.fzzyhmstrs.imbued_ascendancy.armor.VoidMailArmorMaterial
 import me.fzzyhmstrs.imbued_ascendancy.item.armor.*
 import net.minecraft.entity.EquipmentSlot
 import net.minecraft.item.ArmorItem

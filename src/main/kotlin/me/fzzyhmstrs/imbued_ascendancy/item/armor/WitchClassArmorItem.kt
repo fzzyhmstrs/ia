@@ -1,22 +1,18 @@
 package me.fzzyhmstrs.imbued_ascendancy.item.armor
 
-import me.fzzyhmstrs.amethyst_imbuement.item.Reactant
 import me.fzzyhmstrs.amethyst_imbuement.item.Reagent
 import me.fzzyhmstrs.fzzy_core.interfaces.Modifiable
 import me.fzzyhmstrs.fzzy_core.modifier_util.ModifierHelperType
-import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifier
 import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifierHelper
-import me.fzzyhmstrs.imbued_ascendancy.armor.CelestialArmorMaterial
+import me.fzzyhmstrs.imbued_ascendancy.armor.FzzyArmorMaterial
 import net.minecraft.entity.EquipmentSlot
-import net.minecraft.entity.attribute.EntityAttribute
-import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.item.ArmorItem
 import net.minecraft.item.ArmorMaterial
 import net.minecraft.item.ItemStack
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.util.Identifier
 
-open class WitchClassArmorItem(material: ArmorMaterial,slot: EquipmentSlot, settings: Settings): ArmorItem(material,slot,settings), Reagent, Modifiable {
+open class WitchClassArmorItem(material: FzzyArmorMaterial,slot: EquipmentSlot, settings: Settings): FzzyArmorItem(material,slot,settings), Reagent, Modifiable {
 
     override fun defaultModifiers(type: ModifierHelperType): MutableList<Identifier> {
         if (type == EquipmentModifierHelper.getType()) return defaultEquipmentModifiers()

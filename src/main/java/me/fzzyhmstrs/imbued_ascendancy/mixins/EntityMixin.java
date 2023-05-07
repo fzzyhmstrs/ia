@@ -1,7 +1,6 @@
 package me.fzzyhmstrs.imbued_ascendancy.mixins;
 
 import me.fzzyhmstrs.amethyst_imbuement.item.promise.GemOfPromiseItem;
-import me.fzzyhmstrs.imbued_ascendancy.item.promise.VoidGemItem;
 import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;

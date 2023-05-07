@@ -4,9 +4,9 @@ package me.fzzyhmstrs.imbued_ascendancy.registry
 
 import me.fzzyhmstrs.amethyst_core.nbt_util.NbtKeys
 import me.fzzyhmstrs.amethyst_core.scepter_util.SpellType
+import me.fzzyhmstrs.imbued_ascendancy.IA
 import me.fzzyhmstrs.imbued_ascendancy.model.CelestialTridentEntityModel
 import me.fzzyhmstrs.imbued_ascendancy.model.CelestialTridentEntityRenderer
-import me.fzzyhmstrs.imbued_ascendancy.IA
 import me.fzzyhmstrs.imbued_ascendancy.model.ChampionsTridentEntityModel
 import me.fzzyhmstrs.imbued_ascendancy.model.ChampionsTridentEntityRenderer
 import net.fabricmc.api.EnvType

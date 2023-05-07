@@ -8,7 +8,6 @@ import me.fzzyhmstrs.amethyst_imbuement.item.SpellcastersReagentFlavorItem
 import me.fzzyhmstrs.amethyst_imbuement.item.custom.CustomHoeItem
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterModifier
 import me.fzzyhmstrs.fzzy_core.item_util.CustomFlavorItem
-import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterModifier as RegisterModifier1
 import me.fzzyhmstrs.imbued_ascendancy.IA
 import me.fzzyhmstrs.imbued_ascendancy.item.*
 import me.fzzyhmstrs.imbued_ascendancy.item.promise.EnsouledGemItem
@@ -28,6 +27,7 @@ import net.minecraft.text.Text
 import net.minecraft.util.Identifier
 import net.minecraft.util.Rarity
 import java.util.*
+import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterModifier as RegisterModifier1
 
 // don't know if this is better as a class or object. as an object it allows me to call it without needing to initialize an instance of it.
 object RegisterItem {
@@ -40,6 +40,7 @@ object RegisterItem {
     //Make Tigers Eye??
     val SERPENTINE = Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM)).also{ regItem["serpentine"] = it}
     val ENSOULED_GEM = EnsouledGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)).also{ regItem["reality_gem"] = it}
+    //make a spellcasters reagent that does less magic resist
     val REALITY_GEM = RealityGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)).also{ regItem["reality_gem"] = it}
     val VOID_GEM = VoidGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)).also{ regItem["void_gem"] = it}
     val MYSTIC_FRAGMENT = SpellcastersReagentFlavorItem(RegisterAttribute.DAMAGE_MULTIPLICATION,

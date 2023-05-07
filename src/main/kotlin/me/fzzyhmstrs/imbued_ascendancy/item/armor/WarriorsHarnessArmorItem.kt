@@ -1,6 +1,5 @@
 package me.fzzyhmstrs.imbued_ascendancy.item.armor
 
-import me.fzzyhmstrs.imbued_ascendancy.armor.VoidMailArmorMaterial
 import me.fzzyhmstrs.imbued_ascendancy.armor.WarriorsHarnessArmorMaterial
 import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterModifier
 import net.minecraft.entity.EquipmentSlot

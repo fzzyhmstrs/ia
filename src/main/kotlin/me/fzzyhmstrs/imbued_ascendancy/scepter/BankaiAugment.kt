@@ -1,37 +1,28 @@
 package me.fzzyhmstrs.imbued_ascendancy.scepter
 
 import me.fzzyhmstrs.amethyst_core.modifier_util.AugmentEffect
-import me.fzzyhmstrs.amethyst_core.scepter_util.CustomDamageSources
 import me.fzzyhmstrs.amethyst_core.scepter_util.LoreTier
 import me.fzzyhmstrs.amethyst_core.scepter_util.ScepterTier
 import me.fzzyhmstrs.amethyst_core.scepter_util.SpellType
 import me.fzzyhmstrs.amethyst_core.scepter_util.augments.AugmentDatapoint
-import me.fzzyhmstrs.amethyst_core.scepter_util.augments.AugmentPersistentEffectData
-import me.fzzyhmstrs.amethyst_core.scepter_util.augments.MiscAugment
 import me.fzzyhmstrs.amethyst_core.scepter_util.augments.ScepterAugment
-import me.fzzyhmstrs.amethyst_imbuement.AIClient
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem
 import me.fzzyhmstrs.fzzy_core.coding_util.PerLvlI
 import me.fzzyhmstrs.fzzy_core.coding_util.PersistentEffectHelper
 import me.fzzyhmstrs.fzzy_core.raycaster_util.RaycasterUtil
-import net.minecraft.client.MinecraftClient
 import net.minecraft.entity.Entity
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.damage.DamageSource
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemStack
 import net.minecraft.item.ToolItem
-import net.minecraft.particle.ParticleTypes
 import net.minecraft.server.world.ServerWorld
 import net.minecraft.sound.SoundCategory
 import net.minecraft.sound.SoundEvent
 import net.minecraft.sound.SoundEvents
 import net.minecraft.util.Hand
-import net.minecraft.util.hit.HitResult
-import net.minecraft.util.math.BlockPos
 import net.minecraft.util.math.Vec3d
 import net.minecraft.world.World
-import java.util.*
 
 class BankaiAugment: ScepterAugment(ScepterTier.TWO,9), PersistentEffectHelper.PersistentEffect{
 

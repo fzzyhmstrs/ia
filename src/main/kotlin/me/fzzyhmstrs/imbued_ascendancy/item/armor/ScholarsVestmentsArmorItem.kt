@@ -2,7 +2,6 @@ package me.fzzyhmstrs.imbued_ascendancy.item.armor
 
 import me.fzzyhmstrs.amethyst_core.registry.ModifierRegistry
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterModifier
-import me.fzzyhmstrs.imbued_ascendancy.armor.ElementalistsGarbArmorMaterial
 import me.fzzyhmstrs.imbued_ascendancy.armor.ScholarsVestmentsArmorMaterial
 import net.minecraft.entity.EquipmentSlot
 import net.minecraft.util.Identifier

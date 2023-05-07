@@ -1,10 +1,10 @@
 package me.fzzyhmstrs.imbued_ascendancy.registry
 
-import me.fzzyhmstrs.imbued_ascendancy.model.CelestialTridentEntityModel
-import me.fzzyhmstrs.imbued_ascendancy.model.CelestialTridentItemEntityRenderer
 import me.fzzyhmstrs.amethyst_imbuement.AI
 import me.fzzyhmstrs.fzzy_core.registry.ItemModelRegistry
 import me.fzzyhmstrs.imbued_ascendancy.IA
+import me.fzzyhmstrs.imbued_ascendancy.model.CelestialTridentEntityModel
+import me.fzzyhmstrs.imbued_ascendancy.model.CelestialTridentItemEntityRenderer
 import me.fzzyhmstrs.imbued_ascendancy.model.ChampionsTridentEntityModel
 import me.fzzyhmstrs.imbued_ascendancy.model.ChampionsTridentItemEntityRenderer
 import net.minecraft.client.util.ModelIdentifier

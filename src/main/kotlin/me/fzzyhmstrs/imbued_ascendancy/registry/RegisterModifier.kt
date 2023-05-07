@@ -12,12 +12,12 @@ import me.fzzyhmstrs.imbued_ascendancy.config.IaConfig
 import me.fzzyhmstrs.imbued_ascendancy.modifier.ConfigEquipmentModifier
 import me.fzzyhmstrs.imbued_ascendancy.modifier.ModifierConsumers
 import me.fzzyhmstrs.imbued_ascendancy.modifier.ModifierFunctions
-import me.fzzyhmstrs.imbued_ascendancy.modifier.ModifierPredicates as ModifierPredicates1
 import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.entity.attribute.EntityAttributes
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider
 import net.minecraft.loot.provider.number.UniformLootNumberProvider
 import net.minecraft.util.Identifier
+import me.fzzyhmstrs.imbued_ascendancy.modifier.ModifierPredicates as ModifierPredicates1
 
 object RegisterModifier {
 

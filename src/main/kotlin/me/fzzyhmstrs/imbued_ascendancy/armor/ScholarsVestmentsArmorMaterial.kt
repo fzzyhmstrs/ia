@@ -2,16 +2,16 @@ package me.fzzyhmstrs.imbued_ascendancy.armor
 
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterBlock
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem
+import me.fzzyhmstrs.imbued_ascendancy.armor.FzzyArmorMaterial.Companion.PROTECTION_VALUES
 import net.minecraft.entity.EquipmentSlot
-import net.minecraft.item.ArmorMaterial
 import net.minecraft.recipe.Ingredient
 import net.minecraft.sound.SoundEvent
 import net.minecraft.sound.SoundEvents
 
 @Suppress("PrivatePropertyName")
-class ScholarsVestmentsArmorMaterial : ArmorMaterial {
+class ScholarsVestmentsArmorMaterial : FzzyArmorMaterial {
     private val BASE_DURABILITY = intArrayOf(13, 15, 16, 11)
-    private val PROTECTION_VALUES = intArrayOf(2, 6, 7, 2)
+    private val ARMOR_VALUES = doubleArrayOf(2.0, 5.5, 6.5, 2.0)
 
 
     override fun getName(): String = "ia_elementalist"
@@ -19,7 +19,8 @@ class ScholarsVestmentsArmorMaterial : ArmorMaterial {
     override fun getRepairIngredient(): Ingredient? = Ingredient.ofItems(RegisterItem.SPARKING_GEM,RegisterItem.BLAZING_GEM,RegisterBlock.GLISTENING_ICE_ITEM)
     override fun getEnchantability(): Int = 50
     override fun getProtectionAmount(slot: EquipmentSlot): Int = PROTECTION_VALUES[slot.entitySlotId]
+    override fun getFzzyProtectionValue(slot: EquipmentSlot): Double = ARMOR_VALUES[slot.entitySlotId]
     override fun getDurability(slot: EquipmentSlot): Int = BASE_DURABILITY[slot.entitySlotId] * 19
     override fun getKnockbackResistance(): Float = 0.0F
-    override fun getToughness(): Float = 1.0f
+    override fun getToughness(): Float = 0.0f
 }

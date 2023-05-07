@@ -2,27 +2,21 @@ package me.fzzyhmstrs.imbued_ascendancy.item
 
 import me.fzzyhmstrs.amethyst_core.event.ModifySpellEvent
 import me.fzzyhmstrs.amethyst_core.item_util.AugmentScepterItem
-import me.fzzyhmstrs.fzzy_core.modifier_util.AbstractModifier
 import me.fzzyhmstrs.amethyst_core.modifier_util.AugmentModifier
-import me.fzzyhmstrs.amethyst_core.modifier_util.ModifierHelper
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
 import me.fzzyhmstrs.amethyst_core.scepter_util.ScepterHelper
 import me.fzzyhmstrs.amethyst_core.scepter_util.augments.ScepterAugment
 import me.fzzyhmstrs.amethyst_core.scepter_util.augments.SummonEntityAugment
 import me.fzzyhmstrs.fzzy_core.coding_util.AcText
-import me.fzzyhmstrs.imbued_ascendancy.config.IaConfig
-import me.fzzyhmstrs.fzzy_core.interfaces.Modifiable
-import me.fzzyhmstrs.fzzy_core.item_util.CustomFlavorItem
 import me.fzzyhmstrs.fzzy_core.mana_util.ManaHelper
 import me.fzzyhmstrs.fzzy_core.mana_util.ManaItem
-import me.fzzyhmstrs.fzzy_core.modifier_util.ModifierHelperType
-import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifierHelper
+import me.fzzyhmstrs.fzzy_core.modifier_util.AbstractModifier
+import me.fzzyhmstrs.imbued_ascendancy.config.IaConfig
 import net.minecraft.entity.Entity
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemStack
 import net.minecraft.registry.Registries
-import net.minecraft.registry.Registry
 import net.minecraft.util.ActionResult
 import net.minecraft.util.Hand
 import net.minecraft.util.Identifier
@@ -48,7 +42,7 @@ open class BoneRattleItem(
                                 val level = max(1, ((testLevel + modifiers.compiledData.levelModifier) * user.getAttributeValue(
                                     RegisterAttribute.SPELL_LEVEL)).toInt())
                                 spell.applyModifiableTasks(world,user,hand,level,modifiers.modifiers,modifiers.compiledData)
-                                item.manaDamage(stack, world,user,IaConfig.items.boneRattle.duplicationDamage.get())
+                                item.manaDamage(stack, world, user, IaConfig.items.boneRattle.duplicationDamage.get())
                             }
                         }
                     }

@@ -1,7 +1,5 @@
 package me.fzzyhmstrs.imbued_ascendancy.config
 
-import me.fzzyhmstrs.amethyst_imbuement.tool.ScepterLvl1ToolMaterial
-import me.fzzyhmstrs.amethyst_imbuement.tool.ScepterOfBladesToolMaterial
 import me.fzzyhmstrs.fzzy_config.config_util.ConfigClass
 import me.fzzyhmstrs.fzzy_config.config_util.ConfigSection
 import me.fzzyhmstrs.fzzy_config.config_util.ReadMeText

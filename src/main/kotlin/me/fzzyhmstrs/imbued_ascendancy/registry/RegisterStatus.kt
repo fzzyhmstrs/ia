@@ -1,8 +1,7 @@
 package me.fzzyhmstrs.imbued_ascendancy.registry
 
-import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
 import me.fzzyhmstrs.imbued_ascendancy.IA
-import me.fzzyhmstrs.imbued_ascendancy.effects.*
+import me.fzzyhmstrs.imbued_ascendancy.effects.NihilismStatusEffect
 import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.entity.attribute.EntityAttributes
 import net.minecraft.entity.effect.StatusEffect

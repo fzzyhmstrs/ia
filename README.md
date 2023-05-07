@@ -34,9 +34,6 @@ Embark on an epic journey to discover the origins of the world, the source of ma
 |Task|Status|
 |----|------|
 |NOT STARTED|X|
-|Implement custom guidebook engine|Not started|
-|Implement custom atlas-like map|Not started|
-|Implement map biome data format|Not started|
 |Add murals and lore writings blocks|Not started|
 |Add Demigod Altars|Not started|
 |Begin Dungeon design|Not started|
@@ -50,18 +47,18 @@ Embark on an epic journey to discover the origins of the world, the source of ma
 |Integrate celestial language|Not started|
 |Begin Dungeon design|Not started|
 |Add in-game armor textures|Not started|
-|Book of Legend|Not started|
 |Notebook of Echoes|Not started|
-|Cosmos|Not started|0
 |Blaze of Light|Not started|
 |Living Flame|Not started|
 |IN PROGRESS|X|
-|Add Scholars Robes set item textures|In progress|
-|Add elementalists set item textures|In progress|
+|Implement custom guidebook engine|In progress|
+|Implement custom atlas-like map|In progress|
+|Implement map biome data format|In progress|
 |COMPLETE|X|
 |Icon of Nothingness|Complete|
 |Icon of Depravity|complete|
 |Icon of Flames|Complete|
+|Cosmos|Complete|
 |Icon of the Saint|Complete|
 |Icon of the Warrior|Complete|
 |Icon of the Champion|Complete|
@@ -70,6 +67,9 @@ Embark on an epic journey to discover the origins of the world, the source of ma
 |Bone Rattle|Complete|
 |Lore Fragment|Complete|
 |Null and Void|Complete|
+|Book of Legend|Complete|
+|Add Scholars Robes set item textures|Complete|
+|Add elementalists set item textures|Complete|
 |Add Spellblades set item textures|Complete|
 |Strange Map|Complete|
 |10/12 item textures|Complete|

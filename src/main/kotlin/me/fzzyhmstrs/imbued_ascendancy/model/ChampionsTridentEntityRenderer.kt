@@ -1,8 +1,6 @@
 package me.fzzyhmstrs.imbued_ascendancy.model
 
 import me.fzzyhmstrs.imbued_ascendancy.IA
-import me.fzzyhmstrs.imbued_ascendancy.entity.CelestialTridentAvatarEntity
-import me.fzzyhmstrs.imbued_ascendancy.entity.CelestialTridentEntity
 import me.fzzyhmstrs.imbued_ascendancy.entity.ChampionsTridentEntity
 import me.fzzyhmstrs.imbued_ascendancy.registry.RegisterRenderer
 import net.minecraft.client.render.OverlayTexture

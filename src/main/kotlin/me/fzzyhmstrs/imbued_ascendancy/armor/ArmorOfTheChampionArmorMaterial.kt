@@ -1,16 +1,16 @@
 package me.fzzyhmstrs.imbued_ascendancy.armor
 
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem
+import me.fzzyhmstrs.imbued_ascendancy.armor.FzzyArmorMaterial.Companion.PROTECTION_VALUES
 import net.minecraft.entity.EquipmentSlot
-import net.minecraft.item.ArmorMaterial
 import net.minecraft.recipe.Ingredient
 import net.minecraft.sound.SoundEvent
 import net.minecraft.sound.SoundEvents
 
 @Suppress("PrivatePropertyName")
-class ArmorOfTheChampionArmorMaterial : ArmorMaterial {
+class ArmorOfTheChampionArmorMaterial : FzzyArmorMaterial {
     private val BASE_DURABILITY = intArrayOf(13, 15, 16, 11)
-    private val PROTECTION_VALUES = intArrayOf(3, 7, 9, 3)
+    private val ARMOR_VALUES = doubleArrayOf(4.0, 7.0, 9.0, 4.0)
 
 
     override fun getName(): String = "ia_armor_champion"
@@ -18,6 +18,7 @@ class ArmorOfTheChampionArmorMaterial : ArmorMaterial {
     override fun getRepairIngredient(): Ingredient? = Ingredient.ofItems(RegisterItem.MOONSTONE)
     override fun getEnchantability(): Int = 1
     override fun getProtectionAmount(slot: EquipmentSlot): Int = PROTECTION_VALUES[slot.entitySlotId]
+    override fun getFzzyProtectionValue(slot: EquipmentSlot): Double = ARMOR_VALUES[slot.entitySlotId]
     override fun getDurability(slot: EquipmentSlot): Int = BASE_DURABILITY[slot.entitySlotId] * 55
     override fun getKnockbackResistance(): Float = 0.05F
     override fun getToughness(): Float = 6.0f
