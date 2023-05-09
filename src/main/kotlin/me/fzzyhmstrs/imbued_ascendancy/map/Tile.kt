@@ -17,7 +17,7 @@ import net.minecraft.resource.ResourceManager
 import net.minecraft.util.Identifier
 import net.minecraft.util.math.ChunkPos
 
-class Tile(private val texture: Identifier, private val highCon: Identifier, private val u: Int, private val v: Int,biomeId: Identifier): BaseTile(biomeId){
+class Tile(private val texture: Identifier, private val highCon: Identifier, private val u: Int, private val v: Int,biomeId: Identifier,val isStructure: Boolean = false): BaseTile(biomeId){
     
         override fun draw(matrices: MatrixStack, x: Int, y: Int, hc: Boolean) {
             RenderSystem.setShader { GameRenderer.getPositionTexProgram() }
