@@ -28,7 +28,7 @@ open class BaseTile(){
       }
 
       companion object{
-          protected val EMPTY_TILE = BaseTile()
+          val EMPTY_TILE = BaseTile()
           val EMPTY = "empty"
           val BASIC = "basic"
 
