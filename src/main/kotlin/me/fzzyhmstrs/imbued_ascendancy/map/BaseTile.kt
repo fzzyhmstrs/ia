@@ -17,7 +17,7 @@ import net.minecraft.resource.ResourceManager
 import net.minecraft.util.Identifier
 import net.minecraft.util.math.ChunkPos
 
-open class BaseTile(){
+open class BaseTile(val biome: Identifier, val isEmpty: Boolean = false){
 
       open fun draw(matrices: MatrixStack, x: Int, y: Int, hc: Boolean) {}
 
@@ -28,7 +28,7 @@ open class BaseTile(){
       }
 
       companion object{
-          val EMPTY_TILE = BaseTile()
+          val EMPTY_TILE = BaseTile(Identifier("empty_tile", true))
           val EMPTY = "empty"
           val BASIC = "basic"
 
