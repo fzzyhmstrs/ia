@@ -13,7 +13,7 @@ class WarriorsHarnessArmorMaterial : FzzyArmorMaterial {
     private val ARMOR_VALUES = doubleArrayOf(4.5, 7.5, 9.5, 4.5)
 
 
-    override fun getName(): String = "ia_warriors_harness"
+    override fun getName(): String = "ia_warrior"
     override fun getEquipSound(): SoundEvent = SoundEvents.ITEM_ARMOR_EQUIP_IRON
     override fun getRepairIngredient(): Ingredient? = Ingredient.ofItems(RegisterItem.PURESTEEL)
     override fun getEnchantability(): Int = 10

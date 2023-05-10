@@ -14,7 +14,7 @@ class ScholarsVestmentsArmorMaterial : FzzyArmorMaterial {
     private val ARMOR_VALUES = doubleArrayOf(2.0, 5.5, 6.5, 2.0)
 
 
-    override fun getName(): String = "ia_elementalist"
+    override fun getName(): String = "ia_scholars"
     override fun getEquipSound(): SoundEvent = SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     override fun getRepairIngredient(): Ingredient? = Ingredient.ofItems(RegisterItem.SPARKING_GEM,RegisterItem.BLAZING_GEM,RegisterBlock.GLISTENING_ICE_ITEM)
     override fun getEnchantability(): Int = 50

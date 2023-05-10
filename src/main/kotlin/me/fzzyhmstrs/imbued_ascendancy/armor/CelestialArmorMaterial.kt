@@ -13,7 +13,7 @@ class CelestialArmorMaterial : ArmorMaterial {
     private val PROTECTION_VALUES = intArrayOf(6, 9, 11, 6)
 
 
-    override fun getName(): String = "ia_celestine"
+    override fun getName(): String = "ia_celestial"
     override fun getEquipSound(): SoundEvent = SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE
     override fun getRepairIngredient(): Ingredient? = Ingredient.ofItems(RegisterItem.CELESTINE)
     override fun getEnchantability(): Int = 45

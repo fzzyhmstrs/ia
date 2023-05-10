@@ -13,7 +13,7 @@ class LichKingsRobesArmorMaterial : FzzyArmorMaterial {
     private val ARMOR_VALUES = doubleArrayOf(2.5, 5.5, 7.5, 2.5)
 
 
-    override fun getName(): String = "ia_lich_kings_robes"
+    override fun getName(): String = "ia_lich_kings"
     override fun getEquipSound(): SoundEvent = SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     override fun getRepairIngredient(): Ingredient? = Ingredient.ofItems(RegisterItem.SERPENTINE)
     override fun getEnchantability(): Int = 13

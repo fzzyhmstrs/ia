@@ -13,7 +13,7 @@ class ArmorOfTheChampionArmorMaterial : FzzyArmorMaterial {
     private val ARMOR_VALUES = doubleArrayOf(4.0, 7.0, 9.0, 4.0)
 
 
-    override fun getName(): String = "ia_armor_champion"
+    override fun getName(): String = "ia_champion"
     override fun getEquipSound(): SoundEvent = SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND
     override fun getRepairIngredient(): Ingredient? = Ingredient.ofItems(RegisterItem.MOONSTONE)
     override fun getEnchantability(): Int = 1

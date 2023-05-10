@@ -13,7 +13,7 @@ class SpellbladesArmorArmorMaterial : FzzyArmorMaterial {
     private val ARMOR_VALUES = doubleArrayOf(3.0, 5.0, 7.0, 3.0)
 
 
-    override fun getName(): String = "ia_spellblades_armor"
+    override fun getName(): String = "ia_spellblades"
     override fun getEquipSound(): SoundEvent = SoundEvents.ITEM_ARMOR_EQUIP_ELYTRA
     override fun getRepairIngredient(): Ingredient? = Ingredient.ofItems(RegisterItem.SARDONYX)
     override fun getEnchantability(): Int = 10
