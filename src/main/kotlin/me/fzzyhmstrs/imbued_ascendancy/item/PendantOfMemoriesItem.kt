@@ -18,32 +18,33 @@ class PendantOfMemoriesItem(settings: Settings): AbstractAugmentJewelryItem(sett
         if (entity is PlayerEntity && getActive(stack)) {
             val stacks: MutableList<ItemStack> = mutableListOf()
             for (stack2 in entity.inventory.main) {
-                if (stack2.item is ManaItem && stack2.isDamaged) {
+                if (stack2.item is ManaItem && stack2.isDamaged && !stack.isOf(RegiterItem.PENDANT_OF_MEMORIES)) {
                     stacks.add(stack2)
                 }
             } // iterate over the inventory and look for items that are interfaced with "ManaItem"
             for (stack2 in entity.inventory.offHand) {
-                if (stack2.item is ManaItem && stack2.isDamaged) {
+                if (stack2.item is ManaItem && stack2.isDamaged && !stack.isOf(RegiterItem.PENDANT_OF_MEMORIES)) {
                     stacks.add(stack2)
                 }
             }
             for (stack2 in entity.inventory.armor) {
-                if (stack2.item is ManaItem && stack2.isDamaged) {
+                if (stack2.item is ManaItem && stack2.isDamaged && !stack.isOf(RegiterItem.PENDANT_OF_MEMORIES)) {
                     stacks.add(stack2)
                 }
             }
             val stacks2 = TrinketUtil.getTrinketStacks(entity)
             stacks2.forEach {
-                if (it.item is ManaItem && it.isDamaged) {
+                if (it.item is ManaItem && it.isDamaged && !stack.isOf(RegiterItem.PENDANT_OF_MEMORIES)) {
                     stacks.add(it)
                 }
             }
-            if (stacks.isNotEmpty()){
-                val i = entity.world.random.nextInt(stacks.size)
-                if (stack.damage < stack.maxDamage - 1)
-                this.healDamage(1,stacks[i])
-            } else {
-                entity.addExperience(1)
+            if (stack.damage < stack.maxDamage - 1){
+                if (stacks.isNotEmpty()){
+                    val i = entity.world.random.nextInt(stacks.size)
+                    this.healDamage(1,stacks[i])
+                } else {
+                    entity.addExperience(1)
+                }
             }
             if (this.manaDamage(stack,entity.world,entity,1)){
                 val nbt = stack.orCreateNbt
