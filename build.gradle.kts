@@ -48,19 +48,19 @@ repositories {
         url = uri("https://jitpack.io")
     }
     flatDir {
-        dirs("F:\\Documents\\Mod Libraries\\ac\\build\\libs")
+        dirs("E:\\Documents\\Mod Libraries\\ac\\build\\libs")
     }
     flatDir {
-        dirs("F:\\Documents\\Mod Libraries\\fc\\build\\libs")
+        dirs("E:\\Documents\\Mod Libraries\\fc\\build\\libs")
     }
     flatDir {
-        dirs("F:\\Documents\\Mod Libraries\\gc\\build\\libs")
+        dirs("E:\\Documents\\Mod Libraries\\gc\\build\\libs")
     }
     flatDir {
-        dirs("F:\\Documents\\Mod Development\\ai\\build\\libs")
+        dirs("E:\\Documents\\Mod Development\\ai\\build\\libs")
     }
     flatDir {
-        dirs("F:\\Documents\\Mod Libraries\\fzzy_config\\build\\libs")
+        dirs("E:\\Documents\\Mod Libraries\\fzzy_config\\build\\libs")
     }
     mavenCentral()
 }
